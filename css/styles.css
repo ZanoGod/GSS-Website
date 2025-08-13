@@ -13,8 +13,8 @@
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 111;
-  background: #fff;
+  z-index: 9999;
+  background: #ffffff;
 }
 
 .loader {
@@ -42,7 +42,7 @@
   bottom: 5px;
   border-radius: 50%;
   border: 3px solid transparent;
-  border-top-color: rgb(233, 184, 137);
+  border-top-color: rgb(255, 208, 164);
   -webkit-animation: spin 3s linear infinite;
   animation: spin 3s linear infinite;
 }
@@ -56,7 +56,7 @@
   bottom: 15px;
   border-radius: 50%;
   border: 3px solid transparent;
-  border-top-color: #f4e7db;
+  border-top-color: #fcebdb;
   -webkit-animation: spin 1.5s linear infinite;
   animation: spin 1.5s linear infinite;
 }

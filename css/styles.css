@@ -1,7 +1,59 @@
 
+/* =====================================================
+   Topbar Custom Styling
+   ===================================================== */
 
+/* Topbar background color */
+.topbar {
+  background-color: #000000c1 !important;
+}
 
+/* Topbar link text color (location, phone, email) */
+.topbar a {
+  color: #FFB22C !important;
+  text-decoration: none; 
+}
 
+.topbar a:hover {
+  color: #ffffff !important; /* White on hover */
+ 
+}
+
+/* Font Awesome icon colors (phone, email, location) */
+.topbar i {
+  color: #FFB22C !important; /* Bright gold */
+}
+
+/* Social media button background */
+.topbar .btn.btn-light {
+  background-color: #fff; /* Dark button background */
+  border: none;
+}
+
+/* Social media icon color */
+.topbar .btn i {
+  color: #B68B2E !important; /* Icon color */
+}
+
+/* Hover effect for social media buttons */
+.topbar .btn:hover {
+  background-color: #555555; /* Darker on hover */
+}
+
+.topbar .btn:hover i {
+  color: #ffffff !important; /* Icon turns white on hover */
+} 
+
+/* Add this new class to your custom CSS file */
+.topbar .social-icon {
+  width: 35px;          /* Set a fixed width */
+  height: 35px;         /* Set a fixed height (same as width) */
+  border-radius: 50%;   /* This makes the element a perfect circle */
+  display: inline-flex; /* Use flexbox for easy centering */
+  align-items: center;    /* Center the icon vertically */
+  justify-content: center;/* Center the icon horizontally */
+  padding: 0;           /* Remove any default button padding */
+}
 
 
 /* Preloader
@@ -88,3 +140,97 @@
     transform: rotate(360deg);
   }
 }
+
+/***======================= Navbar Start =========================***/
+.nav-bar {
+    background: var(--bs-white);
+}
+
+.sticky-top {
+    transition: 1s;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    position: relative;
+    margin-right: 25px;
+    padding: 35px 0;
+    letter-spacing: 1px;
+    color: var(--bs-dark);
+    font-size: 17px;
+    font-weight: 500;
+    outline: none;
+    transition: .5s;
+}
+
+
+.sticky-top .navbar-light .navbar-nav .nav-link {
+    padding: 20px 0;
+    color: var(--bs-dark);
+}
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link.active {
+    color: var(--bs-primary);
+}
+
+.navbar-light .navbar-brand img {
+    max-height: 60px;
+    transition: .5s;
+}
+
+.sticky-top .navbar-light .navbar-brand img {
+    max-height: 50px;
+}
+
+.navbar .dropdown-toggle::after {
+    border: none;
+    content: "\f107";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 600;
+    vertical-align: middle;
+    margin-left: 8px;
+}
+
+.dropdown .dropdown-menu a:hover {
+    background: var(--bs-primary);
+    color: var(--bs-white);
+}
+
+.navbar .nav-item:hover .dropdown-menu {
+    transform: rotateX(0deg);
+    visibility: visible;
+    margin-top: 8px !important;
+    background: var(--bs-light);
+    transition: .5s;
+    opacity: 1;
+}
+
+
+
+@media (min-width: 992px) {
+    .navbar .nav-item .dropdown-menu {
+    display: block;
+    visibility: hidden;
+    top: 100%;
+    transform: rotateX(-75deg);
+    transform-origin: 0% 0%;
+    border: 0;
+    border-radius: 10px;
+    margin-top: 8px !important;
+    transition: .5s;
+    opacity: 0;
+    }
+}
+
+@media (max-width: 991px) {
+    .navbar.navbar-expand-lg .navbar-toggler {
+        padding: 8px 15px;
+        border: 1px solid var(--bs-primary);
+        color: var(--bs-primary);
+    }
+
+    .sticky-top .navbar-light .navbar-nav .nav-link {
+        padding: 12px 0;
+    }
+}
+/*** Navbar End ***/

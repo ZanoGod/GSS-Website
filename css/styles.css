@@ -255,3 +255,89 @@
 
 
 /*** Navbar End ***/
+
+
+/*** Carousel Header Start ***/
+
+.header-carousel .bg-secondary {
+    /* Fallback color */
+    background-color: var(--bs-dark); 
+    
+    /* A subtle, luxurious gradient from your dark color to a muted gold */
+    background-image: linear-gradient(45deg, var(--bs-dark), #594f3b);
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    border: none;
+    
+    /* Using !important to ensure the corner radius applies over any other style */
+    border-radius: 1rem !important; 
+}
+
+
+.carousel .carousel-item img {
+    object-fit: cover;
+}
+
+.carousel .carousel-item,
+.carousel .carousel-item img {
+    height: 700px;
+}
+
+.carousel-item .carousel-caption {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.453);
+    display: flex;
+    align-items: center;
+}
+
+.carousel .carousel-indicators {
+    left: 80%;
+    top: 50%;
+    /* margin-right: 25%; */
+    transform: translateY(-50%);
+    flex-direction: column;
+}
+
+.carousel-indicators [data-bs-target] {
+    display: flex;
+    width: 15px;
+    height: 15px;
+    border: 6px solid var(--bs-white);
+    border-radius: 15px;
+    padding: 0;
+    margin-top:10px;
+    margin-bottom:10px;
+    background-color: var(--bs-primary);
+    opacity: 1;
+    transition: 0.5s;
+}
+.carousel .btn-booknow {
+  background-color: var(--bs-secondary);
+    border-color: var(--bs-secondary);
+    color: var(--bs-dark);
+    font-weight: bold;
+}
+.carousel .btn-booknow:hover {
+    
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
+    color: var(--bs-light);
+    font-weight: bold;
+}
+
+.carousel-indicators [data-bs-target].active {
+    background-color: var(--bs-secondary);
+}
+
+
+@media (max-width: 992px) {
+    .carousel-indicators [data-bs-target] {
+        display: none;
+    }
+}
+/*** Carousel Header End ***/
+

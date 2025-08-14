@@ -1,3 +1,11 @@
+:root {
+  /* Change the hex code below to your desired color */
+  --bs-primary: #B68B2E; 
+  --bs-secondary: #FFB22C; /* Secondary color */
+  --bs-light: #F8F9FA; /* Light background color */
+  --bs-dark: #343a40; /* Dark text color */
+}
+
 
 /* =====================================================
    Topbar Custom Styling
@@ -162,7 +170,6 @@
     transition: .5s;
 }
 
-
 .sticky-top .navbar-light .navbar-nav .nav-link {
     padding: 20px 0;
     color: var(--bs-dark);
@@ -205,7 +212,19 @@
     opacity: 1;
 }
 
+.nav-bar .btn-primary {
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
+    color: var(--bs-white);
+}
 
+
+.nav-bar .btn-primary:hover {
+    background-color: var(--bs-secondary); 
+    border-color: var(--bs-secondary);
+    color: var(--bs-dark);
+    font-weight: bold;
+}
 
 @media (min-width: 992px) {
     .navbar .nav-item .dropdown-menu {
@@ -233,4 +252,6 @@
         padding: 12px 0;
     }
 }
+
+
 /*** Navbar End ***/

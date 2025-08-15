@@ -1,0 +1,17 @@
+.service-card {
+  background: #fff;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  border: 1px solid #eaeaea;
+}
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 3px 3px 5px 5px #e9c17d;
+  border-color: transparent;
+}
+.icon i {
+  background: #f4f7ff;
+  padding: 15px;
+  border-radius: 50%;
+  display: inline-block;
+}

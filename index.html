@@ -25,10 +25,12 @@
     <link href="./fontawesome/css/brands.css" rel="stylesheet" />
     <link href="./fontawesome/css/fontawesome.min.css" rel="stylesheet" />
 
-    <link
+    <!-- <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
-    />
+    /> -->
+    <!-- Bootstrap Icons CDN -->
+    <link rel="stylesheet" href="bootstrap/icons/bootstrap-icons.css" />
     <!-- custom css -->
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/service.css" />
@@ -48,16 +50,15 @@
       <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light">
           <a href="" class="navbar-brand p-0">
-            <h3 class="display-6 text-primary">
+            <h3 class="display-6">
               <!--<i class="fas fa-car-alt me-3"></i></i>-->
               <!-- <img src="img/gss-logo-navbar.png" alt="Logo" /> -->
               <img
                 src="img/gss-logo-navbar.png"
                 alt="Golden Support Service Logo"
               />
-            GSS Rent a Car 
+              GSS Rent a Car
             </h3>
-
           </a>
           <button
             class="navbar-toggler"
@@ -108,102 +109,264 @@
     <div include-html="items/carousel.html"></div>
     <!-- Topbar End -->
 
-    <!---About Us Section -->
-    <section class="py-5 bordered" id="about">
-      <div class="container">
+
+    <!-- About Start -->
+    <div class="container-fluid overflow-hidden about py-5">
+      <div class="container py-5">
         <div class="row g-5">
-          <div class="col-lg-6">
-            <h1 class="display-6 mb-4">About Us</h1>
-            <p class="mb-4">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-              tincidunt, nunc at consectetur sagittis, nisi nisl aliquet nunc,
-              eget aliquam nisl nisi euismod nisi. Sed tincidunt, nunc at
-              consectetur sagittis, nisi nisl aliquet nunc, eget aliquam nisl
-              nisi euismod nisi.
-            </p>
-            <p class="mb-4">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-              tincidunt, nunc at consectetur sagittis, nisi nisl aliquet nunc,
-              eget aliquam nisl nisi euismod nisi. Sed tincidunt, nunc at
-              consectetur sagittis, nisi nisl aliquet nunc, eget aliquam nisl
-              nisi euismod nisi.
-            </p>
+          <div class="col-xl-6 wow fadeInLeft" data-wow-delay="0.2s">
+            
+            <div class="about-item">
+              <div class="pb-5">
+                <h1 class="display-5 text-capitalize">
+                <span>GSS </span>About Us
+                </h1>
+                <p class="mb-0">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut
+                  amet nemo expedita asperiores commodi accusantium at cum
+                  harum, excepturi, quia tempora cupiditate! Adipisci facilis
+                  modi quisquam quia distinctio,
+                </p>
+              </div>
+              <div class="row g-4">
+                <div class="col-lg-6">
+                  <div class="about-item-inner border p-4">
+                    <div class="about-icon mb-4">
+                      <img
+                        src="img/about-icon-1.png"
+                        class="img-fluid w-50 h-50"
+                        alt="Icon"
+                      />
+                    </div>
+                    <h5 class="mb-3">Our Vision</h5>
+                    <p class="mb-0">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="about-item-inner border p-4">
+                    <div class="about-icon mb-4">
+                      <img
+                        src="img/about-icon-2.png"
+                        class="img-fluid h-50 w-50"
+                        alt="Icon"
+                      />
+                    </div>
+                    <h5 class="mb-3">Our Mision</h5>
+                    <p class="mb-0">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <p class="text-item my-4">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Beatae, aliquam ipsum. Sed suscipit dolorem libero sequi aut
+                natus debitis reprehenderit facilis quaerat similique, est at in
+                eum. Quo, obcaecati in!
+              </p>
+              <div class="row g-4">
+                <div class="col-lg-6">
+                  <div class="text-center rounded bg-secondary p-4">
+                    <h1 class="display-6 text-white">17</h1>
+                    <h5 class="text-light mb-0">Years Of Experience</h5>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="rounded">
+                    <p class="mb-2">
+                      <i class="fa fa-check-circle text-primary me-1"></i> Morbi
+                      tristique senectus
+                    </p>
+                    <p class="mb-2">
+                      <i class="fa fa-check-circle text-primary me-1"></i> A
+                      scelerisque purus
+                    </p>
+                    <p class="mb-2">
+                      <i class="fa fa-check-circle text-primary me-1"></i>
+                      Dictumst vestibulum
+                    </p>
+                    <p class="mb-0">
+                      <i class="fa fa-check-circle text-primary me-1"></i> dio
+                      aenean sed adipiscing
+                    </p>
+                  </div>
+                </div>
+                <div class="col-lg-5 d-flex align-items-center">
+                  <a href="#" class="btn rounded py-3 px-5"
+                    >More About Us</a
+                  >
+                </div>
+                <div class="col-lg-7">
+                  <div class="d-flex align-items-center">
+                    <img
+                      src="img/U_Ni.jpg"
+                      class="img-fluid rounded-circle border border-4 border-secondary"
+                      style="width: 100px; height: 100px"
+                      alt="Image"
+                    />
+                    <div class="ms-4">
+                      <h4>U Ni Htwe</h4>
+                      <p class="mb-0">Founder</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="col-lg-6">
-            <img
-              src="img/U_Ni.jpg"
-              style="
-                width: auto;
-                height: 400px;
-                margin-left: 20px;
-                padding-top: 0;
-              "
-            />
+          <div class="col-xl-6 wow fadeInRight" data-wow-delay="0.2s">
+            <div class="about-img">
+              <div class="img-1">
+                <img
+                  src="img/about-img.jpg"
+                  class="img-fluid rounded h-100 w-100"
+                  alt=""
+                />
+              </div>
+              <div class="img-2">
+                <img
+                  src="img/about-img-1.jpg"
+                  class="img-fluid rounded w-100"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- About End -->
+
+    <!-- Service Section Start -->
+    <section class="py-5 bg-light">
+      <div class="container">
+        <!-- Section Title -->
+        <div class="text-center mb-5">
+          <h1 class="fw-bold">Our Services</h1>
+          <p class="text-muted">
+            Professional, reliable, and always ready to serve you anywhere in
+            Myanmar.
+          </p>
+        </div>
+
+        <!-- Services Grid -->
+        <div class="row g-4">
+          <!-- Car & Driver Rental -->
+          <div class="col-md-4">
+            <div class="service-card p-4 text-center h-100">
+              <div class="icon mb-3">
+                <!-- <i class="bi bi-car-front-fill fs-1 text-primary"></i> -->
+                <i class="fa-solid fa-car fs-1 icon-green"></i>
+              </div>
+              <h5 class="fw-bold">Car & Driver Rental</h5>
+              <p class="text-muted">
+                Daily and monthly rentals for Yangon, Bago, Mandalay, Naypyitaw,
+                and more. Experienced drivers and well-maintained vehicles for
+                safe and comfortable journeys.
+              </p>
+              <a href="#" class="text-primary fw-semibold text-decoration-none"
+                >Learn More →</a
+              >
+            </div>
+          </div>
+
+          <!-- Petrol Delivery -->
+          <div class="col-md-4">
+            <div class="service-card p-4 text-center h-100">
+              <div class="icon mb-3">
+                <i class="bi bi-fuel-pump fs-1 icon-blue"></i>
+              </div>
+              <h5 class="fw-bold">Petrol Delivery Service</h5>
+              <p class="text-muted">
+                Fast, safe, and convenient fuel delivery to your location
+                whenever you need it. No more delays or hassle — we bring the
+                petrol to you.
+              </p>
+              <a href="#" class="text-primary fw-semibold text-decoration-none"
+                >Learn More →</a
+              >
+            </div>
+          </div>
+
+          <!-- 24/7 Support -->
+          <div class="col-md-4">
+            <div class="service-card p-4 text-center h-100">
+              <div class="icon mb-3">
+                <i class="bi bi-headset fs-1 icon-gray"></i>
+              </div>
+              <h5 class="fw-bold">24/7 Service Support</h5>
+              <p class="text-muted">
+                Our dedicated team is always available to assist you, day or
+                night, ensuring your travel and fuel needs are met without
+                interruption. We provide support in <strong>Japanese</strong>,
+                <strong>English</strong>, and <strong>Burmese</strong>
+                so you can communicate with us in the language you are most
+                comfortable with.
+              </p>
+              <a href="#" class="text-primary fw-semibold text-decoration-none"
+                >Learn More →</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Additional Services Grid -->
+        <div class="row g-4 mt-2">
+          <!-- Payment Method -->
+          <div class="col-md-4">
+            <div class="service-card p-4 text-center h-100">
+              <div class="icon mb-3">
+                <i class="bi bi-credit-card fs-1 icon-purple"></i>
+              </div>
+              <h5 class="fw-bold">Choose Your Preferred Payment</h5>
+              <p class="text-muted">
+                Flexible and secure payment options including cash, bank
+                transfer, and digital wallets — whatever works best for you.
+              </p>
+              <a href="#" class="text-primary fw-semibold text-decoration-none"
+                >Learn More →</a
+              >
+            </div>
+          </div>
+
+          <!-- Driver Training -->
+          <div class="col-md-4">
+            <div class="service-card p-4 text-center h-100">
+              <div class="icon mb-3">
+                <i class="bi bi-person-lines-fill fs-1 icon-yellow"></i>
+              </div>
+              <h5 class="fw-bold">Driver Training Programs</h5>
+              <p class="text-muted">
+                Comprehensive training for drivers to ensure safety,
+                professionalism, and confidence on the road.
+              </p>
+              <a href="#" class="text-primary fw-semibold text-decoration-none"
+                >Learn More →</a
+              >
+            </div>
+          </div>
+
+          <!-- Vehicle Maintenance -->
+          <div class="col-md-4">
+            <div class="service-card p-4 text-center h-100">
+              <div class="icon mb-3">
+                <i class="bi bi-tools fs-1 icon-red"></i>
+              </div>
+              <h5 class="fw-bold">Vehicle Maintenance & Management</h5>
+              <p class="text-muted">
+                Regular inspections, servicing, and proactive management to keep
+                your vehicles in top condition.
+              </p>
+              <a href="#" class="text-primary fw-semibold text-decoration-none"
+                >Learn More →</a
+              >
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!---Service section start-->
-
-
-    <div class="row g-4">
-      <!-- Car & Driver Rental -->
-      <div class="col-md-4">
-        <div class="service-card p-4 text-center h-100">
-          <div class="icon mb-3">
-            <i class="bi bi-car-front fs-1 text-primary"></i>
-          </div>
-          <h5 class="fw-bold">Car & Driver Rental</h5>
-          <p class="text-muted">
-            Daily and monthly rentals for Yangon, Bago, Mandalay, Naypyitaw, and
-            more. Experienced drivers and well-maintained vehicles for safe and
-            comfortable journeys.
-          </p>
-          <a href="#" class="text-primary fw-semibold text-decoration-none"
-            >Learn More →</a
-          >
-        </div>
-      </div>
-
-      <!-- Petrol Delivery -->
-      <div class="col-md-4">
-        <div class="service-card p-4 text-center h-100">
-          <div class="icon mb-3">
-            <i class="bi bi-fuel-pump fs-1 text-success"></i>
-          </div>
-          <h5 class="fw-bold">Petrol Delivery Service</h5>
-          <p class="text-muted">
-            Fast, safe, and convenient fuel delivery to your location whenever
-            you need it. No more delays or hassle — we bring the petrol to you.
-          </p>
-          <a href="#" class="text-primary fw-semibold text-decoration-none"
-            >Learn More →</a
-          >
-        </div>
-      </div>
-
-      <!-- 24/7 Support -->
-      <div class="col-md-4">
-        <div class="service-card p-4 text-center h-100">
-          <div class="icon mb-3">
-            <i class="bi bi-headset fs-1 text-warning"></i>
-          </div>
-          <h5 class="fw-bold">24/7 Service Support</h5>
-          <p class="text-muted">
-            Our dedicated team is always available to assist you, day or night,
-            ensuring your travel and fuel needs are met without interruption. We
-            provide support in <strong>Japanese</strong>,
-            <strong>English</strong>, and <strong>Burmese</strong>
-            so you can communicate with us in the language you are most
-            comfortable with.
-          </p>
-          <a href="#" class="text-primary fw-semibold text-decoration-none"
-            >Learn More →</a
-          >
-        </div>
-      </div>
-    </div>
     <!-- Load jQuery -->
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/items.js"></script>
@@ -213,5 +376,11 @@
 
     <!-- custom script -->
     <script type="text/javascript" src="js/script.js"></script>
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <!-- <script src="lib/easing/easing.min.js"></script>    
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script> -->
   </body>
 </html>

@@ -11,7 +11,41 @@
 }
 .icon i {
   background: #f4f7ff;
-  padding: 15px;
+  width: 65px;
+  height: 65px;
+  line-height: 65px;
   border-radius: 50%;
   display: inline-block;
+  text-align: center;
+  font-size: 24px; 
+}
+
+.icon-blue {
+  background: #e0ecff;
+  color: #2e6be6;  /* Blue */
+}
+
+.icon-green {
+  background: #e1f7e7;
+  color: #28a745;  /* Green */
+}
+
+.icon-yellow {
+  background: #fff9e6;
+  color: #ffc107;  /* Yellow */
+}
+
+.icon-red {
+  background: #ffe5e5;
+  color: #dc3545;  /* Red */
+}
+
+.icon-purple {
+  background: #f3e6ff;
+  color: #6f42c1;  /* Purple */
+}
+
+.icon-gray {
+  background: #f0f0f0;
+  color: #6c757d;  /* Gray */
 }

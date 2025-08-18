@@ -1,11 +1,10 @@
 :root {
   /* Change the hex code below to your desired color */
-  --bs-primary: #B68B2E; 
-  --bs-secondary: #FFB22C; /* Secondary color */
-  --bs-light: #F8F9FA; /* Light background color */
+  --bs-primary: #b68b2e;
+  --bs-secondary: #ffb22c; /* Secondary color */
+  --bs-light: #f8f9fa; /* Light background color */
   --bs-dark: #343a40; /* Dark text color */
 }
-
 
 /* =====================================================
    Topbar Custom Styling
@@ -18,18 +17,17 @@
 
 /* Topbar link text color (location, phone, email) */
 .topbar a {
-  color: #FFB22C !important;
-  text-decoration: none; 
+  color: #ffb22c !important;
+  text-decoration: none;
 }
 
 .topbar a:hover {
   color: #ffffff !important; /* White on hover */
- 
 }
 
 /* Font Awesome icon colors (phone, email, location) */
 .topbar i {
-  color: #FFB22C !important; /* Bright gold */
+  color: #ffb22c !important; /* Bright gold */
 }
 
 /* Social media button background */
@@ -40,7 +38,7 @@
 
 /* Social media icon color */
 .topbar .btn i {
-  color: #B68B2E !important; /* Icon color */
+  color: #b68b2e !important; /* Icon color */
 }
 
 /* Hover effect for social media buttons */
@@ -50,19 +48,18 @@
 
 .topbar .btn:hover i {
   color: #ffffff !important; /* Icon turns white on hover */
-} 
+}
 
 /* Add this new class to your custom CSS file */
 .topbar .social-icon {
-  width: 35px;          /* Set a fixed width */
-  height: 35px;         /* Set a fixed height (same as width) */
-  border-radius: 50%;   /* This makes the element a perfect circle */
+  width: 35px; /* Set a fixed width */
+  height: 35px; /* Set a fixed height (same as width) */
+  border-radius: 50%; /* This makes the element a perfect circle */
   display: inline-flex; /* Use flexbox for easy centering */
-  align-items: center;    /* Center the icon vertically */
-  justify-content: center;/* Center the icon horizontally */
-  padding: 0;           /* Remove any default button padding */
+  align-items: center; /* Center the icon vertically */
+  justify-content: center; /* Center the icon horizontally */
+  padding: 0; /* Remove any default button padding */
 }
-
 
 /* Preloader
 ------------------------------------------------------------- */
@@ -151,83 +148,89 @@
 
 /***======================= Navbar Start =========================***/
 .nav-bar {
-    background: var(--bs-white);
+  background: var(--bs-white);
 }
 
 .sticky-top {
-    transition: 1s;
+  transition: 1s;
+}
+
+.navbar-brand h3 {
+  font-size: 30px !important;
+  font-weight: 600 !important;
+  color: var(--bs-dark) !important;
+  transition: color 0.5s ease, font-weight 0.5s ease;
 }
 
 .navbar-light .navbar-nav .nav-link {
-    position: relative;
-    margin-right: 25px;
-    padding: 35px 0;
-    letter-spacing: 1px;
-    color: var(--bs-dark);
-    font-size: 17px;
-    font-weight: 500;
-    outline: none;
-    transition: .5s;
+  position: relative;
+  margin-right: 25px;
+  padding: 35px 0;
+  letter-spacing: 1px;
+  color: var(--bs-dark);
+  font-size: 17px;
+  font-weight: 500;
+  outline: none;
+  transition: 0.5s;
 }
 
 .sticky-top .navbar-light .navbar-nav .nav-link {
-    padding: 20px 0;
-    color: var(--bs-dark);
+  padding: 20px 0;
+  color: var(--bs-dark);
 }
 
 .navbar-light .navbar-nav .nav-link:hover,
 .navbar-light .navbar-nav .nav-link.active {
-    color: var(--bs-primary);
+  color: var(--bs-primary);
 }
 
 .navbar-light .navbar-brand img {
-    max-height: 60px;
-    transition: .5s;
+  max-height: 70px;
+  transition: 0.5s ease-in-out;
 }
 
 .sticky-top .navbar-light .navbar-brand img {
-    max-height: 50px;
+  max-height: 70px;
 }
 
 .navbar .dropdown-toggle::after {
-    border: none;
-    content: "\f107";
-    font-family: "Font Awesome 5 Free";
-    font-weight: 600;
-    vertical-align: middle;
-    margin-left: 8px;
+  border: none;
+  content: "\f107";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 600;
+  vertical-align: middle;
+  margin-left: 8px;
 }
 
 .dropdown .dropdown-menu a:hover {
-    background: var(--bs-primary);
-    color: var(--bs-white);
+  background: var(--bs-primary);
+  color: var(--bs-white);
 }
 
 .navbar .nav-item:hover .dropdown-menu {
-    transform: rotateX(0deg);
-    visibility: visible;
-    margin-top: 8px !important;
-    background: var(--bs-light);
-    transition: .5s;
-    opacity: 1;
+  transform: rotateX(0deg);
+  visibility: visible;
+  margin-top: 8px !important;
+  background: var(--bs-light);
+  transition: 0.5s;
+  opacity: 1;
 }
 
 .nav-bar .btn-primary {
-    background-color: var(--bs-primary);
-    border-color: var(--bs-primary);
-    color: var(--bs-white);
+  background-color: var(--bs-primary);
+  border-color: var(--bs-primary);
+  color: var(--bs-white);
 }
 
-
 .nav-bar .btn-primary:hover {
-    background-color: var(--bs-secondary); 
-    border-color: var(--bs-secondary);
-    color: var(--bs-dark);
-    font-weight: bold;
+  background-color: var(--bs-secondary);
+  border-color: var(--bs-secondary);
+  color: var(--bs-dark);
+  font-weight: bold;
 }
 
 @media (min-width: 992px) {
-    .navbar .nav-item .dropdown-menu {
+  .navbar .nav-item .dropdown-menu {
     display: block;
     visibility: hidden;
     top: 100%;
@@ -236,107 +239,203 @@
     border: 0;
     border-radius: 10px;
     margin-top: 8px !important;
-    transition: .5s;
+    transition: 0.5s;
     opacity: 0;
-    }
+  }
 }
 
 @media (max-width: 991px) {
-    .navbar.navbar-expand-lg .navbar-toggler {
-        padding: 8px 15px;
-        border: 1px solid var(--bs-primary);
-        color: var(--bs-primary);
-    }
+  .navbar.navbar-expand-lg .navbar-toggler {
+    padding: 8px 15px;
+    border: 1px solid var(--bs-primary);
+    color: var(--bs-primary);
+  }
 
-    .sticky-top .navbar-light .navbar-nav .nav-link {
-        padding: 12px 0;
-    }
+  .sticky-top .navbar-light .navbar-nav .nav-link {
+    padding: 12px 0;
+  }
 }
 
-
 /*** Navbar End ***/
-
 
 /*** Carousel Header Start ***/
 
 .header-carousel .bg-secondary {
-    /* Fallback color */
-    background-color: var(--bs-dark); 
-    
-    /* A subtle, luxurious gradient from your dark color to a muted gold */
-    background-image: linear-gradient(45deg, var(--bs-dark), #594f3b);
+  /* Fallback color */
+  background-color: var(--bs-dark);
 
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
-    border: none;
-    
-    /* Using !important to ensure the corner radius applies over any other style */
-    border-radius: 1rem !important; 
+  /* A subtle, luxurious gradient from your dark color to a muted gold */
+  background-image: linear-gradient(45deg, var(--bs-dark), #594f3b);
+
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+  border: none;
+
+  /* Using !important to ensure the corner radius applies over any other style */
+  border-radius: 1rem !important;
 }
 
-
 .carousel .carousel-item img {
-    object-fit: cover;
+  object-fit: cover;
 }
 
 .carousel .carousel-item,
 .carousel .carousel-item img {
-    height: 700px;
+  height: 700px;
 }
 
 .carousel-item .carousel-caption {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.453);
-    display: flex;
-    align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.453);
+  display: flex;
+  align-items: center;
 }
 
 .carousel .carousel-indicators {
-    left: 80%;
-    top: 50%;
-    /* margin-right: 25%; */
-    transform: translateY(-50%);
-    flex-direction: column;
+  left: 80%;
+  top: 50%;
+  /* margin-right: 25%; */
+  transform: translateY(-50%);
+  flex-direction: column;
 }
 
 .carousel-indicators [data-bs-target] {
-    display: flex;
-    width: 15px;
-    height: 15px;
-    border: 6px solid var(--bs-white);
-    border-radius: 15px;
-    padding: 0;
-    margin-top:10px;
-    margin-bottom:10px;
-    background-color: var(--bs-primary);
-    opacity: 1;
-    transition: 0.5s;
+  display: flex;
+  width: 15px;
+  height: 15px;
+  border: 6px solid var(--bs-white);
+  border-radius: 15px;
+  padding: 0;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: var(--bs-primary);
+  opacity: 1;
+  transition: 0.5s;
 }
 .carousel .btn-booknow {
   background-color: var(--bs-secondary);
-    border-color: var(--bs-secondary);
-    color: var(--bs-dark);
-    font-weight: bold;
+  border-color: var(--bs-secondary);
+  color: var(--bs-dark);
+  font-weight: bold;
 }
 .carousel .btn-booknow:hover {
-    background-color: var(--bs-primary);
-    border-color: var(--bs-primary);
-    color: var(--bs-light);
-    font-weight: bold;
+  background-color: var(--bs-primary);
+  border-color: var(--bs-primary);
+  color: var(--bs-light);
+  font-weight: bold;
 }
 
 .carousel-indicators [data-bs-target].active {
-    background-color: var(--bs-secondary);
+  background-color: var(--bs-secondary);
 }
 
-
 @media (max-width: 992px) {
-    .carousel-indicators [data-bs-target] {
-        display: none;
-    }
+  .carousel-indicators [data-bs-target] {
+    display: none;
+  }
 }
 /*** Carousel Header End ***/
 
+/*** About Start ***/
+.about .about-item h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--bs-dark);
+  margin-bottom: 20px;
+}
+.about .about-item span {
+  color: var(--bs-primary);
+}
+
+
+
+.about .about-item .btn {
+  color: var(--bs-dark);
+  font-weight: bold;
+  background-color: var(--bs-secondary);
+}
+.about .about-item .btn:hover {
+  color: var(--bs-light);
+  background-color: var(--bs-primary);
+}
+
+.about .about-item .about-item-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 10px;
+  background: var(--bs-light);
+  transition: 0.5s;
+}
+
+.about .about-item .about-item-inner .about-icon {
+  width: 90px;
+  height: 90px;
+  border-radius: 67% 33% 29% 71% / 39% 46% 54% 61%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--bs-secondary);
+  background: var(--bs-primary);
+  animation-name: icon-animat;
+  animation-duration: 5s;
+  animation-delay: 1s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  transition: 0.5s;
+}
+
+.about .about-img {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.about .about-img .img-1 {
+  height: 85%;
+  margin-right: 50px;
+}
+
+.about .about-img .img-2 {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  right: 0;
+  padding-left: 50px;
+  border-radius: 10px;
+}
+
+.about .about-img::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 98%;
+  top: 0;
+  right: 0;
+  border-radius: 10px;
+  background: var(--bs-primary);
+  z-index: -1;
+}
+
+.about .about-item .text-item {
+  position: relative;
+  padding-left: 25px;
+}
+
+.about .about-item .text-item::after {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 10px;
+  background: var(--bs-secondary);
+}
+/*** About End ***/

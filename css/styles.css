@@ -6,6 +6,24 @@
   --bs-dark: #343a40; /* Dark text color */
 }
 
+
+/* =====================================================
+   Reusable Section Title Style
+   ===================================================== */
+.section-title {
+  /* Use the 'Montserrat' font you imported from Google Fonts */
+    font-size: 2.5rem;
+  font-weight: 600;     /* Bold weight */
+  color: var(--bs-dark);  /* Use the dark color from your variables */
+ 
+  text-align: center;     /* Center the title */
+}
+
+/* This styles the colored part of the title (like 'Us' in 'About Us') */
+.section-title span {
+  color: var(--bs-primary); /* Use the primary gold/yellow color */
+}
+
 /* =====================================================
    Topbar Custom Styling
    ===================================================== */
@@ -522,6 +540,14 @@
     transition: 0.5s;
 }
 
+.categories h1 {
+
+  color: var(--bs-dark) !important;
+  transition: color 0.5s ease, font-weight 0.5s ease;
+}
+.categories span {
+  color: var(--bs-primary);
+}
 .categories .categories-item:hover {
     border: 1px solid var(--bs-primary);
 }

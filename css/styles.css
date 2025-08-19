@@ -475,3 +475,34 @@
   opacity: 1;
   transform: translate(0, 0); /* Move to final position */
 }
+
+
+/*** Fact Counter Start ***/
+.counter {
+    /* background: linear-gradient(rgb(0, 12, 33), rgba(31, 46, 78, 0.823)), url(../img/fact-bg.jpg); */
+    background-color: #f8f9fa;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.counter .counter-item .counter-item-icon {
+    width: 90px; 
+    height: 90px; 
+    border-radius: 67% 33% 29% 71% / 39% 46% 54% 61%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--bs-secondary);
+    background: var(--bs-primary);
+    animation-name: icon-animat;
+    animation-duration: 5s;
+    animation-delay: 1s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    transition: 0.5s;
+}
+
+/*** Fact Counter End ***/
+
+

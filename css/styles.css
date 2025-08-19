@@ -350,8 +350,10 @@
   color: var(--bs-primary);
 }
 
-
-
+/* Custom style for the experience box */
+.about .experience-box {
+  background-color: var(--bs-primary); /* Example: Black background */
+}
 .about .about-item .btn {
   color: var(--bs-dark);
   font-weight: bold;
@@ -439,3 +441,37 @@
   background: var(--bs-secondary);
 }
 /*** About End ***/
+
+
+/* =====================================================
+  Custom Scroll Animation
+   ===================================================== */
+
+.scroll-animate {
+  opacity: 0;
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+
+.scroll-animate.fade-up {
+  transform: translateY(50px); /* Start 50px below final position */
+}
+
+.scroll-animate.fade-down {
+  transform: translateY(-50px); /* Start 50px above final position */
+}
+
+.scroll-animate.fade-left {
+  transform: translateX(50px); /* Start 50px to the right */
+}
+
+.scroll-animate.fade-right {
+  transform: translateX(-50px); /* Start 50px to the left */
+}
+
+/* This is the final, visible state.
+   When this class is added by JavaScript, the transition happens. */
+.scroll-animate.is-visible {
+  opacity: 1;
+  transform: translate(0, 0); /* Move to final position */
+}

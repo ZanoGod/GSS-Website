@@ -1,0 +1,40 @@
+/* About Page Custom Styles */
+
+/* CEO Profile */
+.ceo-img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Client Carousel */
+.client-carousel img {
+  max-height: 100px;
+  margin: 0 auto;
+  display: inline-block;
+  filter: grayscale(100%);
+  transition: all 0.3s ease;
+}
+
+.client-carousel img:hover {
+  filter: grayscale(0%);
+  transform: scale(1.05);
+}
+
+
+/* Our Group - Company Cards */
+.group-card {
+  background: #fff;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+.group-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+.group-card img {
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+}

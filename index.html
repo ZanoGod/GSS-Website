@@ -1,714 +1,617 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Golden Support Service</title>
 
-    <!--- Bootstrap CSS -->
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Golden Support Service</title>
 
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
+  <!--- Bootstrap CSS -->
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
 
-    <!-- Libraries Stylesheet -->
+  <!-- Google Web Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
+
+  <!-- Libraries Stylesheet -->
   <link href="lib/animate/animate.min.css" rel="stylesheet">
   <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 
-    <!-- Fontawesome -->
-    <link href="./fontawesome/css/all.min.css" rel="stylesheet" />
-    <link href="./fontawesome/css/brands.css" rel="stylesheet" />
-    <link href="./fontawesome/css/fontawesome.min.css" rel="stylesheet" />
+  <!-- Fontawesome -->
+  <link href="./fontawesome/css/all.min.css" rel="stylesheet" />
+  <link href="./fontawesome/css/brands.css" rel="stylesheet" />
+  <link href="./fontawesome/css/fontawesome.min.css" rel="stylesheet" />
 
-    <!-- Bootstrap Icons CDN -->
-    <link rel="stylesheet" href="bootstrap/icons/bootstrap-icons.css" />
-    <!-- custom css -->
-    <link rel="stylesheet" href="css/styles.css" />
-    <link rel="stylesheet" href="css/service.css" />
-  </head>
+  <!-- Bootstrap Icons CDN -->
+  <link rel="stylesheet" href="bootstrap/icons/bootstrap-icons.css" />
+  <!-- custom css -->
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/service.css" />
+</head>
 
-  <body>
-    <div class="preloader">
-      <div class="loader"></div>
-    </div>
+<body>
+  <div class="preloader">
+    <div class="loader"></div>
+  </div>
 
-    <!-- Topbar Start -->
-    <div include-html="items/topbar.html"></div>
-    <!-- Topbar End -->
+  <!-- Topbar Start -->
+  <div include-html="items/topbar.html"></div>
+  <!-- Topbar End -->
 
-    <!-- Navbar & Hero Start -->
-    <div class="container-fluid nav-bar sticky-top px-0 px-lg-4 py-2 py-lg-0">
-      <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-light">
-          <a href="" class="navbar-brand p-0">
-            <h3 class="display-6">
-              <!--<i class="fas fa-car-alt me-3"></i></i>-->
-              <!-- <img src="img/gss-logo-navbar.png" alt="Logo" /> -->
-              <img
-                src="img/gss-logo-navbar.png"
-                alt="Golden Support Service Logo"
-              />
-              GSS Rent a Car
-            </h3>
-          </a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarCollapse"
-          >
-            <span class="fa fa-bars"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <div class="navbar-nav mx-auto py-0">
-              <a href="index.html" class="nav-item nav-link active">Home</a>
-              <a href="./pages/about.html" class="nav-item nav-link">About</a>
-              <a href="./pages/service.html" class="nav-item nav-link"
-                >Service</a
-              >
-              <a href="#" class="nav-item nav-link">Blog</a>
+  <!-- Navbar & Hero Start -->
+  <div class="container-fluid nav-bar sticky-top px-0 px-lg-4 py-2 py-lg-0">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <a href="" class="navbar-brand p-0">
+          <h3 class="display-6">
+            <!--<i class="fas fa-car-alt me-3"></i></i>-->
+            <!-- <img src="img/gss-logo-navbar.png" alt="Logo" /> -->
+            <img src="img/gss-logo-navbar.png" alt="Golden Support Service Logo" />
+            GSS Rent a Car
+          </h3>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+          <span class="fa fa-bars"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <div class="navbar-nav mx-auto py-0">
+            <a href="index.html" class="nav-item nav-link active">Home</a>
+            <a href="./pages/about.html" class="nav-item nav-link">About</a>
+            <a href="./pages/service.html" class="nav-item nav-link">Service</a>
+            <a href="#" class="nav-item nav-link">Blog</a>
 
-              <div class="nav-item dropdown">
-                <a
-                  href="#"
-                  class="nav-link dropdown-toggle"
-                  data-bs-toggle="dropdown"
-                  >Pages</a
-                >
-                <div class="dropdown-menu m-0">
-                  <a href="feature.html" class="dropdown-item">Our Feature</a>
-                  <a href="cars.html" class="dropdown-item">Our Cars</a>
-                  <a href="team.html" class="dropdown-item">Our Team</a>
-                  <a href="testimonial.html" class="dropdown-item"
-                    >Testimonial</a
-                  >
-                  <a href="404.html" class="dropdown-item">404 Page</a>
-                </div>
+            <div class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+              <div class="dropdown-menu m-0">
+                <a href="feature.html" class="dropdown-item">Our Feature</a>
+                <a href="cars.html" class="dropdown-item">Our Cars</a>
+                <a href="team.html" class="dropdown-item">Our Team</a>
+                <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                <a href="404.html" class="dropdown-item">404 Page</a>
               </div>
-              <a href="#" class="nav-item nav-link">Contact</a>
             </div>
-            <a href="#" class="btn btn-primary rounded-pill py-2 px-4"
-              >Get Started</a
-            >
+            <a href="#" class="nav-item nav-link">Contact</a>
           </div>
-        </nav>
-      </div>
+          <a href="#" class="btn btn-primary rounded-pill py-2 px-4">Get Started</a>
+        </div>
+      </nav>
     </div>
-    <!-- Navbar & Hero End -->
+  </div>
+  <!-- Navbar & Hero End -->
 
-    <!-- Topbar Start -->
-    <div include-html="items/carousel.html"></div>
-    <!-- Topbar End -->
+  <!-- Topbar Start -->
+  <div include-html="items/carousel.html"></div>
+  <!-- Topbar End -->
 
-    <!-- About Start -->
-    <div class="container-fluid overflow-hidden about py-5">
-      <div class="container py-5">
-        <div class="row g-5">
-          <div class="col-xl-6">
-            <div class="about-item scroll-animate fade-left">
-              <div class="pb-5 section-title">
-                <h1 class="display-5 text-capitalize">
-                  <span>GSS </span>About Us
-                </h1>
-                <p class="mb-0">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut
-                  amet nemo expedita asperiores commodi accusantium at cum
-                  harum, excepturi, quia tempora cupiditate! Adipisci facilis
-                  modi quisquam quia distinctio,
-                </p>
-              </div>
-              <div class="row g-4">
-                <div class="col-lg-6">
-                  <div class="about-item-inner border p-4">
-                    <div class="about-icon mb-4">
-                      <i class="bi bi-bullseye fs-1 text-black"></i>
-                    </div>
-                    <h5 class="mb-3">Our Vision</h5>
-                    <p class="mb-0">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    </p>
-                  </div>
-                </div>
-                <div class="col-lg-6">
-                  <div class="about-item-inner border p-4">
-                    <div class="about-icon mb-4">
-                      <img
-                        src="img/target_icon.png"
-                        class="img-fluid h-50 w-50"
-                        alt="Icon"
-                      />
-                    </div>
-                    <h5 class="mb-3">Our Mision</h5>
-                    <p class="mb-0">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <p class="text-item my-4">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Beatae, aliquam ipsum. Sed suscipit dolorem libero sequi aut
-                natus debitis reprehenderit facilis quaerat similique, est at in
-                eum. Quo, obcaecati in!
+  <!-- About Start -->
+  <div class="container-fluid overflow-hidden about py-5">
+    <div class="container py-5">
+      <div class="row g-5">
+        <div class="col-xl-6">
+          <div class="about-item scroll-animate fade-left">
+            <div class="pb-5 section-title">
+              <h1 class="display-5 text-capitalize">
+                <span>GSS </span>About Us
+              </h1>
+              <p class="mb-0">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut
+                amet nemo expedita asperiores commodi accusantium at cum
+                harum, excepturi, quia tempora cupiditate! Adipisci facilis
+                modi quisquam quia distinctio,
               </p>
-              <div class="row g-4">
-                <div class="col-lg-6">
-                  <div class="text-center rounded p-4 experience-box">
-                    <h1 class="display-6 text-white">17+</h1>
-                    <h5 class="text-light mb-0">Years Of Experience</h5>
+            </div>
+            <div class="row g-4">
+              <div class="col-lg-6">
+                <div class="about-item-inner border p-4">
+                  <div class="about-icon mb-4">
+                    <i class="bi bi-bullseye fs-1 text-black"></i>
                   </div>
+                  <h5 class="mb-3">Our Vision</h5>
+                  <p class="mb-0">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  </p>
                 </div>
-                <div class="col-lg-6">
-                  <div class="rounded">
-                    <p class="mb-2">
-                      <i class="fa fa-check-circle text-primary me-1"></i> Morbi
-                      tristique senectus
-                    </p>
-                    <p class="mb-2">
-                      <i class="fa fa-check-circle text-primary me-1"></i> A
-                      scelerisque purus
-                    </p>
-                    <p class="mb-2">
-                      <i class="fa fa-check-circle text-primary me-1"></i>
-                      Dictumst vestibulum
-                    </p>
-                    <p class="mb-0">
-                      <i class="fa fa-check-circle text-primary me-1"></i> dio
-                      aenean sed adipiscing
-                    </p>
+              </div>
+              <div class="col-lg-6">
+                <div class="about-item-inner border p-4">
+                  <div class="about-icon mb-4">
+                    <img src="img/target_icon.png" class="img-fluid h-50 w-50" alt="Icon" />
                   </div>
+                  <h5 class="mb-3">Our Mision</h5>
+                  <p class="mb-0">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  </p>
                 </div>
-                <div class="col-lg-5 d-flex align-items-center">
-                  <a href="pages/about.html" class="btn rounded py-3 px-5"
-                    >More About Us</a
-                  >
+              </div>
+            </div>
+            <p class="text-item my-4">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Beatae, aliquam ipsum. Sed suscipit dolorem libero sequi aut
+              natus debitis reprehenderit facilis quaerat similique, est at in
+              eum. Quo, obcaecati in!
+            </p>
+            <div class="row g-4">
+              <div class="col-lg-6">
+                <div class="text-center rounded p-4 experience-box">
+                  <h1 class="display-6 text-white">17+</h1>
+                  <h5 class="text-light mb-0">Years Of Experience</h5>
                 </div>
-                <div class="col-lg-7">
-                  <div class="d-flex align-items-center">
-                    <img
-                      src="img/U_Ni.jpg"
-                      class="img-fluid rounded-circle border border-4 border-secondary"
-                      style="width: 100px; height: 100px"
-                      alt="Image"
-                    />
-                    <div class="ms-4">
-                      <h4>U Ni Htwe</h4>
-                      <p class="mb-0">Founder</p>
-                    </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="rounded">
+                  <p class="mb-2">
+                    <i class="fa fa-check-circle text-primary me-1"></i> Morbi
+                    tristique senectus
+                  </p>
+                  <p class="mb-2">
+                    <i class="fa fa-check-circle text-primary me-1"></i> A
+                    scelerisque purus
+                  </p>
+                  <p class="mb-2">
+                    <i class="fa fa-check-circle text-primary me-1"></i>
+                    Dictumst vestibulum
+                  </p>
+                  <p class="mb-0">
+                    <i class="fa fa-check-circle text-primary me-1"></i> dio
+                    aenean sed adipiscing
+                  </p>
+                </div>
+              </div>
+              <div class="col-lg-5 d-flex align-items-center">
+                <a href="pages/about.html" class="btn rounded py-3 px-5">More About Us</a>
+              </div>
+              <div class="col-lg-7">
+                <div class="d-flex align-items-center">
+                  <img src="img/U_Ni.jpg" class="img-fluid rounded-circle border border-4 border-secondary"
+                    style="width: 100px; height: 100px" alt="Image" />
+                  <div class="ms-4">
+                    <h4>U Ni Htwe</h4>
+                    <p class="mb-0">Founder</p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col-xl-6 scroll-animate fade-right">
-            <div class="about-img">
-              <div class="img-1">
-                <img
-                  src="img/about-img.jpg"
-                  class="img-fluid rounded h-100 w-100"
-                  alt=""
-                />
-              </div>
-              <div class="img-2">
-                <img
-                  src="img/about-img-1.jpg"
-                  class="img-fluid rounded w-100"
-                  alt=""
-                />
-              </div>
+        </div>
+        <div class="col-xl-6 scroll-animate fade-right">
+          <div class="about-img">
+            <div class="img-1">
+              <img src="img/about-img.jpg" class="img-fluid rounded h-100 w-100" alt="" />
+            </div>
+            <div class="img-2">
+              <img src="img/about-img-1.jpg" class="img-fluid rounded w-100" alt="" />
             </div>
           </div>
         </div>
       </div>
     </div>
-    <!-- About End -->
+  </div>
+  <!-- About End -->
 
-    <!-- Service Section Start -->
-    <section class="py-5 bg-light">
-      <div class="container">
-        <!-- Section Title -->
-        <div class="text-center mb-5 scroll-animate fade-up section-title">
-          <h1 class="fw-bold"><span>GSS</span> Services</h1>
-          <p class="text-muted">
-            Professional, reliable, and always ready to serve you anywhere in
-            Myanmar.
-          </p>
-        </div>
+  <!-- Service Section Start -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <!-- Section Title -->
+      <div class="text-center mb-5 scroll-animate fade-up section-title">
+        <h1 class="fw-bold"><span>GSS</span> Services</h1>
+        <p class="text-muted">
+          Professional, reliable, and always ready to serve you anywhere in
+          Myanmar.
+        </p>
+      </div>
 
-        <!-- Services Grid -->
-        <div class="row g-4">
-          <!-- Car & Driver Rental -->
-          <div class="col-md-4 scroll-animate fade-right">
-            <div class="service-card p-4 text-center h-100">
-              <div class="icon mb-3">
-                <!-- <i class="bi bi-car-front-fill fs-1 text-primary"></i> -->
-                <i class="fa-solid fa-car fs-1 icon-green"></i>
-              </div>
-              <h5 class="fw-bold">Car & Driver Rental</h5>
-              <p class="text-muted">
-                Daily and monthly rentals for Yangon, Bago, Mandalay, Naypyitaw,
-                and more. Experienced drivers and well-maintained vehicles for
-                safe and comfortable journeys.
-              </p>
-              <a href="pages/service.html" class="text-primary fw-semibold text-decoration-none"
-                >Learn More →</a
-              >
+      <!-- Services Grid -->
+      <div class="row g-4">
+        <!-- Car & Driver Rental -->
+        <div class="col-md-4 scroll-animate fade-right">
+          <div class="service-card p-4 text-center h-100">
+            <div class="icon mb-3">
+              <!-- <i class="bi bi-car-front-fill fs-1 text-primary"></i> -->
+              <i class="fa-solid fa-car fs-1 icon-green"></i>
             </div>
-          </div>
-
-          <!-- Petrol Delivery -->
-          <div class="col-md-4 scroll-animate fade-up">
-            <div class="service-card p-4 text-center h-100">
-              <div class="icon mb-3">
-                <i class="bi bi-fuel-pump fs-1 icon-blue"></i>
-              </div>
-              <h5 class="fw-bold">Petrol Delivery Service</h5>
-              <p class="text-muted">
-                Fast, safe, and convenient fuel delivery to your location
-                whenever you need it. No more delays or hassle — we bring the
-                petrol to you.
-              </p>
-              <a href="pages/service.html" class="text-primary fw-semibold text-decoration-none"
-                >Learn More →</a
-              >
-            </div>
-          </div>
-
-          <!-- 24/7 Support -->
-          <div class="col-md-4 scroll-animate fade-left">
-            <div class="service-card p-4 text-center h-100">
-              <div class="icon mb-3">
-                <i class="bi bi-headset fs-1 icon-gray"></i>
-              </div>
-              <h5 class="fw-bold">24/7 Service Support</h5>
-              <p class="text-muted">
-                Our dedicated team is always available to assist you, day or
-                night, ensuring your travel and fuel needs are met without
-                interruption. We provide support in <strong>Japanese</strong>,
-                <strong>English</strong>, and <strong>Burmese</strong>
-                so you can communicate with us in the language you are most
-                comfortable with.
-              </p>
-              <a href="pages/service.html" class="text-primary fw-semibold text-decoration-none"
-                >Learn More →</a
-              >
-            </div>
+            <h5 class="fw-bold">Car & Driver Rental</h5>
+            <p class="text-muted">
+              Daily and monthly rentals for Yangon, Bago, Mandalay, Naypyitaw,
+              and more. Experienced drivers and well-maintained vehicles for
+              safe and comfortable journeys.
+            </p>
+            <a href="pages/service.html" class="text-primary fw-semibold text-decoration-none">Learn More →</a>
           </div>
         </div>
 
-        <!-- Additional Services Grid -->
-        <div class="row g-4 mt-2">
-          <!-- Payment Method -->
-          <div class="col-md-4 scroll-animate fade-left">
-            <div class="service-card p-4 text-center h-100">
-              <div class="icon mb-3">
-                <i class="bi bi-credit-card fs-1 icon-purple"></i>
-              </div>
-              <h5 class="fw-bold">Choose Your Preferred Payment</h5>
-              <p class="text-muted">
-                Flexible and secure payment options including cash, bank
-                transfer, and digital wallets — whatever works best for you.
-              </p>
-              <a href="pages/service.html" class="text-primary fw-semibold text-decoration-none"
-                >Learn More →</a
-              >
+        <!-- Petrol Delivery -->
+        <div class="col-md-4 scroll-animate fade-up">
+          <div class="service-card p-4 text-center h-100">
+            <div class="icon mb-3">
+              <i class="bi bi-fuel-pump fs-1 icon-blue"></i>
             </div>
+            <h5 class="fw-bold">Petrol Delivery Service</h5>
+            <p class="text-muted">
+              Fast, safe, and convenient fuel delivery to your location
+              whenever you need it. No more delays or hassle — we bring the
+              petrol to you.
+            </p>
+            <a href="pages/service.html" class="text-primary fw-semibold text-decoration-none">Learn More →</a>
           </div>
+        </div>
 
-          <!-- Driver Training -->
-          <div class="col-md-4 scroll-animate fade-up">
-            <div class="service-card p-4 text-center h-100">
-              <div class="icon mb-3">
-                <i class="bi bi-person-lines-fill fs-1 icon-yellow"></i>
-              </div>
-              <h5 class="fw-bold">Driver Training Programs</h5>
-              <p class="text-muted">
-                Comprehensive training for drivers to ensure safety,
-                professionalism, and confidence on the road.
-              </p>
-              <a href="pages/service.html" class="text-primary fw-semibold text-decoration-none"
-                >Learn More →</a
-              >
+        <!-- 24/7 Support -->
+        <div class="col-md-4 scroll-animate fade-left">
+          <div class="service-card p-4 text-center h-100">
+            <div class="icon mb-3">
+              <i class="bi bi-headset fs-1 icon-gray"></i>
             </div>
-          </div>
-
-          <!-- Vehicle Maintenance -->
-          <div class="col-md-4 scroll-animate fade-right">
-            <div class="service-card p-4 text-center h-100">
-              <div class="icon mb-3">
-                <i class="bi bi-tools fs-1 icon-red"></i>
-              </div>
-              <h5 class="fw-bold">Vehicle Maintenance & Management</h5>
-              <p class="text-muted">
-                Regular inspections, servicing, and proactive management to keep
-                your vehicles in top condition.
-              </p>
-              <a href="pages/service.html" class="text-primary fw-semibold text-decoration-none"
-                >Learn More →</a
-              >
-            </div>
+            <h5 class="fw-bold">
+              <span>24/7 Service And</span><br>
+              <span>Additional Service Support</span>
+            </h5>
+            <p class="text-muted">
+              Additional Support Request!! We provide support in <strong>Japanese</strong>,
+              <strong>English</strong>, and <strong>Burmese</strong>
+              so you can communicate with us in the language you are most
+              comfortable with.
+            </p>
+            <a href="pages/service.html" class="text-primary fw-semibold text-decoration-none">Learn More →</a>
           </div>
         </div>
       </div>
-    </section>
 
-    <!-- Fact Counter -->
-    <div class="container-fluid counter py-5">
-      <div class="container py-5 scroll-animate fade-down">
-        <div class="row g-5">
-          <div class="col-md-6 col-lg-6 col-xl-3">
-            <div class="counter-item text-center">
-              <div class="counter-item-icon mx-auto">
-                <i class="fas fa-thumbs-up fa-2x text-dark"></i>
-              </div>
-              <div class="counter-counting my-3">
-                <span class="text-white fs-2 fw-bold" data-toggle="counter-up"
-                  >55</span
-                >
-                <span class="h1 fw-bold text-white">+</span>
-              </div>
-              <h4 class="text-white mb-0">Employees</h4>
+      <!-- Additional Services Grid -->
+      <div class="row g-4 mt-2">
+        <!-- Payment Method -->
+        <div class="col-md-4 scroll-animate fade-left">
+          <div class="service-card p-4 text-center h-100">
+            <div class="icon mb-3">
+              <i class="bi bi-credit-card fs-1 icon-purple"></i>
             </div>
+            <h5 class="fw-bold">Choose Your Preferred Payment</h5>
+            <p class="text-muted">
+              Flexible and secure payment options including cash, bank
+              transfer, and digital wallets — whatever works best for you.
+            </p>
+            <a href="pages/service.html" class="text-primary fw-semibold text-decoration-none">Learn More →</a>
           </div>
-          <div
-            class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp"
-            data-wow-delay="0.3s"
-          >
-            <div class="counter-item text-center">
-              <div class="counter-item-icon mx-auto">
-                <i class="fas fa-car-alt fa-2x text-dark"></i>
-              </div>
-              <div class="counter-counting my-3">
-                <span class="text-white fs-2 fw-bold" data-toggle="counter-up"
-                  >56</span
-                >
-                <span class="h1 fw-bold text-white">+</span>
-              </div>
-              <h4 class="text-white mb-0">Royal Clients</h4>
+        </div>
+
+        <!-- Driver Training -->
+        <div class="col-md-4 scroll-animate fade-up">
+          <div class="service-card p-4 text-center h-100">
+            <div class="icon mb-3">
+              <i class="bi bi-person-lines-fill fs-1 icon-yellow"></i>
             </div>
+            <h5 class="fw-bold">Driver Training Programs</h5>
+            <p class="text-muted">
+              Comprehensive training for drivers to ensure safety,
+              professionalism, and confidence on the road.
+            </p>
+            <a href="pages/service.html" class="text-primary fw-semibold text-decoration-none">Learn More →</a>
           </div>
-          <div
-            class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp"
-            data-wow-delay="0.5s"
-          >
-            <div class="counter-item text-center">
-              <div class="counter-item-icon mx-auto">
-                <i class="fas fa-building fa-2x text-dark"></i>
-              </div>
-              <div class="counter-counting my-3">
-                <span class="text-white fs-2 fw-bold" data-toggle="counter-up"
-                  >127</span
-                >
-                <span class="h1 fw-bold text-white">+</span>
-              </div>
-              <h4 class="text-white mb-0">Car available</h4>
+        </div>
+
+        <!-- Vehicle Maintenance -->
+        <div class="col-md-4 scroll-animate fade-right">
+          <div class="service-card p-4 text-center h-100">
+            <div class="icon mb-3">
+              <i class="bi bi-tools fs-1 icon-red"></i>
             </div>
-          </div>
-          <div
-            class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp"
-            data-wow-delay="0.7s"
-          >
-            <div class="counter-item text-center">
-              <div class="counter-item-icon mx-auto">
-                <i class="fas fa-clock fa-2x text-dark"></i>
-              </div>
-              <div class="counter-counting my-3">
-                <span class="text-white fs-2 fw-bold" data-toggle="counter-up"
-                  >5589</span
-                >
-                <span class="h1 fw-bold text-white">+</span>
-              </div>
-              <h4 class="text-white mb-0">Total Services Hours</h4>
-            </div>
+            <h5 class="fw-bold">Vehicle Maintenance & Management</h5>
+            <p class="text-muted">
+              Regular inspections, servicing, and proactive management to keep
+              your vehicles in top condition.
+            </p>
+            <a href="pages/service.html" class="text-primary fw-semibold text-decoration-none">Learn More →</a>
           </div>
         </div>
       </div>
     </div>
-    <!-- Fact Counter -->
+  </section>
 
-    <!-- Car categories Start -->
-    <div class="container-fluid categories pb-5">
-      <div class="container pb-5 py-5 ">
-        <div
-          class="text-center mx-auto pb-5 wow fadeInUp section-title scroll-animate fade-left">
-          <h1>
+  <!-- Fact Counter -->
+  <div class="container-fluid counter py-5">
+    <div class="container py-5 scroll-animate fade-down">
+      <div class="row g-5">
+        <div class="col-md-6 col-lg-6 col-xl-3">
+          <div class="counter-item text-center">
+            <div class="counter-item-icon mx-auto">
+              <i class="fas fa-thumbs-up fa-2x text-dark"></i>
+            </div>
+            <div class="counter-counting my-3">
+              <span class="text-white fs-2 fw-bold" data-toggle="counter-up">55</span>
+              <span class="h1 fw-bold text-white">+</span>
+            </div>
+            <h4 class="text-white mb-0">Employees</h4>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
+          <div class="counter-item text-center">
+            <div class="counter-item-icon mx-auto">
+              <i class="fas fa-car-alt fa-2x text-dark"></i>
+            </div>
+            <div class="counter-counting my-3">
+              <span class="text-white fs-2 fw-bold" data-toggle="counter-up">56</span>
+              <span class="h1 fw-bold text-white">+</span>
+            </div>
+            <h4 class="text-white mb-0">Royal Clients</h4>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
+          <div class="counter-item text-center">
+            <div class="counter-item-icon mx-auto">
+              <i class="fas fa-building fa-2x text-dark"></i>
+            </div>
+            <div class="counter-counting my-3">
+              <span class="text-white fs-2 fw-bold" data-toggle="counter-up">127</span>
+              <span class="h1 fw-bold text-white">+</span>
+            </div>
+            <h4 class="text-white mb-0">Car available</h4>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.7s">
+          <div class="counter-item text-center">
+            <div class="counter-item-icon mx-auto">
+              <i class="fas fa-clock fa-2x text-dark"></i>
+            </div>
+            <div class="counter-counting my-3">
+              <span class="text-white fs-2 fw-bold" data-toggle="counter-up">5589</span>
+              <span class="h1 fw-bold text-white">+</span>
+            </div>
+            <h4 class="text-white mb-0">Total Services Hours</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Fact Counter -->
+
+  <!-- Car categories Start -->
+  <div class="container-fluid categories pb-5">
+    <div class="container pb-5 py-5 ">
+      <div class="text-center mx-auto pb-5 wow fadeInUp section-title scroll-animate fade-left">
+        <h1>
           Vehicle<span> Categories</span>
-          </h1>
-          <p class="mb-0">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut amet
-            nemo expedita asperiores commodi accusantium at cum harum,
-            excepturi, quia tempora cupiditate! Adipisci facilis modi quisquam
-            quia distinctio,
-          </p>
+        </h1>
+        <p class="mb-0">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut amet
+          nemo expedita asperiores commodi accusantium at cum harum,
+          excepturi, quia tempora cupiditate! Adipisci facilis modi quisquam
+          quia distinctio,
+        </p>
+      </div>
+      <div class="categories-carousel owl-carousel wow  scroll-animate fade-down">
+        <div class="categories-item p-4">
+          <div class="categories-item-inner">
+            <div class="categories-img rounded-top">
+              <img src="img/car-1.png" class="img-fluid w-100 rounded-top" alt="" />
+            </div>
+            <div class="categories-content rounded-bottom p-4">
+              <h4>Mercedes Benz R3</h4>
+              <div class="categories-review mb-4">
+                <div class="me-3">4.5 Review</div>
+                <div class="d-flex justify-content-center text-secondary">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star text-body"></i>
+                </div>
+              </div>
+              <div class="mb-4">
+                <h4 class="bg-white text-primary rounded-pill py-2 px-4 mb-0">
+                  $99:00/Day
+                </h4>
+              </div>
+              <div class="row gy-2 gx-0 text-center mb-4">
+                <div class="col-4 border-end border-white">
+                  <i class="fa fa-users text-dark"></i>
+                  <span class="text-body ms-1">4 Seat</span>
+                </div>
+                <div class="col-4 border-end border-white">
+                  <i class="fa fa-car text-dark"></i>
+                  <span class="text-body ms-1">AT/MT</span>
+                </div>
+                <div class="col-4">
+                  <i class="fa fa-gas-pump text-dark"></i>
+                  <span class="text-body ms-1">Petrol</span>
+                </div>
+                <div class="col-4 border-end border-white">
+                  <i class="fa fa-car text-dark"></i>
+                  <span class="text-body ms-1">2015</span>
+                </div>
+                <div class="col-4 border-end border-white">
+                  <i class="fa fa-cogs text-dark"></i>
+                  <span class="text-body ms-1">AUTO</span>
+                </div>
+                <div class="col-4">
+                  <i class="fa fa-road text-dark"></i>
+                  <span class="text-body ms-1">27K</span>
+                </div>
+              </div>
+              <a href="#" class="btn btn-primary rounded-pill d-flex justify-content-center py-3">Book Now</a>
+            </div>
+          </div>
         </div>
-        <div
-          class="categories-carousel owl-carousel wow  scroll-animate fade-down">
-          <div class="categories-item p-4">
-            <div class="categories-item-inner">
-              <div class="categories-img rounded-top">
-                <img
-                  src="img/car-1.png"
-                  class="img-fluid w-100 rounded-top"
-                  alt=""/>
+        <div class="categories-item p-4">
+          <div class="categories-item-inner">
+            <div class="categories-img rounded-top">
+              <img src="img/car-2.png" class="img-fluid w-100 rounded-top" alt="" />
+            </div>
+            <div class="categories-content rounded-bottom p-4">
+              <h4>Toyota Corolla Cross</h4>
+              <div class="categories-review mb-4">
+                <div class="me-3">3.5 Review</div>
+                <div class="d-flex justify-content-center text-secondary">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star text-body"></i>
+                </div>
               </div>
-              <div class="categories-content rounded-bottom p-4">
-                <h4>Mercedes Benz R3</h4>
-                <div class="categories-review mb-4">
-                  <div class="me-3">4.5 Review</div>
-                  <div class="d-flex justify-content-center text-secondary">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star text-body"></i>
-                  </div>
-                </div>
-                <div class="mb-4">
-                  <h4 class="bg-white text-primary rounded-pill py-2 px-4 mb-0">
-                    $99:00/Day
-                  </h4>
-                </div>
-                <div class="row gy-2 gx-0 text-center mb-4">
-                  <div class="col-4 border-end border-white">
-                    <i class="fa fa-users text-dark"></i>
-                    <span class="text-body ms-1">4 Seat</span>
-                  </div>
-                  <div class="col-4 border-end border-white">
-                    <i class="fa fa-car text-dark"></i>
-                    <span class="text-body ms-1">AT/MT</span>
-                  </div>
-                  <div class="col-4">
-                    <i class="fa fa-gas-pump text-dark"></i>
-                    <span class="text-body ms-1">Petrol</span>
-                  </div>
-                  <div class="col-4 border-end border-white">
-                    <i class="fa fa-car text-dark"></i>
-                    <span class="text-body ms-1">2015</span>
-                  </div>
-                  <div class="col-4 border-end border-white">
-                    <i class="fa fa-cogs text-dark"></i>
-                    <span class="text-body ms-1">AUTO</span>
-                  </div>
-                  <div class="col-4">
-                    <i class="fa fa-road text-dark"></i>
-                    <span class="text-body ms-1">27K</span>
-                  </div>
-                </div>
-                <a
-                  href="#"
-                  class="btn btn-primary rounded-pill d-flex justify-content-center py-3"
-                  >Book Now</a
-                >
+              <div class="mb-4">
+                <h4 class="bg-white text-primary rounded-pill py-2 px-4 mb-0">
+                  $128:00/Day
+                </h4>
               </div>
+              <div class="row gy-2 gx-0 text-center mb-4">
+                <div class="col-4 border-end border-white">
+                  <i class="fa fa-users text-dark"></i>
+                  <span class="text-body ms-1">4 Seat</span>
+                </div>
+                <div class="col-4 border-end border-white">
+                  <i class="fa fa-car text-dark"></i>
+                  <span class="text-body ms-1">AT/MT</span>
+                </div>
+                <div class="col-4">
+                  <i class="fa fa-gas-pump text-dark"></i>
+                  <span class="text-body ms-1">Petrol</span>
+                </div>
+                <div class="col-4 border-end border-white">
+                  <i class="fa fa-car text-dark"></i>
+                  <span class="text-body ms-1">2015</span>
+                </div>
+                <div class="col-4 border-end border-white">
+                  <i class="fa fa-cogs text-dark"></i>
+                  <span class="text-body ms-1">AUTO</span>
+                </div>
+                <div class="col-4">
+                  <i class="fa fa-road text-dark"></i>
+                  <span class="text-body ms-1">27K</span>
+                </div>
+              </div>
+              <a href="#" class="btn btn-primary rounded-pill d-flex justify-content-center py-3">Book Now</a>
             </div>
           </div>
-          <div class="categories-item p-4">
-            <div class="categories-item-inner">
-              <div class="categories-img rounded-top">
-                <img
-                  src="img/car-2.png"
-                  class="img-fluid w-100 rounded-top"
-                  alt=""
-                />
+        </div>
+        <div class="categories-item p-4">
+          <div class="categories-item-inner">
+            <div class="categories-img rounded-top">
+              <img src="img/car-3.png" class="img-fluid w-100 rounded-top" alt="" />
+            </div>
+            <div class="categories-content rounded-bottom p-4">
+              <h4>Tesla Model S Plaid</h4>
+              <div class="categories-review mb-4">
+                <div class="me-3">3.8 Review</div>
+                <div class="d-flex justify-content-center text-secondary">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star text-body"></i>
+                </div>
               </div>
-              <div class="categories-content rounded-bottom p-4">
-                <h4>Toyota Corolla Cross</h4>
-                <div class="categories-review mb-4">
-                  <div class="me-3">3.5 Review</div>
-                  <div class="d-flex justify-content-center text-secondary">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star text-body"></i>
-                  </div>
-                </div>
-                <div class="mb-4">
-                  <h4 class="bg-white text-primary rounded-pill py-2 px-4 mb-0">
-                    $128:00/Day
-                  </h4>
-                </div>
-                <div class="row gy-2 gx-0 text-center mb-4">
-                  <div class="col-4 border-end border-white">
-                    <i class="fa fa-users text-dark"></i>
-                    <span class="text-body ms-1">4 Seat</span>
-                  </div>
-                  <div class="col-4 border-end border-white">
-                    <i class="fa fa-car text-dark"></i>
-                    <span class="text-body ms-1">AT/MT</span>
-                  </div>
-                  <div class="col-4">
-                    <i class="fa fa-gas-pump text-dark"></i>
-                    <span class="text-body ms-1">Petrol</span>
-                  </div>
-                  <div class="col-4 border-end border-white">
-                    <i class="fa fa-car text-dark"></i>
-                    <span class="text-body ms-1">2015</span>
-                  </div>
-                  <div class="col-4 border-end border-white">
-                    <i class="fa fa-cogs text-dark"></i>
-                    <span class="text-body ms-1">AUTO</span>
-                  </div>
-                  <div class="col-4">
-                    <i class="fa fa-road text-dark"></i>
-                    <span class="text-body ms-1">27K</span>
-                  </div>
-                </div>
-                <a
-                  href="#"
-                  class="btn btn-primary rounded-pill d-flex justify-content-center py-3"
-                  >Book Now</a
-                >
+              <div class="mb-4">
+                <h4 class="bg-white text-primary rounded-pill py-2 px-4 mb-0">
+                  $170:00/Day
+                </h4>
               </div>
+              <div class="row gy-2 gx-0 text-center mb-4">
+                <div class="col-4 border-end border-white">
+                  <i class="fa fa-users text-dark"></i>
+                  <span class="text-body ms-1">4 Seat</span>
+                </div>
+                <div class="col-4 border-end border-white">
+                  <i class="fa fa-car text-dark"></i>
+                  <span class="text-body ms-1">AT/MT</span>
+                </div>
+                <div class="col-4">
+                  <i class="fa fa-gas-pump text-dark"></i>
+                  <span class="text-body ms-1">Petrol</span>
+                </div>
+                <div class="col-4 border-end border-white">
+                  <i class="fa fa-car text-dark"></i>
+                  <span class="text-body ms-1">2015</span>
+                </div>
+                <div class="col-4 border-end border-white">
+                  <i class="fa fa-cogs text-dark"></i>
+                  <span class="text-body ms-1">AUTO</span>
+                </div>
+                <div class="col-4">
+                  <i class="fa fa-road text-dark"></i>
+                  <span class="text-body ms-1">27K</span>
+                </div>
+              </div>
+              <a href="#" class="btn btn-primary rounded-pill d-flex justify-content-center py-3">Book Now</a>
             </div>
           </div>
-          <div class="categories-item p-4">
-            <div class="categories-item-inner">
-              <div class="categories-img rounded-top">
-                <img
-                  src="img/car-3.png"
-                  class="img-fluid w-100 rounded-top"
-                  alt=""
-                />
-              </div>
-              <div class="categories-content rounded-bottom p-4">
-                <h4>Tesla Model S Plaid</h4>
-                <div class="categories-review mb-4">
-                  <div class="me-3">3.8 Review</div>
-                  <div class="d-flex justify-content-center text-secondary">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star text-body"></i>
-                  </div>
-                </div>
-                <div class="mb-4">
-                  <h4 class="bg-white text-primary rounded-pill py-2 px-4 mb-0">
-                    $170:00/Day
-                  </h4>
-                </div>
-                <div class="row gy-2 gx-0 text-center mb-4">
-                  <div class="col-4 border-end border-white">
-                    <i class="fa fa-users text-dark"></i>
-                    <span class="text-body ms-1">4 Seat</span>
-                  </div>
-                  <div class="col-4 border-end border-white">
-                    <i class="fa fa-car text-dark"></i>
-                    <span class="text-body ms-1">AT/MT</span>
-                  </div>
-                  <div class="col-4">
-                    <i class="fa fa-gas-pump text-dark"></i>
-                    <span class="text-body ms-1">Petrol</span>
-                  </div>
-                  <div class="col-4 border-end border-white">
-                    <i class="fa fa-car text-dark"></i>
-                    <span class="text-body ms-1">2015</span>
-                  </div>
-                  <div class="col-4 border-end border-white">
-                    <i class="fa fa-cogs text-dark"></i>
-                    <span class="text-body ms-1">AUTO</span>
-                  </div>
-                  <div class="col-4">
-                    <i class="fa fa-road text-dark"></i>
-                    <span class="text-body ms-1">27K</span>
-                  </div>
-                </div>
-                <a
-                  href="#"
-                  class="btn btn-primary rounded-pill d-flex justify-content-center py-3"
-                  >Book Now</a
-                >
-              </div>
+        </div>
+        <div class="categories-item p-4">
+          <div class="categories-item-inner">
+            <div class="categories-img rounded-top">
+              <img src="img/car-4.png" class="img-fluid w-100 rounded-top" alt="" />
             </div>
-          </div>
-          <div class="categories-item p-4">
-            <div class="categories-item-inner">
-              <div class="categories-img rounded-top">
-                <img
-                  src="img/car-4.png"
-                  class="img-fluid w-100 rounded-top"
-                  alt=""
-                />
+            <div class="categories-content rounded-bottom p-4">
+              <h4>Hyundai Kona Electric</h4>
+              <div class="categories-review mb-4">
+                <div class="me-3">4.8 Review</div>
+                <div class="d-flex justify-content-center text-secondary">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
               </div>
-              <div class="categories-content rounded-bottom p-4">
-                <h4>Hyundai Kona Electric</h4>
-                <div class="categories-review mb-4">
-                  <div class="me-3">4.8 Review</div>
-                  <div class="d-flex justify-content-center text-secondary">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                  </div>
-                </div>
-                <div class="mb-4">
-                  <h4 class="bg-white text-primary rounded-pill py-2 px-4 mb-0">
-                    $187:00/Day
-                  </h4>
-                </div>
-                <div class="row gy-2 gx-0 text-center mb-4">
-                  <div class="col-4 border-end border-white">
-                    <i class="fa fa-users text-dark"></i>
-                    <span class="text-body ms-1">4 Seat</span>
-                  </div>
-                  <div class="col-4 border-end border-white">
-                    <i class="fa fa-car text-dark"></i>
-                    <span class="text-body ms-1">AT/MT</span>
-                  </div>
-                  <div class="col-4">
-                    <i class="fa fa-gas-pump text-dark"></i>
-                    <span class="text-body ms-1">Petrol</span>
-                  </div>
-                  <div class="col-4 border-end border-white">
-                    <i class="fa fa-car text-dark"></i>
-                    <span class="text-body ms-1">2015</span>
-                  </div>
-                  <div class="col-4 border-end border-white">
-                    <i class="fa fa-cogs text-dark"></i>
-                    <span class="text-body ms-1">AUTO</span>
-                  </div>
-                  <div class="col-4">
-                    <i class="fa fa-road text-dark"></i>
-                    <span class="text-body ms-1">27K</span>
-                  </div>
-                </div>
-                <a
-                  href="#"
-                  class="btn btn-primary rounded-pill d-flex justify-content-center py-3"
-                >Book Now</a
-                >
+              <div class="mb-4">
+                <h4 class="bg-white text-primary rounded-pill py-2 px-4 mb-0">
+                  $187:00/Day
+                </h4>
               </div>
+              <div class="row gy-2 gx-0 text-center mb-4">
+                <div class="col-4 border-end border-white">
+                  <i class="fa fa-users text-dark"></i>
+                  <span class="text-body ms-1">4 Seat</span>
+                </div>
+                <div class="col-4 border-end border-white">
+                  <i class="fa fa-car text-dark"></i>
+                  <span class="text-body ms-1">AT/MT</span>
+                </div>
+                <div class="col-4">
+                  <i class="fa fa-gas-pump text-dark"></i>
+                  <span class="text-body ms-1">Petrol</span>
+                </div>
+                <div class="col-4 border-end border-white">
+                  <i class="fa fa-car text-dark"></i>
+                  <span class="text-body ms-1">2015</span>
+                </div>
+                <div class="col-4 border-end border-white">
+                  <i class="fa fa-cogs text-dark"></i>
+                  <span class="text-body ms-1">AUTO</span>
+                </div>
+                <div class="col-4">
+                  <i class="fa fa-road text-dark"></i>
+                  <span class="text-body ms-1">27K</span>
+                </div>
+              </div>
+              <a href="#" class="btn btn-primary rounded-pill d-flex justify-content-center py-3">Book Now</a>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <!-- Car categories End -->
+  </div>
+  <!-- Car categories End -->
 
-    <!-- Load jQuery -->
-    <script src="js/jquery-3.7.1.min.js"></script>
-    <script src="js/items.js"></script>
-    <!-- Bootstrap JS -->
-    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="bootstrap/js/bootstrap.min.js"></script>
+  <!-- Load jQuery -->
+  <script src="js/jquery-3.7.1.min.js"></script>
+  <script src="js/items.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="bootstrap/js/bootstrap.min.js"></script>
 
-    <!-- custom script -->
-    <script type="text/javascript" src="js/script.js"></script>
-    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
-    <!-- <script type="text/javascript" src="js/counter.js"></script> -->
+  <!-- custom script -->
+  <script type="text/javascript" src="js/script.js"></script>
+  <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- <script type="text/javascript" src="js/counter.js"></script> -->
 
-    <script src="lib/wow/wow.min.js"></script>
-    <!-- <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <!-- <script src="lib/easing/easing.min.js"></script>
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/counterup/counterup.min.js"></script> -->
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="js/counter.js"></script>
-  </body>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="js/counter.js"></script>
+</body>
+
 </html>

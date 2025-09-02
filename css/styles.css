@@ -923,6 +923,8 @@
     transition: 0.3s;
 }
 
+
+
 .footer .footer-item a:hover {
     color: var(--bs-secondary);
     letter-spacing: 0.5px;
@@ -931,6 +933,12 @@
 .footer .footer-item p {
     color: var(--bs-light);
     line-height: 30px;
+}
+
+.footer .footer-item h6 {
+    color: var(--bs-light);
+    line-height: 30px;
+    font-weight: 600;
 }
 
 .footer .footer-item .btn-secondary {

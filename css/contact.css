@@ -1,0 +1,44 @@
+/* Page Header */
+.page-header {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.596)), url(../img/about-us.png) center center no-repeat;
+    background-size: cover;
+}
+
+/* Contact Info Card */
+.contact-info-card {
+    background-color: #f8f9fa; /* Light background to stand out */
+    border-radius: 15px;
+    border: 1px solid #dee2e6;
+    transition: all 0.3s ease;
+}
+
+.contact-info-card:hover {
+    box-shadow: 0 0 30px rgba(0,0,0,0.1);
+    transform: translateY(-5px);
+}
+
+.contact-info-card .icon-bg {
+    width: 60px;
+    height: 60px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #e8e8e8;
+}
+
+.contact-info-card i {
+    font-size: 24px;
+}
+
+/* Form Styling (to match existing theme) */
+.form-control {
+    border-radius: 0.5rem;
+}
+
+.form-floating > .form-control:focus,
+.form-floating > .form-control:not(:placeholder-shown) {
+    padding-top: 1.625rem;
+    padding-bottom: 0.625rem;
+}

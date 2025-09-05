@@ -1,3 +1,14 @@
+:root {
+  /* Change the hex code below to your desired color */
+  --bs-primary: #b68b2e;
+  --bs-secondary: #ffb22c; /* Secondary color */
+  --bs-light: #f8f9fa; /* Light background color */
+  --bs-dark: #343a40; /* Dark text color */
+  --bs-footer: #8b540f;
+
+}
+
+
 /* Page Header */
 .page-header {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.596)), url(../img/about-us.png) center center no-repeat;
@@ -42,3 +53,15 @@
     padding-top: 1.625rem;
     padding-bottom: 0.625rem;
 }
+
+.container .btn{
+    background-color: var(--bs-primary);
+    color: #fff;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+.container .btn:hover {
+    background-color: var(--bs-dark);
+    color: #fff;
+}
+

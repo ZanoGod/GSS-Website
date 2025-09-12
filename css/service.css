@@ -1,51 +1,52 @@
 .service-card {
-  background: #fff;
-  border-radius: 10px;
   transition: all 0.3s ease;
-  border: 1px solid #eaeaea;
+  background-color: #fff;
+  border-radius: 16px;
+  overflow: hidden;
 }
+
 .service-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 3px 3px 5px 5px #e9c17d;
-  border-color: transparent;
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
 }
-.icon i {
-  background: #f4f7ff;
-  width: 65px;
-  height: 65px;
-  line-height: 65px;
+
+.service-card img {
+  height: 180px;
+  object-fit: cover;
+  border-bottom: 1px solid #eee;
+}
+
+.service-card .icon {
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  font-size: 22px;
   border-radius: 50%;
-  display: inline-block;
   text-align: center;
-  font-size: 24px; 
+  display: inline-block;
 }
 
 .icon-blue {
-  background: #e0ecff;
-  color: #2e6be6;  /* Blue */
+  background-color: #e6f0ff;
+  color: #2e6be6;
 }
-
 .icon-green {
-  background: #e1f7e7;
-  color: #28a745;  /* Green */
+  background-color: #e7f9ef;
+  color: #28a745;
 }
-
 .icon-yellow {
-  background: #fff9e6;
-  color: #ffc107;  /* Yellow */
+  background-color: #fff8e1;
+  color: #ffc107;
 }
-
-.icon-red {
-  background: #ffe5e5;
-  color: #dc3545;  /* Red */
-}
-
 .icon-purple {
-  background: #f3e6ff;
-  color: #6f42c1;  /* Purple */
+  background-color: #f3e6ff;
+  color: #6f42c1;
 }
-
+.icon-red {
+  background-color: #ffe9e9;
+  color: #dc3545;
+}
 .icon-gray {
-  background: #f0f0f0;
-  color: #6c757d;  /* Gray */
+  background-color: #f2f2f2;
+  color: #6c757d;
 }

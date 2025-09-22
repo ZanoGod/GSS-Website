@@ -99,6 +99,20 @@
     font-size: 24px;
 }
 
+.contact-info-card .row {
+  margin-top: 1rem;
+}
+
+.contact-info-card .col-6 {
+  display: flex;
+  align-items: center;
+}
+
+.contact-info-card .col-6 p {
+  margin-bottom: 0.5rem;
+}
+
+
 /* Form Styling (to match existing theme) */
 .form-control {
     border-radius: 0.5rem;

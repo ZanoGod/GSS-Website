@@ -23,18 +23,18 @@
 
 
 /* Our Group - Company Cards */
-.group-card {
-  background: #fff;
-  border-radius: 15px;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-}
-.group-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-}
-.group-card img {
-  height: 150px;
-  object-fit: cover;
-  border-radius: 10px;
-}
+ .group-card-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px;
+    background-color: #fff;
+  }
+
+  .group-card-hover:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  }
+
+  .card-img-top {
+    max-height: 120px;
+    object-fit: contain;
+  }

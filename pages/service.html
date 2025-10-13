@@ -44,6 +44,11 @@
       <div class="loader"></div>
     </div>
 
+
+
+      <!-- Topbar Start -->
+    <div include-html="../items/topbar.html"></div>
+    <!-- Topbar End -->
     <!-- Navbar Start -->
     <div class="container-fluid nav-bar sticky-top px-0 px-lg-4 py-2 py-lg-0">
       <div class="container">
@@ -54,6 +59,7 @@
                 src="../img/gss-logo-navbar.png"
                 alt="Golden Support Service Logo"
               />
+              Car Rental
             </h3>
           </a>
           <button
@@ -66,13 +72,20 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav mx-auto py-0">
+            
               <a href="../index.html" class="nav-item nav-link">Home</a>
               <a href="about.html" class="nav-item nav-link">About</a>
-              <a href="/pages/service.html" class="nav-item nav-link active"
-                >Service</a
-              >
-              <a href="#" class="nav-item nav-link">Blog</a>
-
+              <a href="service.html" class="nav-item nav-link active">Service</a>
+              <a href="#" class="nav-item nav-link">Fleet</a>
+              <a href="./blog.html" class="nav-item nav-link">Blog</a>
+              <a href="#" class="nav-item nav-link">Our Team</a>
+              <a href="contact.html" class="nav-item nav-link">Contact</a>
+            </div>
+            <a href="#" class="btn btn-primary rounded-pill py-2 px-4"
+              >Get Started</a
+            >
+          </div>
+<!-- 
               <div class="nav-item dropdown">
                 <a
                   href="#"
@@ -87,17 +100,14 @@
                   <a href="#" class="dropdown-item">Testimonial</a>
                   <a href="404.html" class="dropdown-item">404 Page</a>
                 </div>
-              </div>
-              <a href="contact.html" class="nav-item nav-link">Contact</a>
-            </div>
-            <a href="#" class="btn btn-primary rounded-pill py-2 px-4"
-              >Get Started</a
-            >
+              </div> -->
+             
           </div>
         </nav>
       </div>
     </div>
     <!-- Navbar End -->
+
 
     <!-- Service Section Start -->
 <section class="py-5 bg-white" id="services">
@@ -111,90 +121,103 @@
       <p> </p>
     </div>
 
-    <!-- Services Grid -->
-    <div class="row g-5">
-      <!-- Service Item -->
-      <div class="col-md-6 col-lg-4">
-        <div class="service-card shadow-sm h-100 rounded-4 overflow-hidden position-relative">
-          <img src="../img/services/car-rental.jpg" class="img-fluid w-100" alt="Car Rental Service">
-          <div class="p-4">
-            <div class="icon icon-blue mb-3"><i class="bi bi-car-front-fill fs-3"></i></div>
-            <h5 class="fw-bold">Car & Driver Rental</h5>
-            <p class="text-muted small">Reliable daily and monthly vehicle rentals with experienced drivers across Myanmar.</p>
-            <a href="#" class="stretched-link text-primary fw-semibold">Read More →</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Petrol Delivery -->
-      <div class="col-md-6 col-lg-4">
-        <div class="service-card shadow-sm h-100 rounded-4 overflow-hidden position-relative">
-          <img src="../img/services/fuel-delivery.jpg" class="img-fluid w-100" alt="Fuel Delivery Service">
-          <div class="p-4">
-            <div class="icon icon-green mb-3"><i class="bi bi-fuel-pump fs-3"></i></div>
-            <h5 class="fw-bold">Fuel Delivery</h5>
-            <p class="text-muted small">We bring fuel directly to you. No queues, no delays, just convenience.</p>
-            <a href="#" class="stretched-link text-primary fw-semibold">Read More →</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- 24/7 Support -->
-      <div class="col-md-6 col-lg-4">
-        <div class="service-card shadow-sm h-100 rounded-4 overflow-hidden position-relative">
-          <img src="../img/services/support.jpg" class="img-fluid w-100" alt="24/7 Support">
-          <div class="p-4">
-            <div class="icon icon-yellow mb-3"><i class="bi bi-headset fs-3"></i></div>
-            <h5 class="fw-bold">24/7 Service Support</h5>
-            <p class="text-muted small">Support in English, Burmese & Japanese. We’re available whenever you need us.</p>
-            <a href="#" class="stretched-link text-primary fw-semibold">Read More →</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Payment Options -->
-      <div class="col-md-6 col-lg-4">
-        <div class="service-card shadow-sm h-100 rounded-4 overflow-hidden position-relative">
-          <img src="../img/services/payment.jpg" class="img-fluid w-100" alt="Payment Options">
-          <div class="p-4">
-            <div class="icon icon-purple mb-3"><i class="bi bi-credit-card fs-3"></i></div>
-            <h5 class="fw-bold">Flexible Payment</h5>
-            <p class="text-muted small">From cash to digital payments — pay the way that suits you best.</p>
-            <a href="#" class="stretched-link text-primary fw-semibold">Read More →</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Driver Training -->
-      <div class="col-md-6 col-lg-4">
-        <div class="service-card shadow-sm h-100 rounded-4 overflow-hidden position-relative">
-          <img src="../img/services/driver-training.jpg" class="img-fluid w-100" alt="Driver Training">
-          <div class="p-4">
-            <div class="icon icon-red mb-3"><i class="bi bi-person-lines-fill fs-3"></i></div>
-            <h5 class="fw-bold">Driver Training</h5>
-            <p class="text-muted small">Professional driver education for safe and confident performance.</p>
-            <a href="#" class="stretched-link text-primary fw-semibold">Read More →</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Vehicle Management -->
-      <div class="col-md-6 col-lg-4">
-        <div class="service-card shadow-sm h-100 rounded-4 overflow-hidden position-relative">
-          <img src="../img/services/vehicle-maintenance.jpg" class="img-fluid w-100" alt="Vehicle Maintenance">
-          <div class="p-4">
-            <div class="icon icon-gray mb-3"><i class="bi bi-tools fs-3"></i></div>
-            <h5 class="fw-bold">Vehicle Maintenance</h5>
-            <p class="text-muted small">Routine checks, proactive care, and full vehicle management services.</p>
-            <a href="#" class="stretched-link text-primary fw-semibold">Read More →</a>
-          </div>
-        </div>
-      </div>
-    </div>
+  
   </div>
 </section>
 
-    
+  
+<div class="container">
+  <!-- Car & Driver Rental -->
+  <div class="row align-items-center mb-5">
+    <div class="col-md-2 text-center">
+      <div class="icon icon-green mx-auto">
+        <i class="bi bi-car-front-fill fs-1"></i>
+      </div>
+    </div>
+    <div class="col-md-10">
+      <h3 class="fw-bold">Car & Driver Rental</h3>
+      <p class="text-muted fs-5">
+        We provide daily and monthly rental services across Myanmar including Yangon, Bago, Mandalay, and Naypyitaw. Our experienced drivers ensure safety and comfort, and our vehicles are regularly maintained to the highest standards.
+      </p>
+    </div>
+  </div>
+
+  <!-- Petrol Delivery Service -->
+  <div class="row align-items-center mb-5">
+    <div class="col-md-2 text-center">
+      <div class="icon icon-blue mx-auto">
+        <i class="bi bi-fuel-pump fs-1"></i>
+      </div>
+    </div>
+    <div class="col-md-10">
+      <h3 class="fw-bold">Petrol Delivery Service 業務支援配送サービス</h3>
+      <p class="text-muted fs-5">
+        No more fuel station visits! We deliver petrol directly to your location, whether at home or work — reliably, safely, and efficiently.
+      </p>
+    </div>
+  </div>
+
+  <!-- 24/7 Support & Multilingual Service -->
+  <div class="row align-items-center mb-5">
+    <div class="col-md-2 text-center">
+      <div class="icon icon-gray mx-auto">
+        <i class="bi bi-headset fs-1"></i>
+      </div>
+    </div>
+    <div class="col-md-10">
+      <h3 class="fw-bold">24/7 Support & Multilingual Assistance</h3>
+      <p class="text-muted fs-5">
+        We're here for you — anytime, any day. Whether it's an emergency or a custom request, our team supports communication in <strong>Japanese</strong>, <strong>English</strong>, and <strong>Burmese</strong>, ensuring clarity and confidence in every interaction.
+      </p>
+    </div>
+  </div>
+
+  <!-- Payment Methods -->
+  <div class="row align-items-center mb-5">
+    <div class="col-md-2 text-center">
+      <div class="icon icon-purple mx-auto">
+        <i class="bi bi-credit-card fs-1"></i>
+      </div>
+    </div>
+    <div class="col-md-10">
+      <h3 class="fw-bold">Flexible Payment Options</h3>
+      <p class="text-muted fs-5">
+        Choose from multiple secure payment methods including cash, bank transfer, and leading digital wallets — all designed to make your experience seamless.
+      </p>
+    </div>
+  </div>
+
+  <!-- Driver Training Programs -->
+  <div class="row align-items-center mb-5">
+    <div class="col-md-2 text-center">
+      <div class="icon icon-yellow mx-auto">
+        <i class="bi bi-person-lines-fill fs-1"></i>
+      </div>
+    </div>
+    <div class="col-md-10">
+      <h3 class="fw-bold">Driver Training Programs</h3>
+      <p class="text-muted fs-5">
+        Our training ensures every driver is equipped with the knowledge, confidence, and professionalism required to deliver top-tier service on the road.
+      </p>
+    </div>
+  </div>
+
+  <!-- Vehicle Maintenance -->
+  <div class="row align-items-center mb-5">
+    <div class="col-md-2 text-center">
+      <div class="icon icon-red mx-auto">
+        <i class="bi bi-tools fs-1"></i>
+      </div>
+    </div>
+    <div class="col-md-10">
+      <h3 class="fw-bold">Vehicle Maintenance & Fleet Management</h3>
+      <p class="text-muted fs-5">
+        We proactively manage our fleet to ensure performance and safety. From regular inspections to timely servicing, your safety and satisfaction come first.
+      </p>
+    </div>
+  </div>
+</div>
+
 
     <!-- Bootstrap JS and dependencies -->
 

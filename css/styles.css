@@ -369,6 +369,10 @@
 .about .about-item span {
   color: var(--bs-primary);
 }
+.about .text-justify {
+  text-align: justify;
+}
+
 
 /* Custom style for the experience box */
 .about .experience-box {

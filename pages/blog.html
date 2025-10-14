@@ -3,130 +3,112 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blog - Coming Soon</title>
+    <title>Blog & News </title>
 
-    <!-- Bootstrap -->
+    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css" />
 
-    <!-- Google Font -->
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
 
-    <style>
-      body {
-        margin: 0;
-        font-family: "Outfit", sans-serif;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        min-height: 100vh;
-        overflow: hidden;
-        background: linear-gradient(-45deg, #c7aaff, #88c2ff, #37deff, #d8c0ff);
-        background-size: 400% 400%;
-        animation: gradientBG 12s ease infinite;
-      }
+    <!-- Libraries Stylesheet -->
+    <link href="../lib/animate/animate.min.css" rel="stylesheet" />
+    <link
+      href="../lib/owlcarousel/assets/owl.carousel.min.css"
+      rel="stylesheet"
+    />
 
-      @keyframes gradientBG {
-        0% {
-          background-position: 0% 50%;
-        }
-        50% {
-          background-position: 100% 50%;
-        }
-        100% {
-          background-position: 0% 50%;
-        }
-      }
+    <!-- Fontawesome -->
+    <link href="../fontawesome/css/all.min.css" rel="stylesheet" />
+    <link href="../fontawesome/css/brands.css" rel="stylesheet" />
+    <link href="../fontawesome/css/fontawesome.min.css" rel="stylesheet" />
 
-      .maintenance-container {
-        background: rgba(255, 255, 255, 0.9);
-        padding: 50px 40px;
-        text-align: center;
-        border-radius: 20px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-        max-width: 500px;
-        width: 90%;
-        transform: translateY(30px);
-        animation: fadeInUp 1.2s ease forwards;
-      }
+    <!-- Bootstrap Icons CDN -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"> -->
+    <link rel="stylesheet" href="../bootstrap/icons/bootstrap-icons.css" />
+    <!-- custom css -->
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/service.css" />
 
-      @keyframes fadeInUp {
-        0% {
-          opacity: 0;
-          transform: translateY(30px);
-        }
-        100% {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-      .maintenance-container img {
-        width: 120px;
-        margin-bottom: 25px;
-        animation: float 3s ease-in-out infinite;
-      }
-
-      @keyframes float {
-        0%,
-        100% {
-          transform: translateY(0);
-        }
-        50% {
-          transform: translateY(-10px);
-        }
-      }
-
-      .maintenance-container h1 {
-        font-size: 2.8rem;
-        color: #343a40;
-        margin-bottom: 1rem;
-        font-weight: 700;
-      }
-
-      .maintenance-container p {
-        font-size: 1.2rem;
-        color: #555;
-        line-height: 1.6;
-      }
-
-      .btn-primary {
-        background-color: #007bff;
-        border: none;
-        transition: all 0.3s ease;
-        padding: 12px 24px;
-        font-size: 1rem;
-        border-radius: 50px;
-      }
-
-      .btn-primary:hover {
-        background-color: #0056b3;
-        transform: scale(1.05);
-        box-shadow: 0 5px 15px rgba(0, 123, 255, 0.4);
-      }
-
-      @media (max-width: 576px) {
-        .maintenance-container h1 {
-          font-size: 2rem;
-        }
-      }
-    </style>
   </head>
-  <body>
-    <div class="maintenance-container">
-      <img
-        src="../img/maintenance_png.jpg"
-        alt="Maintenance"
-        onerror="this.style.display='none'"
-      />
-      <h1>Coming Soon</h1>
-      <p>
-        Our blog page is currently under maintenance.<br />We're crafting
-        something amazing.<br />Please check back soon!
-      </p>
-      <a href="../index.html" class="btn btn-primary mt-4">Back to Home</a>
+<body>
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2">
+                
+                <h1 class="mb-2">Book Your Ride! Experienced Drivers & Quality Cars from GSS</h1>
+                <div class="text-muted mb-4">Posted on <span class="blog-date">30 Dec 2025</span></div>
+                
+                <img src="../img/blog_img/blog_1_available_now.jpg" class="img-fluid rounded mb-5" alt="GSS Car Rental Available Now" />
+
+                <p class="lead">Golden Support Service (GSS) is excited to announce the immediate availability of our diverse and well-maintained rental fleet! With <strong>13 years of proven experience</strong> in Myanmar, we are committed to providing reliable, safe, and comfortable transportation solutions for every need—whether you're a tourist, a business traveler, or a local resident.</p>
+
+                <h2 class="mt-5 mb-3">Our Reliable Fleet: Available Now!</h2>
+                <p>We offer both modern and rugged vehicles, ensuring we have the perfect ride for city driving, long-distance travel, or executive transport. <strong class="text-danger">Book Now!</strong></p>
+
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Vehicle Model</th>
+                                <th>Year</th>
+                                <th>Type</th>
+                                <th>Ideal For</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>Suzuki Ertiga Type III</strong></td><td>2019</td><td>Compact MPV</td><td>Family trips, city travel, and comfort.</td></tr>
+                            <tr><td><strong>Mitsubishi ASX</strong></td><td>2019</td><td>Compact SUV</td><td>Versatile travel, offering a balance of space and fuel efficiency.</td></tr>
+                            <tr><td><strong>Mitsubishi Mirage</strong></td><td>2019</td><td>Hatchback</td><td>Economical city travel and short-term rentals.</td></tr>
+                            <tr><td><strong>Toyota Prado</strong></td><td>2006</td><td>SUV / Off-Road</td><td>Reliable, durable travel for challenging terrains or long journeys.</td></tr>
+                            <tr><td><strong>Toyota Alphard</strong></td><td>2006</td><td>Luxury Van</td><td>Executive transport, airport transfers, and group comfort.</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2 class="mt-5 mb-3">Why Choose Golden Support Service?</h2>
+                <ul class="list-unstyled">
+                    <li class="mb-3"><i class="fa fa-check-circle text-primary me-2"></i><strong>13 Years of Proven Track Record:</strong> Rich experience and secure support you can trust.</li>
+                    <li class="mb-3"><i class="fa fa-users text-primary me-2"></i><strong>Over 90 Experienced Drivers:</strong> Professional and trustworthy drivers ready to serve you.</li>
+                    <li class="mb-3"><i class="fa fa-map-marker-alt text-primary me-2"></i><strong>Comprehensive Service Area:</strong> Available in Yangon City, inter-city locations, and for sightseeing tours.</li>
+                    <li class="mb-3"><i class="fa fa-calendar-check text-primary me-2"></i><strong>Flexible Rental Plans:</strong> Options for Airport Pickup, Half/Full-Day Use, and Monthly Contracts.</li>
+                </ul>
+
+                <h3 class="mt-5 mb-3">Ready to Book? Contact Us!</h3>
+                <p>Visit our website or contact us directly to reserve your vehicle today:</p>
+                <div class="contact-info">
+                    <p><i class="fa fa-envelope me-2"></i> Email: operator-group@nicemyanmartravel.com, operation@nicemyanmartravel.com</p>
+                    <p><i class="fa fa-phone me-2"></i> Phone (Myanmar): 09-4088 55622, 09-4088 55611, 09-2504 30271</p>
+                </div>
+                
+                <div class="text-center mt-5">
+                    <a href="#" class="btn btn-primary btn-lg">BOOK NOW!</a>
+                </div>
+                
+            </div>
+        </div>
     </div>
-  </body>
+
+
+        <!-- Bootstrap JS and dependencies -->
+
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/items.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- custom script -->
+    <script type="text/javascript" src="../js/script.js"></script>
+    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    </body>
 </html>

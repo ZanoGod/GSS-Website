@@ -24,45 +24,76 @@
     }
   });
 
-
   // =====================================================
-  //  Custom Scroll Animation Logic (Updated)
+  //  Custom Scroll Animation Logic (One-Way Animation)
   // =====================================================
 
-  // This function checks if an element is in the viewport
-  function revealOnScroll() {
-    // Select all elements that we want to animate
-    const elementsToAnimate = document.querySelectorAll('.scroll-animate');
 
-    // Loop through each element
-    for (let i = 0; i < elementsToAnimate.length; i++) {
-      const element = elementsToAnimate[i];
+  // ====================================================================
+//  Modern, Smooth Scroll Animation using Intersection Observer
+// ====================================================================
 
-      // Get the position and dimensions of the element on the screen
-      const elementRect = element.getBoundingClientRect();
-      const windowHeight = window.innerHeight;
+document.addEventListener("DOMContentLoaded", function() {
 
-      // This is the offset. The animation will trigger when the element
-      // is 100 pixels into the viewport from the bottom or top.
-      const triggerOffset = 100;
+  // Select all elements you want to animate
+  const elementsToAnimate = document.querySelectorAll('.scroll-animate');
 
-      // NEW CONDITION: Check if the element is within the visible part of the window
-      // It's "visible" if its top is above the bottom of the screen AND its bottom is below the top of the screen.
-      if (elementRect.top < windowHeight - triggerOffset && elementRect.bottom > triggerOffset) {
-        // If element is visible, add the class to trigger the animation
-        element.classList.add('is-visible');
-      } else {
-        // If element is NOT visible, remove the class to reset the animation
-        element.classList.remove('is-visible');
+  // Set up the observer options
+  const observerOptions = {
+    root: null, // observes intersections relative to the viewport
+    rootMargin: '0px',
+    threshold: 0.1 // Triggers when 10% of the element is visible
+  };
+
+  // Create the observer
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      // If the element is intersecting (visible)
+      if (entry.isIntersecting) {
+        // Add the 'is-visible' class to trigger the animation
+        entry.target.classList.add('is-visible');
+        
+        // Stop observing the element so the animation only happens once
+        observer.unobserve(entry.target);
       }
-    }
-  }
+    });
+  }, observerOptions);
 
-  // Add an event listener to run the function every time the user scrolls
-  window.addEventListener('scroll', revealOnScroll);
+  // Attach the observer to each element
+  elementsToAnimate.forEach(element => {
+    observer.observe(element);
+  });
 
-  // Run the function once on page load to check for elements already in view
-  revealOnScroll();
+});
+
+  // function revealOnScroll() {
+  //   const elementsToAnimate = document.querySelectorAll('.scroll-animate');
+
+  //   for (let i = 0; i < elementsToAnimate.length; i++) {
+  //     const element = elementsToAnimate[i];
+
+  //     // --- CHANGE #1: If the element is already visible, skip it ---
+  //     // This prevents the code from re-checking elements that have already been animated.
+  //     if (element.classList.contains('is-visible')) {
+  //       continue;
+  //     }
+
+  //     const elementRect = element.getBoundingClientRect();
+  //     const windowHeight = window.innerHeight;
+  //     const triggerOffset = 100; // Animation triggers when element is 100px into the viewport
+
+  //     // --- CHANGE #2: Simplified condition & no 'else' block ---
+  //     // This checks if the top of the element has entered the viewport from the bottom.
+  //     // Because there's no 'else', the class is never removed.
+  //     if (elementRect.top < windowHeight - triggerOffset) {
+  //       element.classList.add('is-visible');
+  //     }
+  //   }
+  // }
+
+  // // Keep these event listeners as they are
+  // window.addEventListener('scroll', revealOnScroll);
+  // revealOnScroll(); // Run once on load
 
 
   document.addEventListener('DOMContentLoaded', function () {
@@ -119,7 +150,7 @@
     });
   });
 
-// Back to top button
+  // Back to top button
   // Show button when scrolling down
   window.onscroll = function () {
     let btn = document.getElementById("backToTopBtn");

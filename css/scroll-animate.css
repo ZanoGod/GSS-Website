@@ -1,0 +1,33 @@
+/* The class that will be animated */
+.scroll-animate {
+  opacity: 0;
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  will-change: opacity, transform; /* Helps browsers optimize animations */
+}
+
+/* --- Animation Starting States --- */
+/* Elements that fade up start translated down */
+.scroll-animate.fade-up {
+  transform: translateY(50px);
+}
+
+/* Elements that fade down start translated up */
+.scroll-animate.fade-down {
+  transform: translateY(-50px);
+}
+
+/* Elements that slide from the left start translated left */
+.scroll-animate.slide-in-left {
+  transform: translateX(-100px);
+}
+
+/* Elements that slide from the right start translated right */
+.scroll-animate.slide-in-right {
+  transform: translateX(100px);
+}
+
+/* --- Animation End State (when 'is-visible' is added) --- */
+.scroll-animate.is-visible {
+  opacity: 1;
+  transform: translate(0, 0); /* Return to original position */
+}

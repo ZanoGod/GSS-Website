@@ -24,78 +24,44 @@
     }
   });
 
-  // =====================================================
-  //  Custom Scroll Animation Logic (One-Way Animation)
-  // =====================================================
 
+  //scroll-animation
 
-  // ====================================================================
-//  Modern, Smooth Scroll Animation using Intersection Observer
-// ====================================================================
+  document.addEventListener('DOMContentLoaded', () => {
+    // Select all elements you want to animate
+    const animatedElements = document.querySelectorAll('.scroll-animate');
 
-document.addEventListener("DOMContentLoaded", function() {
+    // The Intersection Observer API is a modern browser feature that
+    // allows us to efficiently watch for when elements enter the viewport.
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        // If the element is intersecting (i.e., is in view)
+        if (entry.isIntersecting) {
+          // Add the 'is-visible' class to trigger the animation
+          entry.target.classList.add('is-visible');
 
-  // Select all elements you want to animate
-  const elementsToAnimate = document.querySelectorAll('.scroll-animate');
-
-  // Set up the observer options
-  const observerOptions = {
-    root: null, // observes intersections relative to the viewport
-    rootMargin: '0px',
-    threshold: 0.1 // Triggers when 10% of the element is visible
-  };
-
-  // Create the observer
-  const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      // If the element is intersecting (visible)
-      if (entry.isIntersecting) {
-        // Add the 'is-visible' class to trigger the animation
-        entry.target.classList.add('is-visible');
-        
-        // Stop observing the element so the animation only happens once
-        observer.unobserve(entry.target);
-      }
+          // Optional: Stop observing the element after it has become visible
+          // This ensures the animation only happens once.
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      // This option adjusts the "trigger point". 
+      // 0.1 means the animation will start when 10% of the element is visible.
+      threshold: 0.1
     });
-  }, observerOptions);
 
-  // Attach the observer to each element
-  elementsToAnimate.forEach(element => {
-    observer.observe(element);
+    // Loop through all the selected elements and start observing them
+    animatedElements.forEach(element => {
+      observer.observe(element);
+    });
   });
 
-});
-
-  // function revealOnScroll() {
-  //   const elementsToAnimate = document.querySelectorAll('.scroll-animate');
-
-  //   for (let i = 0; i < elementsToAnimate.length; i++) {
-  //     const element = elementsToAnimate[i];
-
-  //     // --- CHANGE #1: If the element is already visible, skip it ---
-  //     // This prevents the code from re-checking elements that have already been animated.
-  //     if (element.classList.contains('is-visible')) {
-  //       continue;
-  //     }
-
-  //     const elementRect = element.getBoundingClientRect();
-  //     const windowHeight = window.innerHeight;
-  //     const triggerOffset = 100; // Animation triggers when element is 100px into the viewport
-
-  //     // --- CHANGE #2: Simplified condition & no 'else' block ---
-  //     // This checks if the top of the element has entered the viewport from the bottom.
-  //     // Because there's no 'else', the class is never removed.
-  //     if (elementRect.top < windowHeight - triggerOffset) {
-  //       element.classList.add('is-visible');
-  //     }
-  //   }
-  // }
-
-  // // Keep these event listeners as they are
-  // window.addEventListener('scroll', revealOnScroll);
-  // revealOnScroll(); // Run once on load
 
 
+
+
+  //form load
   document.addEventListener('DOMContentLoaded', function () {
     const containers = document.querySelectorAll('.form-container');
 
@@ -120,6 +86,7 @@ document.addEventListener("DOMContentLoaded", function() {
   $(document).ready(function () {
     $(".categories-carousel").owlCarousel({
       autoplay: true,
+      autoplayTimeout: 1000,
       smartSpeed: 1000,
       dots: false,
       loop: true,

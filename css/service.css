@@ -1,52 +1,186 @@
-.service-card {
-  transition: all 0.3s ease;
-  background-color: #fff;
-  border-radius: 16px;
+/* --------------------------------
+New Service Card Styles
+----------------------------------- */
+
+.service-card-new {
+  display: flex;
+  flex-direction: column;
+  /* margin: 1.5rem auto; */
+  margin: 1.5rem auto 4rem;
+  box-shadow: 0 5px 15px -2px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  line-height: 1.5;
+  font-family: "Lato", sans-serif;
+  border-radius: 8px;
   overflow: hidden;
+  z-index: 0;
+  transition: box-shadow 0.3s ease;
 }
 
-.service-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
+.service-card-new a {
+  color: inherit;
+  text-decoration: none;
+}
+.service-card-new a:hover {
+  color: #3b70fc;
 }
 
-.service-card img {
-  height: 180px;
-  object-fit: cover;
-  border-bottom: 1px solid #eee;
+.service-card-new:hover {
+  box-shadow: 0 8px 25px -5px rgba(0, 0, 0, 0.2);
 }
 
-.service-card .icon {
-  width: 60px;
-  height: 60px;
-  line-height: 60px;
-  font-size: 22px;
-  border-radius: 50%;
-  text-align: center;
-  display: inline-block;
+.service-card-new .meta {
+  position: relative;
+  z-index: 0;
+  height: 200px;
 }
 
-.icon-blue {
-  background-color: #e6f0ff;
-  color: #2e6be6;
+.service-card-new .photo {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.3s ease-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 5rem; /* Icon size */
 }
-.icon-green {
+
+/* Icon Background Colors */
+.icon-bg-green {
   background-color: #e7f9ef;
-  color: #28a745;
+  color: #15803d;
 }
-.icon-yellow {
-  background-color: #fff8e1;
-  color: #ffc107;
+.icon-bg-blue {
+  background-color: #e6f0ff;
+  color: #2563eb;
 }
-.icon-purple {
-  background-color: #f3e6ff;
-  color: #6f42c1;
-}
-.icon-red {
-  background-color: #ffe9e9;
-  color: #dc3545;
-}
-.icon-gray {
+.icon-bg-gray {
   background-color: #f2f2f2;
-  color: #6c757d;
+  color: #4b5563;
 }
+.icon-bg-purple {
+  background-color: #f3e6ff;
+  color: #7e22ce;
+}
+
+.icon-bg-yellow {
+  background-color: #fff9e6;
+  color: #d97706;
+}
+.icon-bg-red {
+  background-color: #ffe6e6;
+  color: #dc2626;
+}
+
+.service-card-new .description {
+  padding: 1.5rem;
+  background: #fff;
+  position: relative;
+  z-index: 1;
+}
+.service-card-new .description h1,
+.service-card-new .description h2 {
+  font-family: "Poppins", sans-serif;
+}
+.service-card-new .description h1 {
+  line-height: 1.1;
+  margin: 0;
+  font-size: 1.7rem;
+}
+.service-card-new .description h2 {
+  font-size: 1rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #a2a2a2;
+  margin-top: 5px;
+}
+.service-card-new .description p {
+  position: relative;
+  text-align: justify;
+  margin: 1rem 0 0;
+  padding-bottom: 1rem; /* Added padding to create space at the bottom */
+}
+.service-card-new .description p:first-of-type {
+  margin-top: 1.25rem;
+}
+
+.service-card-new .description p:first-of-type:before {
+  content: "";
+  position: absolute;
+  height: 5px;
+  width: 40px;
+  top: -0.75rem;
+  border-radius: 3px;
+  transition: width 0.3s ease-out;
+}
+
+/* Hover effect for the color line */
+.service-card-new:hover .description p:first-of-type:before {
+  width: 120px; /* New width on hover */
+}
+
+/* Desktop Styles */
+@media (min-width: 640px) {
+  .service-card-new {
+    flex-direction: row;
+    max-width: 1100px; /* <<<< INCREASED WIDTH HERE */
+  }
+  .service-card-new .meta {
+    flex-basis: 40%;
+    height: auto;
+  }
+  .service-card-new .description {
+    flex-basis: 60%;
+    display: flex; /* Use flexbox for vertical centering */
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+  }
+  .service-card-new .description:before {
+    transform: skewX(-3deg);
+    content: "";
+    background: #fff;
+    width: 30px;
+    position: absolute;
+    left: -10px;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+  .service-card-new.alt {
+    flex-direction: row-reverse;
+  }
+  .service-card-new.alt .description:before {
+    left: inherit;
+    right: -10px;
+    transform: skew(3deg);
+  }
+}
+
+/* Add these new rules to your CSS file.
+  They will set the line color for each card individually.
+*/
+.service-card-new.card-green .description p:first-of-type:before {
+  background-color: #15803d; /* Green */
+}
+.service-card-new.card-blue .description p:first-of-type:before {
+  background-color: #2563eb; /* Blue */
+}
+.service-card-new.card-gray .description p:first-of-type:before {
+  background-color: #4b5563; /* Gray */
+}
+.service-card-new.card-purple .description p:first-of-type:before {
+  background-color: #7e22ce; /* Purple */
+}
+.service-card-new.card-yellow .description p:first-of-type:before {
+  background-color: #d97706; /* Yellow */
+}
+.service-card-new.card-red .description p:first-of-type:before {
+  background-color: #dc2626; /* Red */
+}
+
+

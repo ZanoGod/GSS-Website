@@ -464,39 +464,6 @@
 }
 /*** About End ***/
 
-/* =====================================================
-  Custom Scroll Animation
-   ===================================================== */
-
-.scroll-animate {
-  opacity: 0;
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-
-.scroll-animate.fade-up {
-  transform: translateY(50px); /* Start 50px below final position */
-}
-
-.scroll-animate.fade-down {
-  transform: translateY(-50px); /* Start 50px above final position */
-}
-
-/* Animate IN from the left side */
-.scroll-animate.fade-left {
-  transform: translateX(-50px); /* Corrected: Start 50px to the left */
-}
-
-/* Animate IN from the right side */
-.scroll-animate.fade-right {
-  transform: translateX(50px); /* Corrected: Start 50px to the right */
-}
-
-/* This is the final, visible state.
-   When this class is added by JavaScript, the transition happens. */
-.scroll-animate.is-visible {
-  opacity: 1;
-  transform: translate(0, 0); /* Move to final position */
-}
 
 /*** Fact Counter ***/
 .counter {
@@ -679,7 +646,7 @@
   flex-direction: column;
   justify-content: space-between;
   background: #ffffff;
-  border-radius: 16px;
+  border-radius: 20px ;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.14);
   transition: 0.3s ease-in-out;
   overflow: hidden;
@@ -695,14 +662,13 @@
 .blog .blog-img {
   position: relative;
   overflow: hidden;
-  border-top-left-radius: 16px;
-  border-top-right-radius: 16px;
+  
 }
 
 .blog .blog-img img {
   width: 100%;
-  height: 450px;
-  object-fit: contain;
+  height: 500px;
+  object-fit: fill;
   transition: transform 0.5s ease;
 }
 

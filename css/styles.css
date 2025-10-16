@@ -627,6 +627,40 @@
 
 /*** Cars Categories End ***/
 
+
+
+/* Hover Effects for Why Choose Us section */
+.hover-effect-1:hover {
+  background: #e8f4fd;
+  transform: translateY(-5px);
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0, 123, 255, 0.2);
+}
+
+.hover-effect-2:hover {
+  background: #e5fcef;
+  transform: scale(1.03);
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(40, 167, 69, 0.2);
+}
+
+.hover-effect-3:hover {
+  background: #fff8e1;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(255, 193, 7, 0.2);
+}
+
+.hover-effect-4:hover {
+  background: #fde8e8;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(220, 53, 69, 0.2);
+}
+
+.feature-box {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
 /***======================= Blog Section Start ==============================***/
 
 /* Force equal height and responsive grid */

@@ -509,6 +509,17 @@
 .categories {
   background: var(--bs-gray)!important;
 }
+@media (max-width: 768px) {
+  .floating-fleet-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+}
+
 
 .categories .categories-item {
   position: relative;

@@ -1,100 +1,99 @@
-    body {
-      background-color: #f9fafb;
-      /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
-    }
-    .fleet-section {
-      padding: 80px 0;
-    }
-    .fleet-title {
-      font-size: 2.5rem;
-      font-weight: 700;
-      color: #111827;
-    }
-    .fleet-subtitle {
-      font-size: 1.25rem;
-      color: #6b7280;
-    }
-    
-    .category-btn {
-      border-radius: 50px;
-      padding: 10px 24px;
-      font-weight: 500;
-      transition: all 0.3s ease;
-      border: none;
-      background: #f8f9fa;
-      
-    }
-    .category-btn.active {
-      background-color: #b68b2e;
-      color: white;
-    }
-    .category-btn:hover {
-      background-color: #e0e7ff;
-      color: #b68b2e;
-    }
-    .car-card {
-      background-color: #fff;
-      border-radius: 16px;
-      overflow: hidden;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    }
-    .car-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-    }
-    .car-card img {
-      height: 200px;
-      width: 100%;
-      object-fit: cover;
-    }
-    .feature-badge {
-      background-color: #eff6ff;
-      color: #1d4ed8;
-      font-size: 0.75rem;
-      padding: 4px 10px;
-      border-radius: 20px;
-      display: inline-block;
-    }
-    .price {
-      font-size: 1.75rem;
-      font-weight: bold;
-      color: #1d4ed8;
-    }
-    .rating-badge {
-      background: white;
-      position: absolute;
-      bottom: 10px;
-      left: 10px;
-      padding: 4px 10px;
-      border-radius: 20px;
-      font-size: 0.9rem;
-      display: flex;
-      align-items: center;
-    }
-    .heart-btn {
-      background: white;
-      border-radius: 50%;
-      padding: 6px;
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      border: none;
-    }
-    .heart-btn:hover svg {
-      color: red;
-    }
+body {
+  background-color: #f9fafb;
+  /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+}
+.fleet-section {
+  padding: 80px 0;
+}
+.fleet-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #111827;
+}
+.fleet-subtitle {
+  font-size: 1.25rem;
+  color: #6b7280;
+}
 
-    .categories-item {
+.category-btn {
+  border-radius: 50px;
+  padding: 10px 24px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: none;
+  background: #f8f9fa;
+}
+.category-btn.active {
+  background-color: #b68b2e;
+  color: white;
+}
+.category-btn:hover {
+  background-color: #e0e7ff;
+  color: #b68b2e;
+}
+.car-card {
+  background-color: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+.car-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+.car-card img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+.feature-badge {
+  background-color: #eff6ff;
+  color: #1d4ed8;
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  border-radius: 20px;
+  display: inline-block;
+}
+.price {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: #1d4ed8;
+}
+.rating-badge {
+  background: white;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+}
+.heart-btn {
+  background: white;
+  border-radius: 50%;
+  padding: 6px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: none;
+}
+.heart-btn:hover svg {
+  color: red;
+}
+
+.categories-item {
   background: #fff;
   border-radius: 15px;
   overflow: hidden;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 .categories-item:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 .categories-img img {
   height: 220px;
@@ -107,13 +106,19 @@
   font-size: 0.9rem;
 }
 
-
 .highlighted {
-  animation: pulse-highlight 2s ease-in-out;
+  animation: pulse-highlight 3s ease-in-out;
 }
 
 @keyframes pulse-highlight {
-  0% { box-shadow: 0 0 0px 0 rgba(255, 215, 0, 0.8); }
-  50% { box-shadow: 0 0 20px 10px rgba(255, 215, 0, 0.6); }
-  100% { box-shadow: 0 0 0px 0 rgba(255, 215, 0, 0); }
+  /* 0% { box-shadow: 0 0 0px 0 rgba(255, 215, 0, 0.8); } */
+  0% {
+    box-shadow: 0 0 0px 0 rgb(255, 217, 0);
+  }
+  50% {
+    box-shadow: 0 0 20px 10px rgba(255, 215, 0, 0.6);
+  }
+  100% {
+    box-shadow: 0 0 0px 0 rgba(255, 217, 0, 0);
+  }
 }

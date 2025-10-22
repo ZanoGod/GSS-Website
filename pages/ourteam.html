@@ -1,132 +1,249 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Our Team - Coming Soon</title>
 
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Favicon -->
+  <!-- <link rel="icon" type="image/png" href="img/gss-logo-navbar.png" /> -->
+  <link rel="icon" href="../img/favicon.ico" type="image/x-icon" />
+  <title>Golden Support Service</title>
 
-    <!-- Google Font -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap"
-      rel="stylesheet"
-    />
+  <!--- Bootstrap CSS -->
+  <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css" />
 
-    <style>
-      body {
-        margin: 0;
-        font-family: "Outfit", sans-serif;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        min-height: 100vh;
-        overflow: hidden;
-        background: linear-gradient(-45deg, #c7aaff, #88c2ff, #37deff, #d8c0ff);
-        background-size: 400% 400%;
-        animation: gradientBG 12s ease infinite;
-      }
+  <!-- Google Web Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
 
-      @keyframes gradientBG {
-        0% {
-          background-position: 0% 50%;
-        }
-        50% {
-          background-position: 100% 50%;
-        }
-        100% {
-          background-position: 0% 50%;
-        }
-      }
+  <!-- Libraries Stylesheet -->
+  <link href="lib/animate/animate.min.css" rel="stylesheet" />
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
 
-      .maintenance-container {
-        background: rgba(255, 255, 255, 0.9);
-        padding: 50px 40px;
-        text-align: center;
-        border-radius: 20px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-        max-width: 500px;
-        width: 90%;
-        transform: translateY(30px);
-        animation: fadeInUp 1.2s ease forwards;
-      }
+  <!-- Fontawesome -->
+  <link href="../fontawesome/css/all.min.css" rel="stylesheet" />
+  <link href="../fontawesome/css/brands.css" rel="stylesheet" />
+  <link href="../fontawesome/css/fontawesome.min.css" rel="stylesheet" />
 
-      @keyframes fadeInUp {
-        0% {
-          opacity: 0;
-          transform: translateY(30px);
-        }
-        100% {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
+  <!-- Bootstrap Icons CDN -->
+  <link rel="stylesheet" href="bootstrap/icons/bootstrap-icons.css" />
+  <!-- custom css -->
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="stylesheet" href="../css/scroll-animate.css" />
+</head>
 
-      .maintenance-container img {
-        width: 120px;
-        margin-bottom: 25px;
-        animation: float 3s ease-in-out infinite;
-      }
+<body>
 
-      @keyframes float {
-        0%,
-        100% {
-          transform: translateY(0);
-        }
-        50% {
-          transform: translateY(-10px);
-        }
-      }
 
-      .maintenance-container h1 {
-        font-size: 2.8rem;
-        color: #343a40;
-        margin-bottom: 1rem;
-        font-weight: 700;
-      }
+  <div class="preloader">
+    <div class="loader"></div>
+  </div>
 
-      .maintenance-container p {
-        font-size: 1.2rem;
-        color: #555;
-        line-height: 1.6;
-      }
+  <div include-html="../items/topbar.html"></div>
 
-      .btn-primary {
-        background-color: #007bff;
-        border: none;
-        transition: all 0.3s ease;
-        padding: 12px 24px;
-        font-size: 1rem;
-        border-radius: 50px;
-      }
-
-      .btn-primary:hover {
-        background-color: #0056b3;
-        transform: scale(1.05);
-        box-shadow: 0 5px 15px rgba(0, 123, 255, 0.4);
-      }
-
-      @media (max-width: 576px) {
-        .maintenance-container h1 {
-          font-size: 2rem;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <div class="maintenance-container">
-      <img
-        src="../img/maintenance_png.jpg"
-        alt="Maintenance"
-        onerror="this.style.display='none'"
-      />
-      <h1>Coming Soon</h1>
-      <p>
-        Our Team page is currently under maintenance.<br />We're crafting
-        something amazing.<br />Please check back soon!
-      </p>
-      <a href="../index.html" class="btn btn-primary mt-4">Back to Home</a>
+  
+  <div class="container-fluid nav-bar sticky-top px-0 px-lg-4 py-2 py-lg-0">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <a href="../index.html" class="navbar-brand p-0">
+          <h3 class="display-6 text-primary"><img src="../img/gss-logo-navbar.png" alt="Logo" /> Car Rental</h3>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+          <span class="fa fa-bars"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <div class="navbar-nav mx-auto py-0">
+            <a href="../index.html" class="nav-item nav-link">Home</a>
+            <a href="about.html" class="nav-item nav-link">About</a>
+            <a href="service.html" class="nav-item nav-link">Service</a>
+            <a href="fleet.html" class="nav-item nav-link">Fleet</a>
+            <a href="blog.html" class="nav-item nav-link">Blog</a>
+            <a href="#" class="nav-item nav-link active">Our Team</a>
+            <a href="contact.html" class="nav-item nav-link">Contact</a>
+          </div>
+          <a href="#" class="btn btn-primary rounded-pill py-2 px-4">Get Started</a>
+        </div>
+      </nav>
     </div>
-  </body>
+  </div>
+
+
+
+    <!-- Team Start -->
+    <div class="container-fluid team pb-5">
+      <div class="container pb-5">
+        <div
+          class="text-center mx-auto pb-5 section-title scroll-animate fade-down"
+          style="max-width: 800px">
+          <h1><span>Our</span> Team</h1>
+          <p class="mb-0">
+            現地事情に精通したスタッフが、日本語・ミャンマー語・英語で対応。<br>
+            お客様の不安や疑問に寄り添いながら、安心してご利用いただける環境を整えています。
+          </p>
+          <h1><span>Our</span> Drivers</h1>
+          <p class="mb-0">
+            お客様の安全と快適な移動を支える、経験豊富なドライバーチームをご紹介します。<br>
+            現地事情に精通し、丁寧な対応と確かな運転技術で、安心の旅をサポートします。
+          </p>
+        </div>
+        <div class="row g-4 scroll-animate fade-up">
+          <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp"
+            data-wow-delay="0.1s">
+            <div class="team-item p-4 pt-0">
+              <div class="team-img">
+                <img src="../img/Andrew Garfield.jpg"
+                  class="img-fluid rounded w-100" alt="Image" />
+              </div>
+              <div class="team-content pt-4">
+                <h4>Andrew Garfield</h4>
+                <p>Profession</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp"
+            data-wow-delay="0.3s">
+            <div class="team-item p-4 pt-0">
+              <div class="team-img">
+                <img src="../img/Chris Evans .jpeg" class="img-fluid rounded w-100"
+                  alt="Image" />
+              </div>
+              <div class="team-content pt-4">
+                <h4>Chris Evans</h4>
+                <p>Profession</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp"
+            data-wow-delay="0.5s">
+            <div class="team-item p-4 pt-0">
+              <div class="team-img">
+                <img src="../img/Henry Cavill.jpg" class="img-fluid rounded w-100"
+                  alt="Image" />
+              </div>
+              <div class="team-content pt-4">
+                <h4>Henry Cavill</h4>
+                <p>Profession</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp"
+            data-wow-delay="0.7s">
+            <div class="team-item p-4 pt-0">
+              <div class="team-img">
+                <img src="../img/Tom-Holland.jpg" class="img-fluid rounded w-100"
+                  alt="Image" />
+              </div>
+              <div class="team-content pt-4">
+                <h4>Tom Holland</h4>
+                <p>Profession</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Team End -->
+
+
+    <!-- Team Start -->
+    <div class="container-fluid team pb-5">
+      <div class="container pb-5">
+        <div
+          class="text-center mx-auto pb-5 section-title scroll-animate fade-down"
+          style="max-width: 800px">
+          <h1><span>Our</span> Team</h1>
+          <p class="mb-0">
+            現地事情に精通したスタッフが、日本語・ミャンマー語・英語で対応。<br>
+            お客様の不安や疑問に寄り添いながら、安心してご利用いただける環境を整えています。
+          </p>
+          <h1><span>Our</span> Drivers</h1>
+          <p class="mb-0">
+            お客様の安全と快適な移動を支える、経験豊富なドライバーチームをご紹介します。<br>
+            現地事情に精通し、丁寧な対応と確かな運転技術で、安心の旅をサポートします。
+          </p>
+        </div>
+        <div class="row g-4 scroll-animate fade-up">
+          <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp"
+            data-wow-delay="0.1s">
+            <div class="team-item p-4 pt-0">
+              <div class="team-img">
+                <img src="../img/Andrew Garfield.jpg"
+                  class="img-fluid rounded w-100" alt="Image" />
+              </div>
+              <div class="team-content pt-4">
+                <h4>Andrew Garfield</h4>
+                <p>Profession</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp"
+            data-wow-delay="0.3s">
+            <div class="team-item p-4 pt-0">
+              <div class="team-img">
+                <img src="../img/Chris Evans .jpeg" class="img-fluid rounded w-100"
+                  alt="Image" />
+              </div>
+              <div class="team-content pt-4">
+                <h4>Chris Evans</h4>
+                <p>Profession</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp"
+            data-wow-delay="0.5s">
+            <div class="team-item p-4 pt-0">
+              <div class="team-img">
+                <img src="../img/Henry Cavill.jpg" class="img-fluid rounded w-100"
+                  alt="Image" />
+              </div>
+              <div class="team-content pt-4">
+                <h4>Henry Cavill</h4>
+                <p>Profession</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp"
+            data-wow-delay="0.7s">
+            <div class="team-item p-4 pt-0">
+              <div class="team-img">
+                <img src="../img/Tom-Holland.jpg" class="img-fluid rounded w-100"
+                  alt="Image" />
+              </div>
+              <div class="team-content pt-4">
+                <h4>Tom Holland</h4>
+                <p>Profession</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Team End -->
+
+  <!-- Footer Start -->
+  <div include-html="items/footer.html"></div>
+  <!-- Footer End -->
+
+
+
+  <!-- Load jQuery -->
+  <script src="../js/jquery-3.7.1.min.js"></script>
+  <script src="../js/items.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../bootstrap/js/bootstrap.min.js"></script>
+
+  <!-- custom script -->
+  <script type="text/javascript" src="../js/script.js"></script>
+  <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <script src="../lib/wow/wow.min.js"></script>
+
+  <script src="../lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="../js/counter.js"></script>
+</body>
+
 </html>

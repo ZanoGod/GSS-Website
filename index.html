@@ -59,9 +59,13 @@
             </h3>
           </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-            data-bs-target="#navbarCollapse">
-            <span class="fa fa-bars"></span>
+            data-bs-target="#navbarCollapse" aria-controls="navbarCollapse"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="fa-solid fa-bars toggle-icon open-icon"></span>
+            <span
+              class="fa-solid fa-xmark toggle-icon close-icon d-none"></span>
           </button>
+
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav mx-auto py-0">
               <a href="index.html" class="nav-item nav-link active">Home</a>
@@ -694,12 +698,13 @@
     <script src="js/items.js"></script>
     <!-- Bootstrap JS -->
     <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <!-- <script src="bootstrap/js/bootstrap.min.js"></script> -->
 
     <!-- custom script -->
     <script type="text/javascript" src="js/script.js"></script>
     <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- <script type="text/javascript" src="js/counter.js"></script> -->
+    <script src="js/counter.js"></script>
 
     <script src="lib/wow/wow.min.js"></script>
     <!-- <script src="lib/easing/easing.min.js"></script>
@@ -707,7 +712,7 @@
       <script src="lib/counterup/counterup.min.js"></script> -->
 
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="js/counter.js"></script>
+   
   </body>
 
 </html>

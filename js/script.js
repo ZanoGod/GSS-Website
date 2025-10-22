@@ -135,5 +135,25 @@
       });
     });
 
+  //hambrger menu icon toggle
+  document.addEventListener("DOMContentLoaded", function () {
+    const toggler = document.querySelector(".navbar-toggler");
+    if (toggler) {
+      const collapseEl = document.getElementById("navbarCollapse");
+      const openIcon = toggler.querySelector(".open-icon");
+      const closeIcon = toggler.querySelector(".close-icon");
 
+      if (collapseEl && openIcon && closeIcon) {
+        collapseEl.addEventListener("show.bs.collapse", function () {
+          openIcon.classList.add("d-none");
+          closeIcon.classList.remove("d-none");
+        });
+
+        collapseEl.addEventListener("hide.bs.collapse", function () {
+          closeIcon.classList.add("d-none");
+          openIcon.classList.remove("d-none");
+        });
+      }
+    }
+  });
 })(jQuery);

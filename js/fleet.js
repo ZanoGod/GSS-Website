@@ -70,7 +70,7 @@ const cars = [
     slug: 'mark-ii',
     name: 'Toyota Mark II',
     category: 'saloon',
-    image: '../img/cars/toyota_mark2_gray.jpg',
+    image: '../img/cars/toyota_mark2.jpg',
     passengers: 3,
     transmission: 'Automatic',
     fuel: 'Gasoline',

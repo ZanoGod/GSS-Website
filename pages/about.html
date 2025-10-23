@@ -1,346 +1,289 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About Us - Golden Support Service</title>
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us - Golden Support Service</title>
 
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Montserrat:wght@400;700;900&display=swap"
-      rel="stylesheet"
-    />
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css" />
 
-    <!-- Libraries Stylesheet -->
-    <link href="../lib/animate/animate.min.css" rel="stylesheet" />
-    <link
-      href="../lib/owlcarousel/assets/owl.carousel.min.css"
-      rel="stylesheet"
-    />
 
-    <!-- Fontawesome -->
-    <link href="../fontawesome/css/all.min.css" rel="stylesheet" />
+  <!-- Google Web Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Montserrat:wght@400;700;900&display=swap"
+    rel="stylesheet" />
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="../css/styles.css" />
-    <link rel="stylesheet" href="../css/about.css" />
-  </head>
+  <!-- Libraries Stylesheet -->
+  <link href="../lib/animate/animate.min.css" rel="stylesheet" />
+  <link href="../lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
 
-  <body>
-    <div class="preloader"><div class="loader"></div></div>
+  <!-- Fontawesome -->
+  <link href="../fontawesome/css/all.min.css" rel="stylesheet" />
 
-    <!-- Topbar Start -->
-    <div include-html="../items/topbar.html"></div>
-    <!-- Topbar End -->
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="stylesheet" href="../css/about.css" />
+</head>
 
-    <!-- Navbar Start -->
-    <div class="container-fluid nav-bar sticky-top px-0 px-lg-4 py-2 py-lg-0">
-      <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-light">
-          <a href="" class="navbar-brand p-0">
-            <h3 class="display-6">
-              <img
-                src="../img/gss-logo-navbar.png"
-                alt="Golden Support Service Logo"
-              />
-              Car Rental
-            </h3>
-          </a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarCollapse"
-          >
-            <span class="fa fa-bars"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <div class="navbar-nav mx-auto py-0">
-              <a href="../index.html" class="nav-item nav-link">Home</a>
-              <a href="#" class="nav-item nav-link active">About</a>
-              <a href="service.html" class="nav-item nav-link">Service</a>
-              <a href="fleet.html" class="nav-item nav-link">Fleet</a>
-              <a href="./blog.html" class="nav-item nav-link">Blog</a>
-              <a href="ourteam.html" class="nav-item nav-link">Our Team</a>
-              <!-- <div class="nav-item dropdown">
-                <a
-                  href="#"
-                  class="nav-link dropdown-toggle"
-                  data-bs-toggle="dropdown"
-                  >Pages</a
-                >
-                <div class="dropdown-menu m-0">
-                  <a href="#" class="dropdown-item">Our Feature</a>
-                  <a href="#" class="dropdown-item">Our Cars</a>
-                  <a href="#" class="dropdown-item">Our Team</a>
-                  <a href="#" class="dropdown-item">Testimonial</a>
-                  <a href="404.html" class="dropdown-item">404 Page</a>
-                </div>
-              </div> -->
-              <a href="contact.html" class="nav-item nav-link">Contact</a>
-            </div>
-            <a href="#" class="btn btn-primary rounded-pill py-2 px-4"
-              >Get Started</a
-            >
-          </div>
-        </nav>
+<body>
+  <div class="preloader">
+    <div class="loader"></div>
+  </div>
+
+  <!-- Topbar Start -->
+  <div include-html="../items/topbar.html"></div>
+  <!-- Topbar End -->
+
+
+  <!-- ================= Navbar & Hero Start ================= -->
+  <div class="container-fluid nav-bar sticky-top px-0 px-lg-4 py-2 py-lg-0">
+    <div class="container">
+      <nav class="navbar navbar-light d-flex justify-content-between align-items-center">
+        <!-- Brand -->
+        <a href="#" class="navbar-brand p-0 d-flex align-items-center">
+          <img src="../img/gss-logo-navbar.png" alt="Golden Support Service Logo"
+            style="max-height:55px; margin-right:10px;">
+          <h3 class="display-6 mb-0">Car Rental</h3>
+        </a>
+
+        <!-- Hamburger Menu -->
+        <div class="hamburger d-lg-none">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <!-- Nav Links -->
+        <ul class="nav-links list-unstyled mb-0 d-lg-flex align-items-center">
+          <li> <a href="../index.html" class="nav-item nav-link">Home</a> </li>
+          <li> <a href="#" class="nav-item nav-link active">About</a></li>
+          <li> <a href="service.html" class="nav-item nav-link">Service</a> </li>
+          <li> <a href="fleet.html" class="nav-item nav-link">Fleet</a> </li>
+          <li><a href="./blog.html" class="nav-item nav-link">Blog</a> </li>
+          <li> <a href="ourteam.html" class="nav-item nav-link">Our Team</a></li>
+          <li> <a href="contact.html" class="nav-item nav-link">Contact</a> </li>
+          <li> <a href="contact.html" class="btn btn-primary rounded-pill py-2 px-4">Get Started</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <!-- ================= Navbar & Hero End ================= -->
+
+  <!-- About Us Section -->
+  <section class="py-5 bordered" id="about">
+    <div class="container">
+      <div class="row g-5 align-items-center">
+        <div class="col-lg-6">
+          <h1 class="display-6 mb-4">About Us</h1>
+          <p class="mb-4 text-justify">
+            Golden Support Service Co.,
+            Ltd.は、ミャンマーに滞在・出張される日本人の皆様に<br>向けて、安心・快適な移動と現地生活を支えるサポートサービスを提供しています。<br>
+            <br>
+            ヤンゴン市内およびミャンマー国内各地において、ドライバー付きレンタカーサービスを中心に、通訳手配、市場調査、イベント企画など多岐にわたる業務支援を行っています。<br>
+            契約ベースから緊急対応まで、すべて日本語でご相談いただける体制を整えており、<br>ストレスなくご利用いただけることを第一に考えています。
+            日々の移動はもちろん、急な欠勤や車両トラブルにも備え、常時スタンバイの代車体制や定期メンテナンスを<br> 徹底。お客様にご迷惑がかからないよう、安全・確実な運行管理とスタッフ教育を<br>行っています。
+            <br>
+            また、労働省関連の手続きや移動先の環境確認など、日本人にとって重要な時間管理・現地対応も一人ひとりに合わせてサポートいたします。
+            <br>Golden Support
+            Serviceは、「現地で頼れる日本語対応のパートナー」として、<br>皆様のミャンマーでの活動を支えます。
+            どうぞお気軽にご相談ください。
+          </p>
+
+        </div>
+        <div class="col-lg-6 text-center">
+          <img src="../img/about-us.png" alt="About Image" class="img-fluid rounded shadow-lg" />
+        </div>
       </div>
     </div>
-    <!-- Navbar End -->
+  </section>
+  <!-- About Us End -->
 
-    <!-- About Us Section -->
-    <section class="py-5 bordered" id="about">
-      <div class="container">
-        <div class="row g-5 align-items-center">
-          <div class="col-lg-6">
-            <h1 class="display-6 mb-4">About Us</h1>
-            <p class="mb-4 text-justify">
-              Golden Support Service Co.,
-              Ltd.は、ミャンマーに滞在・出張される日本人の皆様に<br>向けて、安心・快適な移動と現地生活を支えるサポートサービスを提供しています。<br>
-              <br>
-              ヤンゴン市内およびミャンマー国内各地において、ドライバー付きレンタカーサービスを中心に、通訳手配、市場調査、イベント企画など多岐にわたる業務支援を行っています。<br>
-              契約ベースから緊急対応まで、すべて日本語でご相談いただける体制を整えており、<br>ストレスなくご利用いただけることを第一に考えています。
-              日々の移動はもちろん、急な欠勤や車両トラブルにも備え、常時スタンバイの代車体制や定期メンテナンスを<br> 徹底。お客様にご迷惑がかからないよう、安全・確実な運行管理とスタッフ教育を<br>行っています。
-              <br>
-              また、労働省関連の手続きや移動先の環境確認など、日本人にとって重要な時間管理・現地対応も一人ひとりに合わせてサポートいたします。
-              <br>Golden Support
-              Serviceは、「現地で頼れる日本語対応のパートナー」として、<br>皆様のミャンマーでの活動を支えます。
-              どうぞお気軽にご相談ください。
-            </p>
-           
-          </div>
-          <div class="col-lg-6 text-center">
-            <img
-              src="../img/about-us.png"
-              alt="About Image"
-              class="img-fluid rounded shadow-lg"
-            />
-          </div>
+  <!-- CEO Profile -->
+  <section class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Company Profile</h2>
+      <div class="row align-items-center">
+        <div class="col-md-4 text-center">
+          <img src="../img/U_Ni.jpg" alt="CEO" class="rounded-circle shadow-lg ceo-img" />
+        </div>
+        <div class="col-md-8">
+          <h4 class="fw-bold">U Ni Htwe</h4>
+          <p>
+            the CEO of Golden Support Service, brings over 20 years of
+            leadership experience in business development and corporate
+            services. His vision is to create a company that not only delivers
+            excellent service but also contributes positively to communities.
+            Under his leadership, GSS has expanded its reach and earned a
+            reputation for reliability and innovation.
+          </p>
         </div>
       </div>
-    </section>
-    <!-- About Us End -->
+    </div>
+  </section>
 
-    <!-- CEO Profile -->
-    <section class="py-5">
-      <div class="container">
-        <h2 class="text-center mb-4">Company Profile</h2>
-        <div class="row align-items-center">
-          <div class="col-md-4 text-center">
-            <img
-              src="../img/U_Ni.jpg"
-              alt="CEO"
-              class="rounded-circle shadow-lg ceo-img"
-            />
-          </div>
-          <div class="col-md-8">
-            <h4 class="fw-bold">U Ni Htwe</h4>
-            <p>
-              the CEO of Golden Support Service, brings over 20 years of
-              leadership experience in business development and corporate
-              services. His vision is to create a company that not only delivers
-              excellent service but also contributes positively to communities.
-              Under his leadership, GSS has expanded its reach and earned a
-              reputation for reliability and innovation.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CEO Profile Section -->
-    <!-- CEO Profile Hero Section -->
-    <section
-      class="d-flex align-items-center"
-      style="
+  <!-- CEO Profile Section -->
+  <!-- CEO Profile Hero Section -->
+  <section class="d-flex align-items-center" style="
         min-height: 85vh;
         background-image: url('../img/ceo-banner.jpg');
         background-size: cover;
         background-position: center;
         color: #fff;
-      "
-    >
-      <div class="container">
-        <div class="row align-items-center">
-          <!-- CEO Text -->
-          <div class="col-lg-9 order-2 order-lg-1 text-center text-lg-start">
-            <h1 class="fw-bold mb-4">U Ni Htwe</h1>
-            <p class="mb-4 text-justify" >
-              「日本とミャンマーを繋ぐ架け橋として、未来を拓く。」 <br><br> 弊社Golden
-              Support Service
-              Co.,Ltd（GSS）は、2012年に車一台からスタートし、現在では車両75台、<br>ドライバー90名を抱えるまでに成長いたしました。<br>この12年間の歩みは、ひとえに日本企業の皆様の温かいご支援と信頼の賜物であり、心より御礼申し上げます。
-            </p>
-            <p class="mb-4 text-justify">
-              ミャンマーは、かつて経済成長の途上にありましたが、コロナウイルスの影響、そして政情不安により、<br> 多くの企業が撤退を余儀なくされました。<br>そのような厳しい環境下でも、私たちはお客様の支えと社員たちの「諦めない心」で数々の困難を乗り越えてまいりました。
-            </p>
-            <p class="mb-4 text-justify">
-              ミャンマーに駐在される日本人の皆様にとって、車は単なる移動手段ではなく、生活の安全と快適さを支える大切なインフラです。<br>そしてドライバーは、時に秘書のように、時に家族のように、日々の暮らしを支える存在です。<br>GSSでは、日本語での円滑なコミュニケーション、徹底した社員教育、迅速な対応体制を整え、安心してご利用いただけるサービスを提供しております。<br>
-              また、私たちは「駐在員の皆様の暮らしをより安全に、より快適にすること」を使命とし、<br>「仕事を通じて社員全員が幸せになること」を目指して挑戦と成長を続けています。<br>2018年には日本語教育機関「GSS
-              Japanese Language 
-              Center」を開校し、社員の語学力向上と人材育成にも力を注いでまいりました。
-            </p>
-            <p class="mb-4 text-justify">
-              さらに近年では、BPO事業や海外人材育成支援など、グループ全体として日本企業様の多様なニーズに応える体制を<br>構築しております。GSSはその中核として、生活支援の現場から信頼を築き、未来へと繋げる役割を担ってまいります。<br>
-              今後とも、皆様のご期待に応えられるよう、社員一同誠心誠意努力してまいります。<br> 引き続きのご愛顧を賜りますよう、何卒よろしくお願い申し上げます。
-            </p>
-          </div>
+      ">
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- CEO Text -->
+        <div class="col-lg-9 order-2 order-lg-1 text-center text-lg-start">
+          <h1 class="fw-bold mb-4">U Ni Htwe</h1>
+          <p class="mb-4 text-justify">
+            「日本とミャンマーを繋ぐ架け橋として、未来を拓く。」 <br><br> 弊社Golden
+            Support Service
+            Co.,Ltd（GSS）は、2012年に車一台からスタートし、現在では車両75台、<br>ドライバー90名を抱えるまでに成長いたしました。<br>この12年間の歩みは、ひとえに日本企業の皆様の温かいご支援と信頼の賜物であり、心より御礼申し上げます。
+          </p>
+          <p class="mb-4 text-justify">
+            ミャンマーは、かつて経済成長の途上にありましたが、コロナウイルスの影響、そして政情不安により、<br>
+            多くの企業が撤退を余儀なくされました。<br>そのような厳しい環境下でも、私たちはお客様の支えと社員たちの「諦めない心」で数々の困難を乗り越えてまいりました。
+          </p>
+          <p class="mb-4 text-justify">
+            ミャンマーに駐在される日本人の皆様にとって、車は単なる移動手段ではなく、生活の安全と快適さを支える大切なインフラです。<br>そしてドライバーは、時に秘書のように、時に家族のように、日々の暮らしを支える存在です。<br>GSSでは、日本語での円滑なコミュニケーション、徹底した社員教育、迅速な対応体制を整え、安心してご利用いただけるサービスを提供しております。<br>
+            また、私たちは「駐在員の皆様の暮らしをより安全に、より快適にすること」を使命とし、<br>「仕事を通じて社員全員が幸せになること」を目指して挑戦と成長を続けています。<br>2018年には日本語教育機関「GSS
+            Japanese Language
+            Center」を開校し、社員の語学力向上と人材育成にも力を注いでまいりました。
+          </p>
+          <p class="mb-4 text-justify">
+            さらに近年では、BPO事業や海外人材育成支援など、グループ全体として日本企業様の多様なニーズに応える体制を<br>構築しております。GSSはその中核として、生活支援の現場から信頼を築き、未来へと繋げる役割を担ってまいります。<br>
+            今後とも、皆様のご期待に応えられるよう、社員一同誠心誠意努力してまいります。<br> 引き続きのご愛顧を賜りますよう、何卒よろしくお願い申し上げます。
+          </p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Our Group Section -->
-    <section class="py-5 bg-light">
-      <div class="container">
-        <h2 class="text-center mb-5 display-5 fw-bold">Our Group</h2>
-        <div class="row g-4">
-          <!-- Company Card -->
-          <div class="col-sm-6 col-lg-3">
-            <div class="card h-100 border-0 shadow-sm group-card-hover">
-              <img
-                src="../img/NMT-letterhead.png"
-                class="card-img-top p-3"
-                alt="Nice Myanmar Travel"
-              />
-              <div class="card-body text-center d-flex flex-column">
-                <h5 class="card-title fw-semibold">Nice Myanmar Travel</h5>
-                <p class="card-text text-muted small flex-grow-1">
-                  Crafting unforgettable travel experiences across Myanmar and
-                  beyond.
-                </p>
-                <a
-                  href="#"
-                  class="btn btn-outline-primary btn-sm rounded-pill mt-3"
-                  >Learn More</a
-                >
-              </div>
+  <!-- Our Group Section -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-5 display-5 fw-bold">Our Group</h2>
+      <div class="row g-4">
+        <!-- Company Card -->
+        <div class="col-sm-6 col-lg-3">
+          <div class="card h-100 border-0 shadow-sm group-card-hover">
+            <img src="../img/NMT-letterhead.png" class="card-img-top p-3" alt="Nice Myanmar Travel" />
+            <div class="card-body text-center d-flex flex-column">
+              <h5 class="card-title fw-semibold">Nice Myanmar Travel</h5>
+              <p class="card-text text-muted small flex-grow-1">
+                Crafting unforgettable travel experiences across Myanmar and
+                beyond.
+              </p>
+              <a href="#" class="btn btn-outline-primary btn-sm rounded-pill mt-3">Learn More</a>
             </div>
           </div>
+        </div>
 
-          <!-- Company Card -->
-          <div class="col-sm-6 col-lg-3">
-            <div class="card h-100 border-0 shadow-sm group-card-hover">
-              <img
-                src="../img/MGSS-letterhead.png"
-                class="card-img-top p-3"
-                alt="Myanmar GSS"
-              />
-              <div class="card-body text-center d-flex flex-column">
-                <h5 class="card-title fw-semibold">Myanmar GSS</h5>
-                <p class="card-text text-muted small flex-grow-1">
-                  Delivering reliable logistics and supply chain solutions
-                  worldwide.
-                </p>
-                <a
-                  href="#"
-                  class="btn btn-outline-primary btn-sm rounded-pill mt-3"
-                  >Learn More</a
-                >
-              </div>
+        <!-- Company Card -->
+        <div class="col-sm-6 col-lg-3">
+          <div class="card h-100 border-0 shadow-sm group-card-hover">
+            <img src="../img/MGSS-letterhead.png" class="card-img-top p-3" alt="Myanmar GSS" />
+            <div class="card-body text-center d-flex flex-column">
+              <h5 class="card-title fw-semibold">Myanmar GSS</h5>
+              <p class="card-text text-muted small flex-grow-1">
+                Delivering reliable logistics and supply chain solutions
+                worldwide.
+              </p>
+              <a href="#" class="btn btn-outline-primary btn-sm rounded-pill mt-3">Learn More</a>
             </div>
           </div>
+        </div>
 
-          <!-- Company Card -->
-          <div class="col-sm-6 col-lg-3">
-            <div class="card h-100 border-0 shadow-sm group-card-hover">
-              <img
-                src="../img/Rita-Outsourcing-Logo.png"
-                class="card-img-top p-3"
-                alt="RITA Outsourcing"
-              />
-              <div class="card-body text-center d-flex flex-column">
-                <h5 class="card-title fw-semibold">RITA Outsourcing</h5>
-                <p class="card-text text-muted small flex-grow-1">
-                  Specializing in outsourced financial services and strategic
-                  investment planning.
-                </p>
-                <a
-                  href="#"
-                  class="btn btn-outline-primary btn-sm rounded-pill mt-3"
-                  >Learn More</a
-                >
-              </div>
+        <!-- Company Card -->
+        <div class="col-sm-6 col-lg-3">
+          <div class="card h-100 border-0 shadow-sm group-card-hover">
+            <img src="../img/Rita-Outsourcing-Logo.png" class="card-img-top p-3" alt="RITA Outsourcing" />
+            <div class="card-body text-center d-flex flex-column">
+              <h5 class="card-title fw-semibold">RITA Outsourcing</h5>
+              <p class="card-text text-muted small flex-grow-1">
+                Specializing in outsourced financial services and strategic
+                investment planning.
+              </p>
+              <a href="#" class="btn btn-outline-primary btn-sm rounded-pill mt-3">Learn More</a>
             </div>
           </div>
+        </div>
 
-          <!-- Company Card -->
-          <div class="col-sm-6 col-lg-3">
-            <div class="card h-100 border-0 shadow-sm group-card-hover">
-              <img
-                src="../img/gss-logo-removebg.png"
-                class="card-img-top p-3"
-                alt="GSS Japanese Language Center"
-              />
-              <div class="card-body text-center d-flex flex-column">
-                <h5 class="card-title fw-semibold">
-                  GSS Japanese Language Center
-                </h5>
-                <p class="card-text text-muted small flex-grow-1">
-                  Offering Japanese language training and cultural immersion
-                  programs.
-                </p>
-                <a
-                  href="#"
-                  class="btn btn-outline-primary btn-sm rounded-pill mt-3"
-                  >Learn More</a
-                >
-              </div>
+        <!-- Company Card -->
+        <div class="col-sm-6 col-lg-3">
+          <div class="card h-100 border-0 shadow-sm group-card-hover">
+            <img src="../img/gss-logo-removebg.png" class="card-img-top p-3" alt="GSS Japanese Language Center" />
+            <div class="card-body text-center d-flex flex-column">
+              <h5 class="card-title fw-semibold">
+                GSS Japanese Language Center
+              </h5>
+              <p class="card-text text-muted small flex-grow-1">
+                Offering Japanese language training and cultural immersion
+                programs.
+              </p>
+              <a href="#" class="btn btn-outline-primary btn-sm rounded-pill mt-3">Learn More</a>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Our Clients -->
-    <section class="py-5">
-      <div class="container">
-        <h2 class="text-center mb-4">Our Clients</h2>
-        <div class="owl-carousel client-carousel text-center">
-          <img src="../img/toyota-logo.png" alt="Toyota" />
-          <img src="../img/Mitsubishi-Logot.png" alt="Mitsubishi" />
-          <img src="../img/suzuki-logo.png" alt="Suzuki" />
-          <img src="../img/Honda-Logo.png" alt="Honda" />
-          <img src="../img/nissan-logo.jpg" alt="Nissan" />
-        </div>
+  <!-- Our Clients -->
+  <section class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Our Clients</h2>
+      <div class="owl-carousel client-carousel text-center">
+        <img src="../img/toyota-logo.png" alt="Toyota" />
+        <img src="../img/Mitsubishi-Logot.png" alt="Mitsubishi" />
+        <img src="../img/suzuki-logo.png" alt="Suzuki" />
+        <img src="../img/Honda-Logo.png" alt="Honda" />
+        <img src="../img/nissan-logo.jpg" alt="Nissan" />
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section>
-      <!-- Footer Start -->
-      <div include-html="../items/footer.html"></div>
-      <!-- Footer End -->
-    </section>
+  <section>
+    <!-- Footer Start -->
+    <div include-html="../items/footer.html"></div>
+    <!-- Footer End -->
+  </section>
 
-    <!-- Scripts -->
-    <script src="../js/jquery-3.7.1.min.js"></script>
-    <script src="../lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="../js/script.js"></script>
-    <script src="../js/items.js"></script>
+  <!-- Scripts -->
+  <script src="../lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="../js/jquery-3.7.1.min.js"></script>
+  <script src="../js/items.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Carousel Init -->
-    <script>
-      $(document).ready(function () {
-        $(".client-carousel").owlCarousel({
-          loop: true,
-          margin: 30,
-          autoplay: true,
-          autoplayTimeout: 2000,
-          smartSpeed: 1000,
-          dots: false,
-          nav: false,
-          responsive: {
-            0: { items: 2 },
-            576: { items: 3 },
-            768: { items: 4 },
-            992: { items: 5 },
-          },
-        });
+  <!-- custom script -->
+  <script type="text/javascript" src="../js/script.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      $(".client-carousel").owlCarousel({
+        loop: true,
+        margin: 30,
+        autoplay: true,
+        autoplayTimeout: 2000,
+        smartSpeed: 1000,
+        dots: false,
+        nav: false,
+        responsive: {
+          0: { items: 2 },
+          576: { items: 3 },
+          768: { items: 4 },
+          992: { items: 5 },
+        },
       });
-    </script>
-  </body>
+    });
+
+
+  </script>
+</body>
+
 </html>

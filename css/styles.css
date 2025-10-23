@@ -165,154 +165,10 @@
 }
 /***======================= Navbar Start =========================***/
 
-.nav-bar {
-  background: var(--bs-white);
-}
-
-.sticky-top {
-  transition: 1s;
-}
-
-.navbar-brand h3 {
-  font-size: 30px !important;
-  font-weight: 600 !important;
-  color: var(--bs-dark) !important;
-  transition: color 0.5s ease, font-weight 0.5s ease;
-}
-
-.navbar-light .navbar-nav .nav-link {
-  position: relative;
-  margin-right: 25px;
-  padding: 35px 0;
-  letter-spacing: 1px;
-  color: var(--bs-dark);
-  font-size: 17px;
-  font-weight: 500;
-  outline: none;
-  transition: 0.5s;
-}
-
-.sticky-top .navbar-light .navbar-nav .nav-link {
-  padding: 20px 0;
-  color: var(--bs-dark);
-}
-
-.navbar-light .navbar-nav .nav-link:hover,
-.navbar-light .navbar-nav .nav-link.active {
-  color: var(--bs-primary);
-}
-
-.navbar-light .navbar-brand img {
-  max-height: 70px;
-  transition: 0.5s ease-in-out;
-}
-
-.sticky-top .navbar-light .navbar-brand img {
-  max-height: 70px;
-}
-
-/* Toggle Icon Styling */
-.toggle-icon {
-  font-size: 24px;
-  transition: all 0.3s ease;
-  line-height: 1;
-}
-
-/* Hide/show logic handled by JS */
-.navbar-toggler .close-icon {
-  display: none;
-}
-
-/* Button Style for Toggler on Mobile */
-@media (max-width: 991px) {
-  .navbar.navbar-expand-lg .navbar-toggler {
-    padding: 8px 15px;
-    border: 1px solid var(--bs-primary);
-    color: var(--bs-primary);
-  }
-
-  .sticky-top .navbar-light .navbar-nav .nav-link {
-    padding: 12px 0;
-  }
-
-  .navbar-collapse {
-    justify-content: center;
-    display: flex !important;
-  }
-}
-
-/* Dropdown Styles */
-.navbar .dropdown-toggle::after {
-  border: none;
-  content: "\f107";
-  font-family: "Font Awesome 5 Free";
-  font-weight: 600;
-  vertical-align: middle;
-  margin-left: 8px;
-}
-
-.dropdown .dropdown-menu a:hover {
-  background: var(--bs-primary);
-  color: var(--bs-white);
-}
-
-.navbar .nav-item:hover .dropdown-menu {
-  transform: rotateX(0deg);
-  visibility: visible;
-  margin-top: 8px !important;
-  background: var(--bs-light);
-  transition: 0.5s;
-  opacity: 1;
-}
-
-/* Desktop dropdown animation */
-@media (min-width: 992px) {
-  .navbar .nav-item .dropdown-menu {
-    display: block;
-    visibility: hidden;
-    top: 100%;
-    transform: rotateX(-75deg);
-    transform-origin: 0% 0%;
-    border: 0;
-    border-radius: 10px;
-    margin-top: 8px !important;
-    transition: 0.5s;
-    opacity: 0;
-  }
-
-  .navbar-collapse {
-    justify-content: center;
-    display: flex !important;
-  }
-}
-
-/* Button styles */
-.nav-bar .btn-primary {
-  background-color: var(--bs-primary);
-  border-color: var(--bs-primary);
-  color: var(--bs-white);
-  font-weight: bold;
-}
-
-.nav-bar .btn-primary:hover {
-  background-color: var(--bs-secondary);
-  border-color: var(--bs-secondary);
-  color: var(--bs-dark);
-  font-weight: bold;
-}
-
-/***======================= Navbar Start =========================***/
+/* General Navbar */
 .nav-bar {
   background: var(--bs-white);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.toggle-icon {
-  font-size: 24px;
-  transition: all 0.3s ease;
-}
-
-.sticky-top {
   transition: 1s;
 }
 
@@ -323,70 +179,18 @@
   transition: color 0.5s ease, font-weight 0.5s ease;
 }
 
-.navbar-light .navbar-nav .nav-link {
-  position: relative;
-  margin-right: 25px;
-  padding: 35px 0;
-  letter-spacing: 1px;
-  color: var(--bs-dark);
-  font-size: 17px;
-  font-weight: 500;
-  outline: none;
-  transition: 0.5s;
-}
-
-.sticky-top.nav-bar {
-  padding-top: 0 !important;
-  padding-bottom: 0 !important;
-}
-
-.sticky-top .navbar-light .navbar-nav .nav-link {
-  padding: 20px 0;
-  color: var(--bs-dark);
-}
-
-.navbar-light .navbar-nav .nav-link:hover,
-.navbar-light .navbar-nav .nav-link.active {
-  color: var(--bs-primary);
-}
-
 .navbar-light .navbar-brand img {
-  max-height: 50px;
+  max-height: 60px;
   transition: 0.5s ease-in-out;
 }
 
-.sticky-top .navbar-light .navbar-brand img {
-  max-height: 50px;
-}
-
-.navbar .dropdown-toggle::after {
-  border: none;
-  content: "\f107";
-  font-family: "Font Awesome 6 Free";
-  font-weight: 900;
-  vertical-align: middle;
-  margin-left: 8px;
-}
-
-.dropdown .dropdown-menu a:hover {
-  background: var(--bs-primary);
-  color: var(--bs-white);
-}
-
-.navbar .nav-item:hover .dropdown-menu {
-  transform: rotateX(0deg);
-  visibility: visible;
-  margin-top: 8px !important;
-  background: var(--bs-light);
-  transition: 0.5s;
-  opacity: 1;
-}
-
+/* Primary Button */
 .nav-bar .btn-primary {
   background-color: var(--bs-primary);
   border-color: var(--bs-primary);
   color: var(--bs-white);
   font-weight: bold;
+  transition: 0.3s;
 }
 
 .nav-bar .btn-primary:hover {
@@ -396,43 +200,161 @@
   font-weight: bold;
 }
 
-@media (min-width: 992px) {
-  .navbar .nav-item .dropdown-menu {
-    display: block;
-    visibility: hidden;
-    top: 100%;
-    transform: rotateX(-75deg);
-    transform-origin: 0% 0%;
-    border: 0;
-    border-radius: 10px;
-    margin-top: 8px !important;
-    transition: 0.5s;
-    opacity: 0;
-  }
+/* ========== Hamburger Menu ========== */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  z-index: 1100;
 }
 
+.hamburger span {
+  height: 3px;
+  width: 25px;
+  background: var(--bs-dark);
+  border-radius: 3px;
+  transition: 0.3s;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translateY(8px);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-8px);
+}
+
+/* ==================== Mobile Styles ==================== */
 @media (max-width: 991.98px) {
-  .navbar.navbar-expand-lg .navbar-toggler {
-    padding: 8px 15px;
-    border: 1px solid var(--bs-primary);
-    color: var(--bs-primary);
+  /* Make the logo/title stay on top */
+  .navbar-brand {
+    position: relative;
+    z-index: 1101;
   }
 
-  .sticky-top .navbar-light .navbar-nav .nav-link,
-  .navbar-light .navbar-nav .nav-link {
-    padding: 12px 0;
+  .hamburger {
+    display: flex;
+  }
+
+  /* Full-screen overlay menu */
+  .nav-links {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    display: flex;
+    background-color: var(--bs-white);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    overflow-y: auto;
+    /* transform: translateY(-100%); 
+    transition: transform 0.5s ease; */
+    z-index: 1050;
+    padding-top: 85px;    /* NEW: Pushes links down from logo */
+    padding-bottom: 20px; /* From previous fix for button */
+    margin: 0;             /* NEW: Enforces full width */
+    border-radius: 0;      /* NEW: Removes rounded corners */
+
+
+    /* --- NEW ANIMATION --- */
+    /* 1. Start invisible */
+    opacity: 0;
+
+    /* 2. Start 20px *above* its final spot (this is the offset) */
+    transform: translateY(-20px);
+
+    /* 3. Animate both opacity and transform. */
+    transition: opacity 0.5s ease-in-out, 
+    transform 0.5s ease-in-out;
+
+    /* 4. Prevent clicking on invisible menu */
+    pointer-events: none;
+  }
+
+  /* .nav-links.active {
+    transform: translateY(0);
+  } */
+
+  .nav-links.active {
+    /* 1. Fade it in */
+    opacity: 1;
+    
+    /* 2. Move it to its final position (0) */
+    transform: translateY(0);
+
+    /* 3. Allow clicking again */
+    pointer-events: auto;
+  }
+
+  .nav-links li {
+    width: 100%;
     text-align: center;
   }
 
-  .navbar-collapse {
-    background: var(--bs-white);
-    padding: 1rem;
-    border-radius: 0.5rem;
-    margin-top: 1rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  .nav-links a {
+    color: var(--bs-dark) !important;
+    font-weight: 600;
+    font-size: 20px;
+    text-decoration: none;
+    display: block;
+    padding: 10px 0;
+  }
+
+  .nav-links .btn.btn-primary {
+    color: var(--bs-white) !important;
+  }
+
+  .nav-links a:hover,
+  .nav-links a.active {
+    color: var(--bs-primary) !important;
+  }
+
+  /* Keep hamburger on top */
+  .hamburger {
+    position: relative;
+    z-index: 1101;
   }
 }
-/*** Navbar End ***/
+
+/* ==================== Desktop Styles ==================== */
+@media (min-width: 992px) {
+  .nav-links {
+    display: flex !important;
+    align-items: center;
+    gap: 35px;
+  }
+
+  .nav-links li {
+    list-style: none;
+  }
+
+  .nav-links a {
+    color: var(--bs-dark);
+    font-weight: 600;
+    font-size: 17px;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  .nav-links a:hover,
+  .nav-links a.active {
+    color: var(--bs-primary);
+  }
+
+  .btn.btn-primary {
+    font-size: 16px;
+    padding: 10px 25px;
+  }
+}
+
+/***======================= Navbar End =========================***/
 
 /*** Carousel Header Start ***/
 

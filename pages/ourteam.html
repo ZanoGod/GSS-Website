@@ -15,6 +15,7 @@
   <!-- Google Web Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
   <link
     href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet" />
@@ -44,185 +45,174 @@
 
   <div include-html="../items/topbar.html"></div>
 
-  
+
+  <!-- ================= Navbar & Hero Start ================= -->
   <div class="container-fluid nav-bar sticky-top px-0 px-lg-4 py-2 py-lg-0">
     <div class="container">
-      <nav class="navbar navbar-expand-lg navbar-light">
-        <a href="../index.html" class="navbar-brand p-0">
-          <h3 class="display-6 text-primary"><img src="../img/gss-logo-navbar.png" alt="Logo" /> 
-            Car Rental </h3>
+      <nav class="navbar navbar-light d-flex justify-content-between align-items-center">
+        <!-- Brand -->
+        <a href="#" class="navbar-brand p-0 d-flex align-items-center">
+          <img src="../img/gss-logo-navbar.png" alt="Golden Support Service Logo"
+            style="max-height:55px; margin-right:10px;">
+          <h3 class="display-6 mb-0">Car Rental</h3>
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-          <span class="fa fa-bars"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-          <div class="navbar-nav mx-auto py-0">
-            <a href="../index.html" class="nav-item nav-link">Home</a>
-            <a href="about.html" class="nav-item nav-link">About</a>
-            <a href="service.html" class="nav-item nav-link">Service</a>
-            <a href="fleet.html" class="nav-item nav-link">Fleet</a>
-            <a href="blog.html" class="nav-item nav-link">Blog</a>
-            <a href="#" class="nav-item nav-link active">Our Team</a>
-            <a href="contact.html" class="nav-item nav-link">Contact</a>
-          </div>
-          <a href="#" class="btn btn-primary rounded-pill py-2 px-4">Get Started</a>
+
+        <!-- Hamburger Menu -->
+        <div class="hamburger d-lg-none">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
+
+        <!-- Nav Links -->
+        <ul class="nav-links list-unstyled mb-0 d-lg-flex align-items-center">
+          <li> <a href="../index.html" class="nav-item nav-link">Home</a> </li>
+          <li> <a href="about.html" class="nav-item nav-link ">About</a></li>
+          <li> <a href="service.html" class="nav-item nav-link">Service</a> </li>
+          <li> <a href="fleet.html" class="nav-item nav-link">Fleet</a> </li>
+          <li><a href="./blog.html" class="nav-item nav-link">Blog</a> </li>
+          <li> <a href="#" class="nav-item nav-link active">Our Team</a></li>
+          <li> <a href="contact.html" class="nav-item nav-link">Contact</a> </li>
+          <li> <a href="contact.html" class="btn btn-primary rounded-pill py-2 px-4">Get Started</a></li>
+        </ul>
       </nav>
     </div>
   </div>
+  <!-- ================= Navbar & Hero End ================= -->
 
 
 
-    <!-- Team Start -->
-    <div class="container-fluid team pb-5">
-      <div class="container pb-5">
-        <div
-          class="text-center mx-auto pb-5 section-title scroll-animate fade-down"
-          style="max-width: 800px">
-          <h1><span>Our</span> Team</h1>
-          <p class="mb-0">
-            現地事情に精通したスタッフが、日本語・ミャンマー語・英語で対応。<br>
-            お客様の不安や疑問に寄り添いながら、安心してご利用いただける環境を整えています。
-          </p>
-          <h1><span>Our</span> Drivers</h1>
-          <p class="mb-0">
-            お客様の安全と快適な移動を支える、経験豊富なドライバーチームをご紹介します。<br>
-            現地事情に精通し、丁寧な対応と確かな運転技術で、安心の旅をサポートします。
-          </p>
+  <!-- Team Start -->
+  <div class="container-fluid team pb-5">
+    <div class="container pb-5">
+      <div class="text-center mx-auto pb-5 section-title scroll-animate fade-down" style="max-width: 800px">
+        <h1><span>Our</span> Team</h1>
+        <p class="mb-0">
+          現地事情に精通したスタッフが、日本語・ミャンマー語・英語で対応。<br>
+          お客様の不安や疑問に寄り添いながら、安心してご利用いただける環境を整えています。
+        </p>
+        <h1><span>Our</span> Drivers</h1>
+        <p class="mb-0">
+          お客様の安全と快適な移動を支える、経験豊富なドライバーチームをご紹介します。<br>
+          現地事情に精通し、丁寧な対応と確かな運転技術で、安心の旅をサポートします。
+        </p>
+      </div>
+      <div class="row g-4 scroll-animate fade-up">
+        <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
+          <div class="team-item p-4 pt-0">
+            <div class="team-img">
+              <img src="../img/Andrew Garfield.jpg" class="img-fluid rounded w-100" alt="Image" />
+            </div>
+            <div class="team-content pt-4">
+              <h4>Andrew Garfield</h4>
+              <p>Profession</p>
+            </div>
+          </div>
         </div>
-        <div class="row g-4 scroll-animate fade-up">
-          <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp"
-            data-wow-delay="0.1s">
-            <div class="team-item p-4 pt-0">
-              <div class="team-img">
-                <img src="../img/Andrew Garfield.jpg"
-                  class="img-fluid rounded w-100" alt="Image" />
-              </div>
-              <div class="team-content pt-4">
-                <h4>Andrew Garfield</h4>
-                <p>Profession</p>
-              </div>
+        <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
+          <div class="team-item p-4 pt-0">
+            <div class="team-img">
+              <img src="../img/Chris Evans .jpeg" class="img-fluid rounded w-100" alt="Image" />
+            </div>
+            <div class="team-content pt-4">
+              <h4>Chris Evans</h4>
+              <p>Profession</p>
             </div>
           </div>
-          <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp"
-            data-wow-delay="0.3s">
-            <div class="team-item p-4 pt-0">
-              <div class="team-img">
-                <img src="../img/Chris Evans .jpeg" class="img-fluid rounded w-100"
-                  alt="Image" />
-              </div>
-              <div class="team-content pt-4">
-                <h4>Chris Evans</h4>
-                <p>Profession</p>
-              </div>
+        </div>
+        <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
+          <div class="team-item p-4 pt-0">
+            <div class="team-img">
+              <img src="../img/Henry Cavill.jpg" class="img-fluid rounded w-100" alt="Image" />
+            </div>
+            <div class="team-content pt-4">
+              <h4>Henry Cavill</h4>
+              <p>Profession</p>
             </div>
           </div>
-          <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp"
-            data-wow-delay="0.5s">
-            <div class="team-item p-4 pt-0">
-              <div class="team-img">
-                <img src="../img/Henry Cavill.jpg" class="img-fluid rounded w-100"
-                  alt="Image" />
-              </div>
-              <div class="team-content pt-4">
-                <h4>Henry Cavill</h4>
-                <p>Profession</p>
-              </div>
+        </div>
+        <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.7s">
+          <div class="team-item p-4 pt-0">
+            <div class="team-img">
+              <img src="../img/Tom-Holland.jpg" class="img-fluid rounded w-100" alt="Image" />
             </div>
-          </div>
-          <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp"
-            data-wow-delay="0.7s">
-            <div class="team-item p-4 pt-0">
-              <div class="team-img">
-                <img src="../img/Tom-Holland.jpg" class="img-fluid rounded w-100"
-                  alt="Image" />
-              </div>
-              <div class="team-content pt-4">
-                <h4>Tom Holland</h4>
-                <p>Profession</p>
-              </div>
+            <div class="team-content pt-4">
+              <h4>Tom Holland</h4>
+              <p>Profession</p>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <!-- Team End -->
+  </div>
+  <!-- Team End -->
 
 
-    <!-- Team Start -->
-    <div class="container-fluid team pb-5">
-      <div class="container pb-5">
-        <div
-          class="text-center mx-auto pb-5 section-title scroll-animate fade-down"
-          style="max-width: 800px">
-          <h1><span>Our</span> Team</h1>
-          <p class="mb-0">
-            現地事情に精通したスタッフが、日本語・ミャンマー語・英語で対応。<br>
-            お客様の不安や疑問に寄り添いながら、安心してご利用いただける環境を整えています。
-          </p>
-          <h1><span>Our</span> Drivers</h1>
-          <p class="mb-0">
-            お客様の安全と快適な移動を支える、経験豊富なドライバーチームをご紹介します。<br>
-            現地事情に精通し、丁寧な対応と確かな運転技術で、安心の旅をサポートします。
-          </p>
+
+  <!-- Team Start -->
+  <div class="container-fluid team pb-5">
+    <div class="container pb-5">
+      <div class="text-center mx-auto pb-5 section-title scroll-animate fade-down" style="max-width: 800px">
+        <h1><span>Our</span> Team</h1>
+        <p class="mb-0">
+          現地事情に精通したスタッフが、日本語・ミャンマー語・英語で対応。<br>
+          お客様の不安や疑問に寄り添いながら、安心してご利用いただける環境を整えています。
+        </p>
+        <h1><span>Our</span> Drivers</h1>
+        <p class="mb-0">
+          お客様の安全と快適な移動を支える、経験豊富なドライバーチームをご紹介します。<br>
+          現地事情に精通し、丁寧な対応と確かな運転技術で、安心の旅をサポートします。
+        </p>
+      </div>
+      <div class="row g-4 scroll-animate fade-up">
+        <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
+          <div class="team-item p-4 pt-0">
+            <div class="team-img">
+              <img src="../img/Andrew Garfield.jpg" class="img-fluid rounded w-100" alt="Image" />
+            </div>
+            <div class="team-content pt-4">
+              <h4>Andrew Garfield</h4>
+              <p>Profession</p>
+            </div>
+          </div>
         </div>
-        <div class="row g-4 scroll-animate fade-up">
-          <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp"
-            data-wow-delay="0.1s">
-            <div class="team-item p-4 pt-0">
-              <div class="team-img">
-                <img src="../img/Andrew Garfield.jpg"
-                  class="img-fluid rounded w-100" alt="Image" />
-              </div>
-              <div class="team-content pt-4">
-                <h4>Andrew Garfield</h4>
-                <p>Profession</p>
-              </div>
+        <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
+          <div class="team-item p-4 pt-0">
+            <div class="team-img">
+              <img src="../img/Chris Evans .jpeg" class="img-fluid rounded w-100" alt="Image" />
+            </div>
+            <div class="team-content pt-4">
+              <h4>Chris Evans</h4>
+              <p>Profession</p>
             </div>
           </div>
-          <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp"
-            data-wow-delay="0.3s">
-            <div class="team-item p-4 pt-0">
-              <div class="team-img">
-                <img src="../img/Chris Evans .jpeg" class="img-fluid rounded w-100"
-                  alt="Image" />
-              </div>
-              <div class="team-content pt-4">
-                <h4>Chris Evans</h4>
-                <p>Profession</p>
-              </div>
+        </div>
+        <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
+          <div class="team-item p-4 pt-0">
+            <div class="team-img">
+              <img src="../img/Henry Cavill.jpg" class="img-fluid rounded w-100" alt="Image" />
+            </div>
+            <div class="team-content pt-4">
+              <h4>Henry Cavill</h4>
+              <p>Profession</p>
             </div>
           </div>
-          <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp"
-            data-wow-delay="0.5s">
-            <div class="team-item p-4 pt-0">
-              <div class="team-img">
-                <img src="../img/Henry Cavill.jpg" class="img-fluid rounded w-100"
-                  alt="Image" />
-              </div>
-              <div class="team-content pt-4">
-                <h4>Henry Cavill</h4>
-                <p>Profession</p>
-              </div>
+        </div>
+        <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.7s">
+          <div class="team-item p-4 pt-0">
+            <div class="team-img">
+              <img src="../img/Tom-Holland.jpg" class="img-fluid rounded w-100" alt="Image" />
             </div>
-          </div>
-          <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp"
-            data-wow-delay="0.7s">
-            <div class="team-item p-4 pt-0">
-              <div class="team-img">
-                <img src="../img/Tom-Holland.jpg" class="img-fluid rounded w-100"
-                  alt="Image" />
-              </div>
-              <div class="team-content pt-4">
-                <h4>Tom Holland</h4>
-                <p>Profession</p>
-              </div>
+            <div class="team-content pt-4">
+              <h4>Tom Holland</h4>
+              <p>Profession</p>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <!-- Team End -->
+  </div>
+  <!-- Team End -->
 
   <!-- Footer Start -->
   <div include-html="items/footer.html"></div>

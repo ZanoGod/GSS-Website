@@ -21,20 +21,151 @@
   transform: scale(1.05);
 }
 
-
 /* Our Group - Company Cards */
- .group-card-hover {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border-radius: 10px;
-    background-color: #fff;
+/* Section Header */
+.section-title {
+  font-weight: 700; /* Bold */
+  color: #111827; /* 'text-gray-900' */
+}
+
+/* Modern Card Styles */
+.group-card {
+  border: none;
+  border-radius: 1rem; /* 'rounded-2xl' */
+  background-color: #fff;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.07),
+    0 4px 6px -4px rgb(0 0 0 / 0.07); /* 'shadow-lg' */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%; /* Ensure cards are the same height */
+  display: flex;
+  flex-direction: column;
+}
+
+.group-card:hover {
+  transform: translateY(-0.375rem); /* '-translate-y-1.5' */
+  box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.15); /* 'shadow-2xl' */
+}
+
+.group-card .card-img-top {
+  height: 8rem; /* 'h-32' */
+  width: 100%;
+  object-fit: contain;
+  padding: 1.5rem; /* 'p-6' */
+}
+
+.group-card .card-body {
+  text-align: center;
+  padding: 1.5rem;
+  padding-top: 0;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Makes card body fill height */
+}
+
+.group-card .card-title {
+  font-size: 1.25rem; /* 'text-xl' */
+  font-weight: 600; /* 'font-semibold' */
+  color: #111827; /* 'text-gray-900' */
+  margin-bottom: 0.75rem; /* 'mb-3' */
+}
+
+.group-card .card-text {
+  font-size: 0.875rem; /* 'text-sm' */
+  color: #4b5563; /* 'text-gray-600' */
+  flex-grow: 1; /* Pushes button to bottom */
+  margin-bottom: 1.25rem; /* 'mb-5' */
+}
+
+/* Modern Button Style */
+/* Modern Button Style */
+        .btn-modern {
+            border-radius: 9999px; /* 'rounded-full' */
+            font-weight: 600; /* 'font-bold' to match your nav button */
+            background-color: var(--bs-primary); /* Using your primary color */
+            border-color: var(--bs-primary);
+            color: var(--bs-white);
+            padding: 0.625rem 1.25rem; /* 'px-5 py-2.5' */
+            font-size: 0.875rem; /* 'text-sm' */
+            transition: all 0.3s ease; /* Matching your nav button transition */
+        }
+        
+        .btn-modern:hover {
+            background-color: var(--bs-secondary); /* Using your secondary color */
+            border-color: var(--bs-secondary);
+            color: var(--bs-dark); /* Text color changes on hover */
+        }
+
+/* === CEO Hero Section === */
+.ceo-hero {
+  position: relative;
+  min-height: 95vh;
+  background-image: url("../img/ceo-banner.jpg");
+  background-size: cover; /* ensures image always visible */
+  background-position: right center;
+  background-position-x: calc(100% + 80px);
+  background-repeat: no-repeat;
+  color: #fff; /* default text color */
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Add a dark overlay to improve text visibility */
+.ceo-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3); /* semi-transparent overlay */
+  z-index: 1;
+}
+
+/* Make sure text stays above overlay */
+.ceo-hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* === Text readability fix === */
+.ceo-hero h1,
+.ceo-hero p {
+  color: #ffffff;
+  transition: color 0.3s ease;
+}
+
+/* Optional: automatic text color switch if background is light */
+@media (prefers-color-scheme: light) {
+  .ceo-hero {
+    color: #111;
+  }
+  .ceo-hero h1,
+  .ceo-hero p {
+    color: #ffffff;
+  }
+}
+
+/* === Mobile (below 576px) === */
+@media (max-width: 575.98px) {
+  .ceo-hero {
+    min-height: auto;
+    padding: 60px 15px;
+    background-position: center top;
   }
 
-  .group-card-hover:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  .ceo-hero::before {
+    background: rgba(
+      0,
+      0,
+      0,
+      0.55
+    ); /* slightly darker overlay for small screens */
   }
 
-  .card-img-top {
-    max-height: 120px;
-    object-fit: contain;
+  .ceo-hero h1 {
+    font-size: 1.5rem;
   }
+
+  .ceo-hero p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+}

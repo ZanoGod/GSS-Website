@@ -15,6 +15,14 @@
         "frame-title": "off"
       }
     ],
-    "disown-opener": "off"
+    "disown-opener": "off",
+    "compat-api/css": [
+      "default",
+      {
+        "ignore": [
+          "min-height: auto"
+        ]
+      }
+    ]
   }
 }

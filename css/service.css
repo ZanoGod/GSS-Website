@@ -119,9 +119,9 @@ New Service Card Styles
   transition: width 0.3s ease-out;
 }
 
-/* Hover effect for the color line */
+/*================ Hover effect for the color line =======================================*/
 .service-card-new:hover .description p:first-of-type:before {
-  width: 120px; /* New width on hover */
+  width: 150px; /* New width on hover */
 }
 
 /* Desktop Styles */

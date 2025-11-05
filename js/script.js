@@ -106,5 +106,73 @@
   // Hide the overlay after 10 seconds (for testing)
   setTimeout(() => {
     document.getElementById("maintenance-overlay").style.display = "none";
-  }, 5000);
+  }, 1000);
+
+  // === Manual Driver Carousel (No Auto Sliding, No Clones, Smooth) ===
+  document.addEventListener("DOMContentLoaded", function () {
+    const carousel = document.querySelector("#driversCarousel");
+    if (!carousel) return;
+
+    const row = carousel.querySelector(".carousel-inner .row");
+    const items = Array.from(row.children);
+    const totalItems = items.length;
+    let currentIndex = 0;
+
+    function getVisibleCount() {
+      if (window.innerWidth >= 992) return 3;
+      if (window.innerWidth >= 768) return 2;
+      return 1;
+    }
+
+    let visibleCount = getVisibleCount();
+
+    // Update carousel transform
+    function updateCarousel(animate = true) {
+      const itemWidth = row.scrollWidth / totalItems;
+      const offset = itemWidth * currentIndex;
+      row.style.transition = animate ? "transform 0.5s ease-in-out" : "none";
+      row.style.transform = `translateX(-${offset}px)`;
+    }
+
+    // Move next
+    function moveNext() {
+      if (currentIndex < totalItems - visibleCount) {
+        currentIndex++;
+        updateCarousel(true);
+      } else {
+        // jump back to start
+        currentIndex = 0;
+        updateCarousel(true);
+      }
+    }
+
+    // Move prev
+    function movePrev() {
+      if (currentIndex > 0) {
+        currentIndex--;
+        updateCarousel(true);
+      } else {
+        // jump to last set
+        currentIndex = Math.max(totalItems - visibleCount, 0);
+        updateCarousel(true);
+      }
+    }
+
+    // Buttons
+    const prevBtn = carousel.querySelector(".carousel-control-prev");
+    const nextBtn = carousel.querySelector(".carousel-control-next");
+
+    if (prevBtn && nextBtn) {
+      prevBtn.addEventListener("click", movePrev);
+      nextBtn.addEventListener("click", moveNext);
+    }
+
+    // Handle resize
+    window.addEventListener("resize", () => {
+      visibleCount = getVisibleCount();
+      updateCarousel(false);
+    });
+
+    updateCarousel(false);
+  });
 })(jQuery);

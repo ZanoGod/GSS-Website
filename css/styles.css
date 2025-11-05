@@ -930,12 +930,17 @@
 /*** Blog Section End ***/
 
 /*** Team Start ***/
+/*** Team Start ***/
+.team{
+  background: var(--bs-light);
+}
+
 .team .team-item {
   position: relative;
   text-align: center;
   border-radius: 10px;
   margin-top: 100px;
-  background: var(--bs-light);
+  background: var(--bs-gray);
   transition: 0.5s;
   z-index: 1;
 }
@@ -960,6 +965,7 @@
 .team .team-item .team-content {
   position: relative;
   z-index: 5;
+  padding-bottom: 15px;
 }
 
 .team .team-item .team-content h4,
@@ -967,9 +973,7 @@
   transition: 0.5s;
 }
 
-.team .team-item:hover .team-content h4 {
-  color: var(--bs-white);
-}
+.team .team-item:hover .team-content h4,
 .team .team-item:hover .team-content p {
   color: var(--bs-white);
 }
@@ -981,13 +985,13 @@
   margin-bottom: -100px;
   border-radius: 10px;
   z-index: 3;
-  height: 350px; /* Fixed height for all image containers */
+  height: 350px;
 }
 
 .team .team-item .team-img img {
-  object-fit: cover; /* Ensures image fills container without distortion */
+  object-fit: cover;
   width: 100%;
-  height: 100%; /* Make image take full container height */
+  height: 100%;
   transition: 0.5s;
 }
 
@@ -1012,9 +1016,101 @@
   height: 100%;
 }
 
+/* === Drivers Carousel Styling === */
+#driversCarousel {
+  position: relative;
+  overflow: hidden;
+  padding: 0 100px;
+}
+
+#driversCarousel .carousel-inner .row {
+  display: flex;
+  flex-wrap: nowrap;
+  transition: transform 0.5s ease-in-out;
+  margin: 0;
+}
 
 
+#driversCarousel .carousel-inner .col-md-6.col-lg-4 {
+  padding: 0 12px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 992px) {
+  #driversCarousel {
+    padding: 0 60px;
+  }
+  #driversCarousel .carousel-inner .col-md-6.col-lg-4 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  #driversCarousel {
+    padding: 0 40px;
+  }
+  #driversCarousel .carousel-inner .col-md-6.col-lg-4 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+/* Carousel Buttons */
+.custom-carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--bs-primary);
+  border: none;
+  color: var(--bs-white);
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  z-index: 10;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-carousel-btn:hover {
+  background-color: var(--bs-secondary);
+  color: var(--bs-dark);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-control-prev.custom-carousel-btn {
+  left: 25px;
+}
+
+.carousel-control-next.custom-carousel-btn {
+  right: 25px;
+}
+
+/* === View More Button Inside Each Card === */
+.team .btn-view-more {
+  background-color: var(--bs-secondary);
+  border-color: var(--bs-secondary);
+  color: var(--bs-dark);
+  font-weight: 600;
+  padding: 6px 18px;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  transition: 0.3s ease;
+  display: inline-block;
+}
+
+.team .btn-view-more:hover {
+  background-color: var(--bs-footer);
+  border-color: var(--bs-footer);
+  color: var(--bs-white);
+  transform: translateY(-2px);
+}
 /*** Team End ***/
+
+
 
 /*** Footer Start ***/
 :root {

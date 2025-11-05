@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -17,7 +16,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet" />
+      rel="stylesheet"
+    />
 
     <!-- Libraries Stylesheet -->
     <link href="lib/animate/animate.min.css" rel="stylesheet" />
@@ -34,11 +34,89 @@
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/service.css" />
     <link rel="stylesheet" href="css/scroll-animate.css" />
+
+    <style>
+      /* === Maintenance Overlay Styles === */
+      #maintenance-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(10, 10, 10, 0.25);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 99999;
+        animation: fadeIn 0.6s ease-in-out;
+      }
+
+      #maintenance-overlay .maintenance-box {
+        background: rgba(255, 255, 255, 0.2);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 16px;
+        padding: 40px 60px;
+        text-align: center;
+        color: #fff;
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+        animation: pulseGlow 2s infinite alternate ease-in-out;
+      }
+
+      #maintenance-overlay .maintenance-box h1 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+        letter-spacing: 0.5px;
+      }
+
+      #maintenance-overlay .maintenance-box p {
+        font-size: 1.1rem;
+        opacity: 0.8;
+      }
+
+      /* === Animations === */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: scale(0.95);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+      @keyframes pulseGlow {
+        from {
+          box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+        }
+        to {
+          box-shadow: 0 0 30px rgba(0, 200, 255, 0.5);
+        }
+      }
+
+      /* === Optional Responsive Tweak === */
+      @media (max-width: 600px) {
+        #maintenance-overlay .maintenance-box {
+          padding: 25px 30px;
+          font-size: 0.95rem;
+        }
+      }
+    </style>
   </head>
 
   <body>
     <div class="preloader">
       <div class="loader"></div>
+    </div>
+
+    <!-- 🔧 Under Maintenance Overlay -->
+    <div id="maintenance-overlay">
+      <div class="maintenance-box">
+        <h1>🚧 Website Under Maintenance</h1>
+        <p>We’re improving your experience. Please check back soon!</p>
+      </div>
     </div>
 
     <!-- Topbar Start -->
@@ -49,11 +127,15 @@
     <div class="container-fluid nav-bar sticky-top px-0 px-lg-4 py-2 py-lg-0">
       <div class="container">
         <nav
-          class="navbar navbar-light d-flex justify-content-between align-items-center">
+          class="navbar navbar-light d-flex justify-content-between align-items-center"
+        >
           <!-- Brand -->
           <a href="#" class="navbar-brand p-0 d-flex align-items-center">
-            <img src="img/gss-logo-navbar.png" alt="Golden Support Service Logo"
-              style="max-height:55px; margin-right:10px;">
+            <img
+              src="img/gss-logo-navbar.png"
+              alt="Golden Support Service Logo"
+              style="max-height: 55px; margin-right: 10px"
+            />
             <h3 class="display-6 mb-0">Car Rental</h3>
           </a>
 
@@ -66,23 +148,40 @@
 
           <!-- Nav Links -->
           <ul class="nav-links list-unstyled mb-0 d-lg-flex align-items-center">
-            <li><a href="index.html"
-                class="nav-item nav-link active">Home</a></li>
-            <li><a href="./pages/about.html"
-                class="nav-item nav-link">About</a></li>
-            <li><a href="./pages/service.html"
-                class="nav-item nav-link">Service</a></li>
-            <li><a href="./pages/fleet.html"
-                class="nav-item nav-link">Fleet</a></li>
-            <li><a href="./pages/blog.html"
-                class="nav-item nav-link">Blog</a></li>
-            <li><a href="./pages/ourteam.html" class="nav-item nav-link">Our
-                Team</a></li>
-            <li><a href="./pages/contact.html"
-                class="nav-item nav-link">Contact</a></li>
-            <li><a href="./pages/contact.html"
-                class="btn btn-primary rounded-pill py-2 px-4 ms-lg-3">Get
-                Started</a></li>
+            <li>
+              <a href="index.html" class="nav-item nav-link active">Home</a>
+            </li>
+            <li>
+              <a href="./pages/about.html" class="nav-item nav-link">About</a>
+            </li>
+            <li>
+              <a href="./pages/service.html" class="nav-item nav-link"
+                >Service</a
+              >
+            </li>
+            <li>
+              <a href="./pages/fleet.html" class="nav-item nav-link">Fleet</a>
+            </li>
+            <li>
+              <a href="./pages/blog.html" class="nav-item nav-link">Blog</a>
+            </li>
+            <li>
+              <a href="./pages/ourteam.html" class="nav-item nav-link"
+                >Our Team</a
+              >
+            </li>
+            <li>
+              <a href="./pages/contact.html" class="nav-item nav-link"
+                >Contact</a
+              >
+            </li>
+            <li>
+              <a
+                href="./pages/contact.html"
+                class="btn btn-primary rounded-pill py-2 px-4 ms-lg-3"
+                >Get Started</a
+              >
+            </li>
           </ul>
         </nav>
       </div>
@@ -99,8 +198,7 @@
         <div class="text-center mx-auto pb-5 section-title">
           <h1><span> Vehicle</span> Categories</h1>
           <p class="mb-0">
-
-            ご利用目的に合わせて、豊富な車種をご用意しています。<br>
+            ご利用目的に合わせて、豊富な車種をご用意しています。<br />
             コンパクトカーから大人数向け大型バンまで、ニーズに応じてお選びいただけます。
           </p>
         </div>
@@ -110,8 +208,11 @@
           <div class="categories-item p-4">
             <div class="categories-item-inner">
               <div class="categories-img rounded-top">
-                <img src="img/cars/toyota alphard 2011.jpg"
-                  class="img-fluid w-100 rounded-top" alt="alphard" />
+                <img
+                  src="img/cars/toyota alphard 2011.jpg"
+                  class="img-fluid w-100 rounded-top"
+                  alt="alphard"
+                />
               </div>
               <div class="categories-content rounded-bottom p-4">
                 <h4>Toyota Alphard 2011</h4>
@@ -132,30 +233,32 @@
               </div> -->
                 <div class="row gy-2 gx-0 text-center mb-4">
                   <div class="col-4 border-end border-white">
-                    <i class="fa fa-users text-dark"></i><span
-                      class="text-body ms-1">6 Seat</span>
+                    <i class="fa fa-users text-dark"></i
+                    ><span class="text-body ms-1">6 Seat</span>
                   </div>
                   <div class="col-4">
-                    <i class="fa fa-gas-pump text-dark"></i><span
-                      class="text-body ms-1">Gasoline</span>
+                    <i class="fa fa-gas-pump text-dark"></i
+                    ><span class="text-body ms-1">Gasoline</span>
                   </div>
                   <div class="col-4 border-end border-white">
                     <i class="bi bi-calendar-event-fill"></i>
                     <span class="text-body ms-1">2011</span>
                   </div>
                   <div class="col-4 border-end border-white">
-                    <i class="fa fa-cogs text-dark"></i><span
-                      class="text-body ms-1">AUTO</span>
+                    <i class="fa fa-cogs text-dark"></i
+                    ><span class="text-body ms-1">AUTO</span>
                   </div>
 
                   <div class="col-4 border-end border-white">
-                    <i class="fa fa-car text-dark"></i><span
-                      class="text-body ms-1">Mini Van</span>
+                    <i class="fa fa-car text-dark"></i
+                    ><span class="text-body ms-1">Mini Van</span>
                   </div>
                 </div>
-                <a href="pages/fleet.html#alphard"
-                  class="btn btn-primary rounded-pill d-flex justify-content-center py-3">View
-                  Fleet</a>
+                <a
+                  href="pages/fleet.html#alphard"
+                  class="btn btn-primary rounded-pill d-flex justify-content-center py-3"
+                  >View Fleet</a
+                >
               </div>
             </div>
           </div>
@@ -164,8 +267,11 @@
           <div class="categories-item p-4">
             <div class="categories-item-inner">
               <div class="categories-img rounded-top">
-                <img src="img/cars/Mitsubishi ASX .png"
-                  class="img-fluid w-100 rounded-top" alt="parjeo" />
+                <img
+                  src="img/cars/Mitsubishi ASX .png"
+                  class="img-fluid w-100 rounded-top"
+                  alt="parjeo"
+                />
               </div>
               <div class="categories-content rounded-bottom p-4">
                 <h4>Mitsubishi ASX</h4>
@@ -186,30 +292,32 @@
               </div> -->
                 <div class="row gy-2 gx-0 text-center mb-4">
                   <div class="col-4 border-end border-white">
-                    <i class="fa fa-users text-dark"></i><span
-                      class="text-body ms-1">4 Seat</span>
+                    <i class="fa fa-users text-dark"></i
+                    ><span class="text-body ms-1">4 Seat</span>
                   </div>
                   <div class="col-4">
-                    <i class="fa fa-gas-pump text-dark"></i><span
-                      class="text-body ms-1">Gasoline</span>
+                    <i class="fa fa-gas-pump text-dark"></i
+                    ><span class="text-body ms-1">Gasoline</span>
                   </div>
                   <div class="col-4 border-end border-white">
                     <i class="bi bi-calendar-event-fill"></i>
                     <span class="text-body ms-1">2018</span>
                   </div>
                   <div class="col-4 border-end border-white">
-                    <i class="fa fa-cogs text-dark"></i><span
-                      class="text-body ms-1">AUTO</span>
+                    <i class="fa fa-cogs text-dark"></i
+                    ><span class="text-body ms-1">AUTO</span>
                   </div>
 
                   <div class="col-4 border-end border-white">
-                    <i class="fa fa-car text-dark"></i><span
-                      class="text-body ms-1">SUV</span>
+                    <i class="fa fa-car text-dark"></i
+                    ><span class="text-body ms-1">SUV</span>
                   </div>
                 </div>
-                <a href="pages/fleet.html#mitsubishi-asx"
-                  class="btn btn-primary rounded-pill d-flex justify-content-center py-3">View
-                  Fleet</a>
+                <a
+                  href="pages/fleet.html#mitsubishi-asx"
+                  class="btn btn-primary rounded-pill d-flex justify-content-center py-3"
+                  >View Fleet</a
+                >
               </div>
             </div>
           </div>
@@ -218,8 +326,11 @@
           <div class="categories-item p-4">
             <div class="categories-item-inner">
               <div class="categories-img rounded-top">
-                <img src="img/cars/suzuki ertiga type 3.jpg"
-                  class="img-fluid w-100 rounded-top" alt="suzuki ertiga" />
+                <img
+                  src="img/cars/suzuki ertiga type 3.jpg"
+                  class="img-fluid w-100 rounded-top"
+                  alt="suzuki ertiga"
+                />
               </div>
               <div class="categories-content rounded-bottom p-4">
                 <h4>Suzuki Ertiga Type 3</h4>
@@ -240,30 +351,32 @@
               </div> -->
                 <div class="row gy-2 gx-0 text-center mb-4">
                   <div class="col-4 border-end border-white">
-                    <i class="fa fa-users text-dark"></i><span
-                      class="text-body ms-1">5 Seat</span>
+                    <i class="fa fa-users text-dark"></i
+                    ><span class="text-body ms-1">5 Seat</span>
                   </div>
                   <div class="col-4">
-                    <i class="fa fa-gas-pump text-dark"></i><span
-                      class="text-body ms-1">Gasoline</span>
+                    <i class="fa fa-gas-pump text-dark"></i
+                    ><span class="text-body ms-1">Gasoline</span>
                   </div>
                   <div class="col-4 border-end border-white">
                     <i class="bi bi-calendar-event-fill"></i>
                     <span class="text-body ms-1">2019</span>
                   </div>
                   <div class="col-4 border-end border-white">
-                    <i class="fa fa-cogs text-dark"></i><span
-                      class="text-body ms-1">AUTO</span>
+                    <i class="fa fa-cogs text-dark"></i
+                    ><span class="text-body ms-1">AUTO</span>
                   </div>
 
                   <div class="col-4 border-end border-white">
-                    <i class="fa fa-car text-dark"></i><span
-                      class="text-body ms-1">SUV</span>
+                    <i class="fa fa-car text-dark"></i
+                    ><span class="text-body ms-1">SUV</span>
                   </div>
                 </div>
-                <a href="pages/fleet.html#suzuki-ertiga-type-3"
-                  class="btn btn-primary rounded-pill d-flex justify-content-center py-3">View
-                  Fleet</a>
+                <a
+                  href="pages/fleet.html#suzuki-ertiga-type-3"
+                  class="btn btn-primary rounded-pill d-flex justify-content-center py-3"
+                  >View Fleet</a
+                >
               </div>
             </div>
           </div>
@@ -272,8 +385,11 @@
           <div class="categories-item p-4">
             <div class="categories-item-inner">
               <div class="categories-img rounded-top">
-                <img src="img/cars/toyota_hiace.png"
-                  class="img-fluid w-100 rounded-top" alt="Toyota Hiace" />
+                <img
+                  src="img/cars/toyota_hiace.png"
+                  class="img-fluid w-100 rounded-top"
+                  alt="Toyota Hiace"
+                />
               </div>
               <div class="categories-content rounded-bottom p-4">
                 <h4>Toyota Hiace</h4>
@@ -294,30 +410,32 @@
               </div> -->
                 <div class="row gy-2 gx-0 text-center mb-4">
                   <div class="col-4 border-end border-white">
-                    <i class="fa fa-users text-dark"></i><span
-                      class="text-body ms-1">14 Seat</span>
+                    <i class="fa fa-users text-dark"></i
+                    ><span class="text-body ms-1">14 Seat</span>
                   </div>
                   <div class="col-4">
-                    <i class="fa fa-gas-pump text-dark"></i><span
-                      class="text-body ms-1">Gasoline</span>
+                    <i class="fa fa-gas-pump text-dark"></i
+                    ><span class="text-body ms-1">Gasoline</span>
                   </div>
                   <div class="col-4 border-end border-white">
                     <i class="bi bi-calendar-event-fill"></i>
                     <span class="text-body ms-1">2005</span>
                   </div>
                   <div class="col-4 border-end border-white">
-                    <i class="fa fa-cogs text-dark"></i><span
-                      class="text-body ms-1">AUTO</span>
+                    <i class="fa fa-cogs text-dark"></i
+                    ><span class="text-body ms-1">AUTO</span>
                   </div>
 
                   <div class="col-4 border-end border-white">
-                    <i class="fa fa-car text-dark"></i><span
-                      class="text-body ms-1">Mini Van</span>
+                    <i class="fa fa-car text-dark"></i
+                    ><span class="text-body ms-1">Mini Van</span>
                   </div>
                 </div>
-                <a href="pages/fleet.html#toyota-hiace"
-                  class="btn btn-primary rounded-pill d-flex justify-content-center py-3">View
-                  Fleet</a>
+                <a
+                  href="pages/fleet.html#toyota-hiace"
+                  class="btn btn-primary rounded-pill d-flex justify-content-center py-3"
+                  >View Fleet</a
+                >
               </div>
             </div>
           </div>
@@ -326,8 +444,11 @@
           <div class="categories-item p-4">
             <div class="categories-item-inner">
               <div class="categories-img rounded-top">
-                <img src="img/cars/suzuki ertiga type 2.jpg"
-                  class="img-fluid w-100 rounded-top" alt="suzuki ertiga" />
+                <img
+                  src="img/cars/suzuki ertiga type 2.jpg"
+                  class="img-fluid w-100 rounded-top"
+                  alt="suzuki ertiga"
+                />
               </div>
               <div class="categories-content rounded-bottom p-4">
                 <h4>Suzuki Ertiga Type 2</h4>
@@ -348,30 +469,32 @@
               </div> -->
                 <div class="row gy-2 gx-0 text-center mb-4">
                   <div class="col-4 border-end border-white">
-                    <i class="fa fa-users text-dark"></i><span
-                      class="text-body ms-1">5 Seat</span>
+                    <i class="fa fa-users text-dark"></i
+                    ><span class="text-body ms-1">5 Seat</span>
                   </div>
                   <div class="col-4">
-                    <i class="fa fa-gas-pump text-dark"></i><span
-                      class="text-body ms-1">Gasoline</span>
+                    <i class="fa fa-gas-pump text-dark"></i
+                    ><span class="text-body ms-1">Gasoline</span>
                   </div>
                   <div class="col-4 border-end border-white">
                     <i class="bi bi-calendar-event-fill"></i>
                     <span class="text-body ms-1">2018</span>
                   </div>
                   <div class="col-4 border-end border-white">
-                    <i class="fa fa-cogs text-dark"></i><span
-                      class="text-body ms-1">AUTO</span>
+                    <i class="fa fa-cogs text-dark"></i
+                    ><span class="text-body ms-1">AUTO</span>
                   </div>
 
                   <div class="col-4 border-end border-white">
-                    <i class="fa fa-car text-dark"></i><span
-                      class="text-body ms-1">Saloon</span>
+                    <i class="fa fa-car text-dark"></i
+                    ><span class="text-body ms-1">Saloon</span>
                   </div>
                 </div>
-                <a href="pages/fleet.html#suzuki-type-2"
-                  class="btn btn-primary rounded-pill d-flex justify-content-center py-3">View
-                  Fleet</a>
+                <a
+                  href="pages/fleet.html#suzuki-type-2"
+                  class="btn btn-primary rounded-pill d-flex justify-content-center py-3"
+                  >View Fleet</a
+                >
               </div>
             </div>
           </div>
@@ -383,15 +506,14 @@
           <i class="fa-solid fa-arrow-right ms-2"></i>
         </a>
       </div> -->
-
       </div>
-
     </div>
     <!-- Car categories End -->
 
     <!-- Why Choose Us Section Start -->
     <div
-      class="container-fluid why-choose-us py-5 bg-light scroll-animate fade-up">
+      class="container-fluid why-choose-us py-5 bg-light scroll-animate fade-up"
+    >
       <div class="container">
         <div class="text-center mx-auto mb-5 section-title">
           <h1><span>安心して</span> ご利用いただける理由</h1>
@@ -401,26 +523,28 @@
           <!-- Feature 1 -->
           <div class="col-md-6 col-lg-6">
             <div
-              class="feature-box hover-effect-1 p-4 h-100 text-center bg-white border rounded">
+              class="feature-box hover-effect-1 p-4 h-100 text-center bg-white border rounded"
+            >
               <i class="fas fa-user-tie fa-2x mb-3 text-primary"></i>
               <h5 class="fw-bold">経験豊富なプロドライバー</h5>
               <p class="mb-0">
-                定期的な研修を受けたドライバーが 安全運転と丁寧なサービスでお迎えします。
+                定期的な研修を受けたドライバーが
+                安全運転と丁寧なサービスでお迎えします。
               </p>
               <p class="mb-0">
-                日本人のお客様への対応経験が豊富で 日本語・英語どちらでもご案内可能です。
+                日本人のお客様への対応経験が豊富で
+                日本語・英語どちらでもご案内可能です。
               </p>
             </div>
           </div>
           <!-- Feature 2 -->
           <div class="col-md-6 col-lg-6">
             <div
-              class="feature-box hover-effect-2 p-4 h-100 text-center bg-white border rounded">
+              class="feature-box hover-effect-2 p-4 h-100 text-center bg-white border rounded"
+            >
               <i class="fas fa-headset fa-2x mb-3 text-success"></i>
               <h5 class="fw-bold">日本語でいつでもサポート</h5>
-              <p class="mb-0">
-                日本語対応スタッフが24時間体制で待機。
-              </p>
+              <p class="mb-0">日本語対応スタッフが24時間体制で待機。</p>
               <p class="mb-0">
                 ご予約・ご相談・緊急時も、すべて日本語で安心してご連絡いただけます。
               </p>
@@ -429,7 +553,8 @@
           <!-- Feature 3 -->
           <div class="col-md-6 col-lg-6">
             <div
-              class="feature-box hover-effect-3 p-4 h-100 text-center bg-white border rounded">
+              class="feature-box hover-effect-3 p-4 h-100 text-center bg-white border rounded"
+            >
               <i class="fas fa-shield-alt fa-2x mb-3 text-warning"></i>
               <h5 class="fw-bold">万が一にも備えた体制</h5>
               <p class="mb-0">
@@ -441,16 +566,19 @@
             </div>
           </div>
           <!-- Feature 4 -->
-          <div class="col-md-6 col-lg-6"> <!-- 6 ko 3 pyn pyon loh ya tl-->
+          <div class="col-md-6 col-lg-6">
+            <!-- 6 ko 3 pyn pyon loh ya tl-->
             <div
-              class="feature-box hover-effect-4 p-4 h-100 text-center bg-white border rounded">
+              class="feature-box hover-effect-4 p-4 h-100 text-center bg-white border rounded"
+            >
               <i class="fas fa-credit-card fa-2x mb-3 text-danger"></i>
               <h5 class="fw-bold">選べる安心のお支払い方法</h5>
               <p class="mb-0">
                 現金・銀行振込・電子決済など、柔軟で安全なお支払い方法をご用意。
               </p>
               <p class="mb-0">
-                お客様のご都合に合わせて、最適な方法をお選びいただけます。 </p>
+                お客様のご都合に合わせて、最適な方法をお選びいただけます。
+              </p>
             </div>
           </div>
         </div>
@@ -468,50 +596,60 @@
                 <i class="fas fa-thumbs-up fa-2x text-dark"></i>
               </div>
               <div class="counter-counting my-3">
-                <span class="text-white fs-2 fw-bold"
-                  data-toggle="counter-up">55</span>
+                <span class="text-white fs-2 fw-bold" data-toggle="counter-up"
+                  >55</span
+                >
                 <span class="h1 fw-bold text-white">+</span>
               </div>
               <h4 class="text-white mb-0">Employees</h4>
             </div>
           </div>
-          <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp"
-            data-wow-delay="0.3s">
+          <div
+            class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp"
+            data-wow-delay="0.3s"
+          >
             <div class="counter-item text-center">
               <div class="counter-item-icon mx-auto">
                 <i class="fas fa-car-alt fa-2x text-dark"></i>
               </div>
               <div class="counter-counting my-3">
-                <span class="text-white fs-2 fw-bold"
-                  data-toggle="counter-up">56</span>
+                <span class="text-white fs-2 fw-bold" data-toggle="counter-up"
+                  >56</span
+                >
                 <span class="h1 fw-bold text-white">+</span>
               </div>
               <h4 class="text-white mb-0">Royal Clients</h4>
             </div>
           </div>
-          <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp"
-            data-wow-delay="0.5s">
+          <div
+            class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp"
+            data-wow-delay="0.5s"
+          >
             <div class="counter-item text-center">
               <div class="counter-item-icon mx-auto">
                 <i class="fas fa-building fa-2x text-dark"></i>
               </div>
               <div class="counter-counting my-3">
-                <span class="text-white fs-2 fw-bold"
-                  data-toggle="counter-up">127</span>
+                <span class="text-white fs-2 fw-bold" data-toggle="counter-up"
+                  >127</span
+                >
                 <span class="h1 fw-bold text-white">+</span>
               </div>
               <h4 class="text-white mb-0">Car available</h4>
             </div>
           </div>
-          <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp"
-            data-wow-delay="0.7s">
+          <div
+            class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp"
+            data-wow-delay="0.7s"
+          >
             <div class="counter-item text-center">
               <div class="counter-item-icon mx-auto">
                 <i class="fas fa-clock fa-2x text-dark"></i>
               </div>
               <div class="counter-counting my-3">
-                <span class="text-white fs-2 fw-bold"
-                  data-toggle="counter-up">5589</span>
+                <span class="text-white fs-2 fw-bold" data-toggle="counter-up"
+                  >5589</span
+                >
                 <span class="h1 fw-bold text-white">+</span>
               </div>
               <h4 class="text-white mb-0">Total Services Hours</h4>
@@ -526,10 +664,11 @@
     <div class="container-fluid blog py-5">
       <div class="container py-5">
         <div
-          class="text-center mx-auto pb-5 section-title scroll-animate fade-down">
+          class="text-center mx-auto pb-5 section-title scroll-animate fade-down"
+        >
           <h1><span> Blogs </span> & <span>News</span></h1>
           <p class="mb-0">
-            GSSおよびナイスミャンマー・トラベルズの最新情報をご覧ください。<br>
+            GSSおよびナイスミャンマー・トラベルズの最新情報をご覧ください。<br />
             最新のツアーパッケージ、レンタカーの特別割引、弊社からのお知らせなどをこちらでご確認いただけます。
           </p>
         </div>
@@ -540,8 +679,11 @@
           <div class="col-lg-6 px-3">
             <div class="blog-item">
               <div class="blog-img">
-                <img src="img/blog_img/blog_1_available_now.jpg"
-                  class="img-fluid rounded-top w-100" alt="Image" />
+                <img
+                  src="img/blog_img/blog_1_available_now.jpg"
+                  class="img-fluid rounded-top w-100"
+                  alt="Image"
+                />
               </div>
               <div class="blog-content rounded-bottom p-4">
                 <div class="blog-date">30 Dec 2025</div>
@@ -551,15 +693,17 @@
                 <div><i class="fa fa-comment-alt"></i><span class="ms-2">6 Comments</span></div>
               </div> -->
                 <a href="#" class="h4 d-block mb-3">Book Your Ride!</a>
-                <a href="#" class="h5 d-block mb-3">Experienced Drivers &
-                  Quality Cars from GSS</a>
+                <a href="#" class="h5 d-block mb-3"
+                  >Experienced Drivers & Quality Cars from GSS</a
+                >
                 <p class="mb-3">
                   Golden Support Service (GSS) offers reliable and experienced
                   car rental services,
                   <b> AVAILABLE NOW!</b>
                 </p>
-                <a href="./pages/blog.html#blog1">Read More <i
-                    class="fa fa-arrow-right"></i></a>
+                <a href="./pages/blog.html#blog1"
+                  >Read More <i class="fa fa-arrow-right"></i
+                ></a>
               </div>
             </div>
           </div>
@@ -568,24 +712,29 @@
           <div class="col-lg-6 px-3">
             <div class="blog-item">
               <div class="blog-img">
-                <img src="img/blog_img/blog_2_pamphlet.jpg"
-                  class="img-fluid rounded-top w-100" alt="Image" />
+                <img
+                  src="img/blog_img/blog_2_pamphlet.jpg"
+                  class="img-fluid rounded-top w-100"
+                  alt="Image"
+                />
               </div>
               <div class="blog-content rounded-bottom p-4">
                 <div class="blog-date">25 Dec 2025</div>
                 <br />
                 <a href="#" class="h4 d-block mb-3">Experience Bagan!</a>
-                <a href="#" class="h5 d-block mb-3">Hot Air Balloons, River
-                  Cruise & More with Nice Myanmar
-                  Travels</a>
+                <a href="#" class="h5 d-block mb-3"
+                  >Hot Air Balloons, River Cruise & More with Nice Myanmar
+                  Travels</a
+                >
                 <p class="mb-3">
                   Explore Bagan on a 3-Day tour! See temples, enjoy a
                   <b> Sunset River Cruise</b>, and add a
                   <b>Hot Air Balloon</b> ride. Quick support by experienced
                   staff.
                 </p>
-                <a href="./pages/blog.html#blog2">Read More <i
-                    class="fa fa-arrow-right"></i></a>
+                <a href="./pages/blog.html#blog2"
+                  >Read More <i class="fa fa-arrow-right"></i
+                ></a>
               </div>
             </div>
           </div>
@@ -600,37 +749,48 @@
       <div class="container pb-5">
         <div
           class="text-center mx-auto pb-5 section-title scroll-animate fade-down"
-          style="max-width: 800px">
+          style="max-width: 800px"
+        >
           <h1><span>Our</span> Team</h1>
           <p class="mb-0">
-            現地事情に精通したスタッフが、日本語・ミャンマー語・英語で対応。<br>
+            現地事情に精通したスタッフが、日本語・ミャンマー語・英語で対応。<br />
             お客様の不安や疑問に寄り添いながら、安心してご利用いただける環境を整えています。
           </p>
-
         </div>
         <div class="container pb-5 scroll-animate fade-up">
-          <div class="team-image mt-4 mb-5 mx-auto" style="background-size: cover;">
-            <img src="img/team/DSC01299.jpg" class="img-fluid rounded shadow"
-              alt="Our Team Group Photo"/>
+          <div
+            class="team-image mt-4 mb-5 mx-auto"
+            style="background-size: cover"
+          >
+            <img
+              src="img/team/DSC01299.jpg"
+              class="img-fluid rounded shadow"
+              alt="Our Team Group Photo"
+            />
           </div>
         </div>
         <div
-          class="text-center mx-auto pb-5 section-title scroll-animate fade-down">
-
+          class="text-center mx-auto pb-5 section-title scroll-animate fade-down"
+        >
           <h1><span>Our</span> Drivers</h1>
           <p class="mb-0">
-            お客様の安全と快適な移動を支える、経験豊富なドライバーチームをご紹介します。<br>
+            お客様の安全と快適な移動を支える、経験豊富なドライバーチームをご紹介します。<br />
             現地事情に精通し、丁寧な対応と確かな運転技術で、安心の旅をサポートします。
           </p>
         </div>
 
         <div class="row g-4 scroll-animate fade-up">
-          <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp"
-            data-wow-delay="0.1s">
+          <div
+            class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp"
+            data-wow-delay="0.1s"
+          >
             <div class="team-item p-4 pt-0">
               <div class="team-img">
-                <img src="img/Andrew Garfield.jpg"
-                  class="img-fluid rounded w-100" alt="Image" />
+                <img
+                  src="img/Andrew Garfield.jpg"
+                  class="img-fluid rounded w-100"
+                  alt="Image"
+                />
               </div>
               <div class="team-content pt-4">
                 <h4>Andrew Garfield</h4>
@@ -638,12 +798,17 @@
               </div>
             </div>
           </div>
-          <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp"
-            data-wow-delay="0.3s">
+          <div
+            class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp"
+            data-wow-delay="0.3s"
+          >
             <div class="team-item p-4 pt-0">
               <div class="team-img">
-                <img src="img/Chris Evans .jpeg" class="img-fluid rounded w-100"
-                  alt="Image" />
+                <img
+                  src="img/Chris Evans .jpeg"
+                  class="img-fluid rounded w-100"
+                  alt="Image"
+                />
               </div>
               <div class="team-content pt-4">
                 <h4>Chris Evans</h4>
@@ -651,12 +816,17 @@
               </div>
             </div>
           </div>
-          <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp"
-            data-wow-delay="0.5s">
+          <div
+            class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp"
+            data-wow-delay="0.5s"
+          >
             <div class="team-item p-4 pt-0">
               <div class="team-img">
-                <img src="img/Henry Cavill.jpg" class="img-fluid rounded w-100"
-                  alt="Image" />
+                <img
+                  src="img/Henry Cavill.jpg"
+                  class="img-fluid rounded w-100"
+                  alt="Image"
+                />
               </div>
               <div class="team-content pt-4">
                 <h4>Henry Cavill</h4>
@@ -664,12 +834,17 @@
               </div>
             </div>
           </div>
-          <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp"
-            data-wow-delay="0.7s">
+          <div
+            class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp"
+            data-wow-delay="0.7s"
+          >
             <div class="team-item p-4 pt-0">
               <div class="team-img">
-                <img src="img/Tom-Holland.jpg" class="img-fluid rounded w-100"
-                  alt="Image" />
+                <img
+                  src="img/Tom-Holland.jpg"
+                  class="img-fluid rounded w-100"
+                  alt="Image"
+                />
               </div>
               <div class="team-content pt-4">
                 <h4>Tom Holland</h4>
@@ -705,7 +880,5 @@
     <script src="lib/wow/wow.min.js"></script>
 
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-
   </body>
-
 </html>

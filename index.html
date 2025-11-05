@@ -1,953 +1,865 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Favicon -->
-    <!-- <link rel="icon" type="image/png" href="img/gss-logo-navbar.png" /> -->
-    <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
-    <title>Golden Support Service</title>
 
-    <!--- Bootstrap CSS -->
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Favicon -->
+  <!-- <link rel="icon" type="image/png" href="img/gss-logo-navbar.png" /> -->
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+  <title>Golden Support Service</title>
 
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
+  <!--- Bootstrap CSS -->
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
 
-    <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet" />
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+  <!-- Google Web Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
 
-    <!-- Fontawesome -->
-    <link href="./fontawesome/css/all.min.css" rel="stylesheet" />
-    <link href="./fontawesome/css/brands.css" rel="stylesheet" />
-    <link href="./fontawesome/css/fontawesome.min.css" rel="stylesheet" />
+  <!-- Libraries Stylesheet -->
+  <link href="lib/animate/animate.min.css" rel="stylesheet" />
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
 
-    <!-- Bootstrap Icons CDN -->
-    <link rel="stylesheet" href="bootstrap/icons/bootstrap-icons.css" />
-    <!-- custom css -->
-    <link rel="stylesheet" href="css/styles.css" />
-    <link rel="stylesheet" href="css/service.css" />
-    <link rel="stylesheet" href="css/scroll-animate.css" />
+  <!-- Fontawesome -->
+  <link href="./fontawesome/css/all.min.css" rel="stylesheet" />
+  <link href="./fontawesome/css/brands.css" rel="stylesheet" />
+  <link href="./fontawesome/css/fontawesome.min.css" rel="stylesheet" />
 
-    <style>
-      /* === Maintenance Overlay Styles === */
-      #maintenance-overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        background: rgba(10, 10, 10, 0.25);
-        backdrop-filter: blur(8px);
-        -webkit-backdrop-filter: blur(8px);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        z-index: 99999;
-        animation: fadeIn 0.6s ease-in-out;
+  <!-- Bootstrap Icons CDN -->
+  <link rel="stylesheet" href="bootstrap/icons/bootstrap-icons.css" />
+  <!-- custom css -->
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/service.css" />
+  <link rel="stylesheet" href="css/scroll-animate.css" />
+
+  <style>
+    /* === Maintenance Overlay Styles === */
+    #maintenance-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(10, 10, 10, 0.25);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 99999;
+      animation: fadeIn 0.6s ease-in-out;
+    }
+
+    #maintenance-overlay .maintenance-box {
+      background: rgba(255, 255, 255, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 16px;
+      padding: 40px 60px;
+      text-align: center;
+      color: #fff;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+      animation: pulseGlow 2s infinite alternate ease-in-out;
+    }
+
+    #maintenance-overlay .maintenance-box h1 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+      letter-spacing: 0.5px;
+    }
+
+    #maintenance-overlay .maintenance-box p {
+      font-size: 1.1rem;
+      opacity: 0.8;
+    }
+
+    /* === Animations === */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: scale(0.95);
       }
 
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    @keyframes pulseGlow {
+      from {
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+      }
+
+      to {
+        box-shadow: 0 0 30px rgba(0, 200, 255, 0.5);
+      }
+    }
+
+    /* === Optional Responsive Tweak === */
+    @media (max-width: 600px) {
       #maintenance-overlay .maintenance-box {
-        background: rgba(255, 255, 255, 0.2);
-        border: 1px solid rgba(255, 255, 255, 0.3);
-        border-radius: 16px;
-        padding: 40px 60px;
-        text-align: center;
-        color: #fff;
-        box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
-        animation: pulseGlow 2s infinite alternate ease-in-out;
+        padding: 25px 30px;
+        font-size: 0.95rem;
       }
+    }
+  </style>
+</head>
 
-      #maintenance-overlay .maintenance-box h1 {
-        font-size: 2rem;
-        margin-bottom: 10px;
-        letter-spacing: 0.5px;
-      }
+<body>
+  <div class="preloader">
+    <div class="loader"></div>
+  </div>
 
-      #maintenance-overlay .maintenance-box p {
-        font-size: 1.1rem;
-        opacity: 0.8;
-      }
-
-      /* === Animations === */
-      @keyframes fadeIn {
-        from {
-          opacity: 0;
-          transform: scale(0.95);
-        }
-        to {
-          opacity: 1;
-          transform: scale(1);
-        }
-      }
-
-      @keyframes pulseGlow {
-        from {
-          box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
-        }
-        to {
-          box-shadow: 0 0 30px rgba(0, 200, 255, 0.5);
-        }
-      }
-
-      /* === Optional Responsive Tweak === */
-      @media (max-width: 600px) {
-        #maintenance-overlay .maintenance-box {
-          padding: 25px 30px;
-          font-size: 0.95rem;
-        }
-      }
-    </style>
-  </head>
-
-  <body>
-    <div class="preloader">
-      <div class="loader"></div>
+  <!-- 🔧 Under Maintenance Overlay -->
+  <div id="maintenance-overlay">
+    <div class="maintenance-box">
+      <h1>🚧 Website Under Maintenance</h1>
+      <p>We’re improving your experience. Please check back soon!</p>
     </div>
+  </div>
 
-    <!-- 🔧 Under Maintenance Overlay -->
-    <div id="maintenance-overlay">
-      <div class="maintenance-box">
-        <h1>🚧 Website Under Maintenance</h1>
-        <p>We’re improving your experience. Please check back soon!</p>
-      </div>
-    </div>
+  <!-- Topbar Start -->
+  <div include-html="items/topbar.html"></div>
+  <!-- Topbar End -->
 
-    <!-- Topbar Start -->
-    <div include-html="items/topbar.html"></div>
-    <!-- Topbar End -->
+  <!-- ================= Navbar & Hero Start ================= -->
+  <div class="container-fluid nav-bar sticky-top px-0 px-lg-4 py-2 py-lg-0">
+    <div class="container">
+      <nav class="navbar navbar-light d-flex justify-content-between align-items-center">
+        <!-- Brand -->
+        <a href="#" class="navbar-brand p-0 d-flex align-items-center">
+          <img src="img/gss-logo-navbar.png" alt="Golden Support Service Logo"
+            style="max-height: 55px; margin-right: 10px" />
+          <h3 class="display-6 mb-0">Car Rental</h3>
+        </a>
 
-    <!-- ================= Navbar & Hero Start ================= -->
-    <div class="container-fluid nav-bar sticky-top px-0 px-lg-4 py-2 py-lg-0">
-      <div class="container">
-        <nav
-          class="navbar navbar-light d-flex justify-content-between align-items-center"
-        >
-          <!-- Brand -->
-          <a href="#" class="navbar-brand p-0 d-flex align-items-center">
-            <img
-              src="img/gss-logo-navbar.png"
-              alt="Golden Support Service Logo"
-              style="max-height: 55px; margin-right: 10px"
-            />
-            <h3 class="display-6 mb-0">Car Rental</h3>
-          </a>
-
-          <!-- Hamburger Menu -->
-          <div class="hamburger d-lg-none">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-
-          <!-- Nav Links -->
-          <ul class="nav-links list-unstyled mb-0 d-lg-flex align-items-center">
-            <li>
-              <a href="index.html" class="nav-item nav-link active">Home</a>
-            </li>
-            <li>
-              <a href="./pages/about.html" class="nav-item nav-link">About</a>
-            </li>
-            <li>
-              <a href="./pages/service.html" class="nav-item nav-link"
-                >Service</a
-              >
-            </li>
-            <li>
-              <a href="./pages/fleet.html" class="nav-item nav-link">Fleet</a>
-            </li>
-            <li>
-              <a href="./pages/blog.html" class="nav-item nav-link">Blog</a>
-            </li>
-            <li>
-              <a href="./pages/ourteam.html" class="nav-item nav-link"
-                >Our Team</a
-              >
-            </li>
-            <li>
-              <a href="./pages/contact.html" class="nav-item nav-link"
-                >Contact</a
-              >
-            </li>
-            <li>
-              <a
-                href="./pages/contact.html"
-                class="btn btn-primary rounded-pill py-2 px-4 ms-lg-3"
-                >Get Started</a
-              >
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </div>
-    <!-- ================= Navbar & Hero End ================= -->
-
-    <!-- Topbar Start -->
-    <div include-html="items/carousel.html"></div>
-    <!-- Topbar End -->
-
-    <!-- Car categories Start -->
-    <div class="container-fluid categories pb-5 scroll-animate slide-in-left">
-      <div class="container pb-5 py-5">
-        <div class="text-center mx-auto pb-5 section-title">
-          <h1><span> Vehicle</span> Categories</h1>
-          <p class="mb-0">
-            ご利用目的に合わせて、豊富な車種をご用意しています。<br />
-            コンパクトカーから大人数向け大型バンまで、ニーズに応じてお選びいただけます。
-          </p>
+        <!-- Hamburger Menu -->
+        <div class="hamburger d-lg-none">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
 
-        <div class="categories-carousel owl-carousel">
-          <!-- Toyota Alphard -->
-          <div class="categories-item p-4">
-            <div class="categories-item-inner">
-              <div class="categories-img rounded-top">
-                <img
-                  src="img/cars/toyota alphard 2011.jpg"
-                  class="img-fluid w-100 rounded-top"
-                  alt="alphard"
-                />
-              </div>
-              <div class="categories-content rounded-bottom p-4">
-                <h4>Toyota Alphard 2011</h4>
-                <div class="categories-review mb-4">
-                  <div class="me-3">4.5 Review</div>
-                  <div class="d-flex justify-content-center text-secondary">
-                    <i class="fa-solid fa-star text-warning-emphasis"></i>
-                    <i class="fa-solid fa-star text-warning-emphasis"></i>
-                    <i class="fa-solid fa-star text-warning-emphasis"></i>
-                    <i class="fa-solid fa-star text-warning-emphasis"></i>
-                    <i class="fa-solid fa-star-half text-warning-emphasis"></i>
-                  </div>
+        <!-- Nav Links -->
+        <ul class="nav-links list-unstyled mb-0 d-lg-flex align-items-center">
+          <li>
+            <a href="index.html" class="nav-item nav-link active">Home</a>
+          </li>
+          <li>
+            <a href="./pages/about.html" class="nav-item nav-link">About</a>
+          </li>
+          <li>
+            <a href="./pages/service.html" class="nav-item nav-link">Service</a>
+          </li>
+          <li>
+            <a href="./pages/fleet.html" class="nav-item nav-link">Fleet</a>
+          </li>
+          <li>
+            <a href="./pages/blog.html" class="nav-item nav-link">Blog</a>
+          </li>
+          <li>
+            <a href="./pages/ourteam.html" class="nav-item nav-link">Our Team</a>
+          </li>
+          <li>
+            <a href="./pages/contact.html" class="nav-item nav-link">Contact</a>
+          </li>
+          <li>
+            <a href="./pages/contact.html" class="btn btn-primary rounded-pill py-2 px-4 ms-lg-3">Get Started</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <!-- ================= Navbar & Hero End ================= -->
+
+  <!-- Topbar Start -->
+  <div include-html="items/carousel.html"></div>
+  <!-- Topbar End -->
+
+  <!-- Car categories Start -->
+  <div class="container-fluid categories pb-5 scroll-animate slide-in-left">
+    <div class="container pb-5 py-5">
+      <div class="text-center mx-auto pb-5 section-title">
+        <h1><span> Vehicle</span> Categories</h1>
+        <p class="mb-0">
+          ご利用目的に合わせて、豊富な車種をご用意しています。<br />
+          コンパクトカーから大人数向け大型バンまで、ニーズに応じてお選びいただけます。
+        </p>
+      </div>
+
+      <div class="categories-carousel owl-carousel">
+        <!-- Toyota Alphard -->
+        <div class="categories-item p-4">
+          <div class="categories-item-inner">
+            <div class="categories-img rounded-top">
+              <img src="img/cars/toyota alphard 2011.jpg" class="img-fluid w-100 rounded-top" alt="alphard" />
+            </div>
+            <div class="categories-content rounded-bottom p-4">
+              <h4>Toyota Alphard 2011</h4>
+              <div class="categories-review mb-4">
+                <div class="me-3">4.5 Review</div>
+                <div class="d-flex justify-content-center text-secondary">
+                  <i class="fa-solid fa-star text-warning-emphasis"></i>
+                  <i class="fa-solid fa-star text-warning-emphasis"></i>
+                  <i class="fa-solid fa-star text-warning-emphasis"></i>
+                  <i class="fa-solid fa-star text-warning-emphasis"></i>
+                  <i class="fa-solid fa-star-half text-warning-emphasis"></i>
                 </div>
-                <!-- <div class="mb-4">
+              </div>
+              <!-- <div class="mb-4">
                 <h4 class="bg-white text-primary rounded-pill py-2 px-4 mb-0">
                   $99:00/Day
                 </h4>
               </div> -->
-                <div class="row gy-2 gx-0 text-center mb-4">
-                  <div class="col-4 border-end border-white">
-                    <i class="fa fa-users text-dark"></i
-                    ><span class="text-body ms-1">6 Seat</span>
-                  </div>
-                  <div class="col-4">
-                    <i class="fa fa-gas-pump text-dark"></i
-                    ><span class="text-body ms-1">Gasoline</span>
-                  </div>
-                  <div class="col-4 border-end border-white">
-                    <i class="bi bi-calendar-event-fill"></i>
-                    <span class="text-body ms-1">2011</span>
-                  </div>
-                  <div class="col-4 border-end border-white">
-                    <i class="fa fa-cogs text-dark"></i
-                    ><span class="text-body ms-1">AUTO</span>
-                  </div>
-
-                  <div class="col-4 border-end border-white">
-                    <i class="fa fa-car text-dark"></i
-                    ><span class="text-body ms-1">Mini Van</span>
-                  </div>
+              <div class="row gy-2 gx-0 text-center mb-4">
+                <div class="col-4 border-end border-white">
+                  <i class="fa fa-users text-dark"></i><span class="text-body ms-1">6 Seat</span>
                 </div>
-                <a
-                  href="pages/fleet.html#alphard"
-                  class="btn btn-primary rounded-pill d-flex justify-content-center py-3"
-                  >View Fleet</a
-                >
-              </div>
-            </div>
-          </div>
-
-          <!-- Mitsubishi ASX -->
-          <div class="categories-item p-4">
-            <div class="categories-item-inner">
-              <div class="categories-img rounded-top">
-                <img
-                  src="img/cars/Mitsubishi ASX .png"
-                  class="img-fluid w-100 rounded-top"
-                  alt="parjeo"
-                />
-              </div>
-              <div class="categories-content rounded-bottom p-4">
-                <h4>Mitsubishi ASX</h4>
-                <div class="categories-review mb-4">
-                  <div class="me-3">4.5 Review</div>
-                  <div class="d-flex justify-content-center text-secondary">
-                    <i class="fa-solid fa-star text-warning-emphasis"></i>
-                    <i class="fa-solid fa-star text-warning-emphasis"></i>
-                    <i class="fa-solid fa-star text-warning-emphasis"></i>
-                    <i class="fa-solid fa-star text-warning-emphasis"></i>
-                    <i class="fa-solid fa-star-half text-warning-emphasis"></i>
-                  </div>
+                <div class="col-4">
+                  <i class="fa fa-gas-pump text-dark"></i><span class="text-body ms-1">Gasoline</span>
                 </div>
-                <!-- <div class="mb-4">
-                <h4 class="bg-white text-primary rounded-pill py-2 px-4 mb-0">
-                  $128:00/Day
-                </h4>
-              </div> -->
-                <div class="row gy-2 gx-0 text-center mb-4">
-                  <div class="col-4 border-end border-white">
-                    <i class="fa fa-users text-dark"></i
-                    ><span class="text-body ms-1">4 Seat</span>
-                  </div>
-                  <div class="col-4">
-                    <i class="fa fa-gas-pump text-dark"></i
-                    ><span class="text-body ms-1">Gasoline</span>
-                  </div>
-                  <div class="col-4 border-end border-white">
-                    <i class="bi bi-calendar-event-fill"></i>
-                    <span class="text-body ms-1">2018</span>
-                  </div>
-                  <div class="col-4 border-end border-white">
-                    <i class="fa fa-cogs text-dark"></i
-                    ><span class="text-body ms-1">AUTO</span>
-                  </div>
-
-                  <div class="col-4 border-end border-white">
-                    <i class="fa fa-car text-dark"></i
-                    ><span class="text-body ms-1">SUV</span>
-                  </div>
+                <div class="col-4 border-end border-white">
+                  <i class="bi bi-calendar-event-fill"></i>
+                  <span class="text-body ms-1">2011</span>
                 </div>
-                <a
-                  href="pages/fleet.html#mitsubishi-asx"
-                  class="btn btn-primary rounded-pill d-flex justify-content-center py-3"
-                  >View Fleet</a
-                >
-              </div>
-            </div>
-          </div>
-
-          <!-- Suzuki Ertiga type 3-->
-          <div class="categories-item p-4">
-            <div class="categories-item-inner">
-              <div class="categories-img rounded-top">
-                <img
-                  src="img/cars/suzuki ertiga type 3.jpg"
-                  class="img-fluid w-100 rounded-top"
-                  alt="suzuki ertiga"
-                />
-              </div>
-              <div class="categories-content rounded-bottom p-4">
-                <h4>Suzuki Ertiga Type 3</h4>
-                <div class="categories-review mb-4">
-                  <div class="me-3">4.0 Review</div>
-                  <div class="d-flex justify-content-center text-secondary">
-                    <i class="fa-solid fa-star text-warning-emphasis"></i>
-                    <i class="fa-solid fa-star text-warning-emphasis"></i>
-                    <i class="fa-solid fa-star text-warning-emphasis"></i>
-                    <i class="fa-solid fa-star text-warning-emphasis"></i>
-                    <i class="fas fa-star"></i>
-                  </div>
+                <div class="col-4 border-end border-white">
+                  <i class="fa fa-cogs text-dark"></i><span class="text-body ms-1">AUTO</span>
                 </div>
-                <!-- <div class="mb-4">
-                <h4 class="bg-white text-primary rounded-pill py-2 px-4 mb-0">
-                  $170:00/Day
-                </h4>
-              </div> -->
-                <div class="row gy-2 gx-0 text-center mb-4">
-                  <div class="col-4 border-end border-white">
-                    <i class="fa fa-users text-dark"></i
-                    ><span class="text-body ms-1">5 Seat</span>
-                  </div>
-                  <div class="col-4">
-                    <i class="fa fa-gas-pump text-dark"></i
-                    ><span class="text-body ms-1">Gasoline</span>
-                  </div>
-                  <div class="col-4 border-end border-white">
-                    <i class="bi bi-calendar-event-fill"></i>
-                    <span class="text-body ms-1">2019</span>
-                  </div>
-                  <div class="col-4 border-end border-white">
-                    <i class="fa fa-cogs text-dark"></i
-                    ><span class="text-body ms-1">AUTO</span>
-                  </div>
 
-                  <div class="col-4 border-end border-white">
-                    <i class="fa fa-car text-dark"></i
-                    ><span class="text-body ms-1">SUV</span>
-                  </div>
+                <div class="col-4 border-end border-white">
+                  <i class="fa fa-car text-dark"></i><span class="text-body ms-1">Mini Van</span>
                 </div>
-                <a
-                  href="pages/fleet.html#suzuki-ertiga-type-3"
-                  class="btn btn-primary rounded-pill d-flex justify-content-center py-3"
-                  >View Fleet</a
-                >
               </div>
-            </div>
-          </div>
-
-          <!-- Toyota Hiace -->
-          <div class="categories-item p-4">
-            <div class="categories-item-inner">
-              <div class="categories-img rounded-top">
-                <img
-                  src="img/cars/toyota_hiace.png"
-                  class="img-fluid w-100 rounded-top"
-                  alt="Toyota Hiace"
-                />
-              </div>
-              <div class="categories-content rounded-bottom p-4">
-                <h4>Toyota Hiace</h4>
-                <div class="categories-review mb-4">
-                  <div class="me-3">4.8 Review</div>
-                  <div class="d-flex justify-content-center text-secondary">
-                    <i class="fa-solid fa-star text-warning-emphasis"></i>
-                    <i class="fa-solid fa-star text-warning-emphasis"></i>
-                    <i class="fa-solid fa-star text-warning-emphasis"></i>
-                    <i class="fa-solid fa-star text-warning-emphasis"></i>
-                    <i class="fas fa-star"></i>
-                  </div>
-                </div>
-                <!-- <div class="mb-4">
-                <h4 class="bg-white text-primary rounded-pill py-2 px-4 mb-0">
-                  $187:00/Day
-                </h4>
-              </div> -->
-                <div class="row gy-2 gx-0 text-center mb-4">
-                  <div class="col-4 border-end border-white">
-                    <i class="fa fa-users text-dark"></i
-                    ><span class="text-body ms-1">14 Seat</span>
-                  </div>
-                  <div class="col-4">
-                    <i class="fa fa-gas-pump text-dark"></i
-                    ><span class="text-body ms-1">Gasoline</span>
-                  </div>
-                  <div class="col-4 border-end border-white">
-                    <i class="bi bi-calendar-event-fill"></i>
-                    <span class="text-body ms-1">2005</span>
-                  </div>
-                  <div class="col-4 border-end border-white">
-                    <i class="fa fa-cogs text-dark"></i
-                    ><span class="text-body ms-1">AUTO</span>
-                  </div>
-
-                  <div class="col-4 border-end border-white">
-                    <i class="fa fa-car text-dark"></i
-                    ><span class="text-body ms-1">Mini Van</span>
-                  </div>
-                </div>
-                <a
-                  href="pages/fleet.html#toyota-hiace"
-                  class="btn btn-primary rounded-pill d-flex justify-content-center py-3"
-                  >View Fleet</a
-                >
-              </div>
-            </div>
-          </div>
-
-          <!-- Suzuki Ertiga type 2-->
-          <div class="categories-item p-4">
-            <div class="categories-item-inner">
-              <div class="categories-img rounded-top">
-                <img
-                  src="img/cars/suzuki ertiga type 2.jpg"
-                  class="img-fluid w-100 rounded-top"
-                  alt="suzuki ertiga"
-                />
-              </div>
-              <div class="categories-content rounded-bottom p-4">
-                <h4>Suzuki Ertiga Type 2</h4>
-                <div class="categories-review mb-4">
-                  <div class="me-3">4.0 Review</div>
-                  <div class="d-flex justify-content-center text-secondary">
-                    <i class="fa-solid fa-star text-warning-emphasis"></i>
-                    <i class="fa-solid fa-star text-warning-emphasis"></i>
-                    <i class="fa-solid fa-star text-warning-emphasis"></i>
-                    <i class="fa-solid fa-star text-warning-emphasis"></i>
-                    <i class="fas fa-star"></i>
-                  </div>
-                </div>
-                <!-- <div class="mb-4">
-                <h4 class="bg-white text-primary rounded-pill py-2 px-4 mb-0">
-                  $170:00/Day
-                </h4>
-              </div> -->
-                <div class="row gy-2 gx-0 text-center mb-4">
-                  <div class="col-4 border-end border-white">
-                    <i class="fa fa-users text-dark"></i
-                    ><span class="text-body ms-1">5 Seat</span>
-                  </div>
-                  <div class="col-4">
-                    <i class="fa fa-gas-pump text-dark"></i
-                    ><span class="text-body ms-1">Gasoline</span>
-                  </div>
-                  <div class="col-4 border-end border-white">
-                    <i class="bi bi-calendar-event-fill"></i>
-                    <span class="text-body ms-1">2018</span>
-                  </div>
-                  <div class="col-4 border-end border-white">
-                    <i class="fa fa-cogs text-dark"></i
-                    ><span class="text-body ms-1">AUTO</span>
-                  </div>
-
-                  <div class="col-4 border-end border-white">
-                    <i class="fa fa-car text-dark"></i
-                    ><span class="text-body ms-1">Saloon</span>
-                  </div>
-                </div>
-                <a
-                  href="pages/fleet.html#suzuki-type-2"
-                  class="btn btn-primary rounded-pill d-flex justify-content-center py-3"
-                  >View Fleet</a
-                >
-              </div>
+              <a href="pages/fleet.html#alphard"
+                class="btn btn-primary rounded-pill d-flex justify-content-center py-3">View Fleet</a>
             </div>
           </div>
         </div>
 
-        <!-- <div class="text-center mt-4">
+        <!-- Mitsubishi ASX -->
+        <div class="categories-item p-4">
+          <div class="categories-item-inner">
+            <div class="categories-img rounded-top">
+              <img src="img/cars/Mitsubishi ASX .png" class="img-fluid w-100 rounded-top" alt="parjeo" />
+            </div>
+            <div class="categories-content rounded-bottom p-4">
+              <h4>Mitsubishi ASX</h4>
+              <div class="categories-review mb-4">
+                <div class="me-3">4.5 Review</div>
+                <div class="d-flex justify-content-center text-secondary">
+                  <i class="fa-solid fa-star text-warning-emphasis"></i>
+                  <i class="fa-solid fa-star text-warning-emphasis"></i>
+                  <i class="fa-solid fa-star text-warning-emphasis"></i>
+                  <i class="fa-solid fa-star text-warning-emphasis"></i>
+                  <i class="fa-solid fa-star-half text-warning-emphasis"></i>
+                </div>
+              </div>
+              <!-- <div class="mb-4">
+                <h4 class="bg-white text-primary rounded-pill py-2 px-4 mb-0">
+                  $128:00/Day
+                </h4>
+              </div> -->
+              <div class="row gy-2 gx-0 text-center mb-4">
+                <div class="col-4 border-end border-white">
+                  <i class="fa fa-users text-dark"></i><span class="text-body ms-1">4 Seat</span>
+                </div>
+                <div class="col-4">
+                  <i class="fa fa-gas-pump text-dark"></i><span class="text-body ms-1">Gasoline</span>
+                </div>
+                <div class="col-4 border-end border-white">
+                  <i class="bi bi-calendar-event-fill"></i>
+                  <span class="text-body ms-1">2018</span>
+                </div>
+                <div class="col-4 border-end border-white">
+                  <i class="fa fa-cogs text-dark"></i><span class="text-body ms-1">AUTO</span>
+                </div>
+
+                <div class="col-4 border-end border-white">
+                  <i class="fa fa-car text-dark"></i><span class="text-body ms-1">SUV</span>
+                </div>
+              </div>
+              <a href="pages/fleet.html#mitsubishi-asx"
+                class="btn btn-primary rounded-pill d-flex justify-content-center py-3">View Fleet</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Suzuki Ertiga type 3-->
+        <div class="categories-item p-4">
+          <div class="categories-item-inner">
+            <div class="categories-img rounded-top">
+              <img src="img/cars/suzuki ertiga type 3.jpg" class="img-fluid w-100 rounded-top" alt="suzuki ertiga" />
+            </div>
+            <div class="categories-content rounded-bottom p-4">
+              <h4>Suzuki Ertiga Type 3</h4>
+              <div class="categories-review mb-4">
+                <div class="me-3">4.0 Review</div>
+                <div class="d-flex justify-content-center text-secondary">
+                  <i class="fa-solid fa-star text-warning-emphasis"></i>
+                  <i class="fa-solid fa-star text-warning-emphasis"></i>
+                  <i class="fa-solid fa-star text-warning-emphasis"></i>
+                  <i class="fa-solid fa-star text-warning-emphasis"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+              <!-- <div class="mb-4">
+                <h4 class="bg-white text-primary rounded-pill py-2 px-4 mb-0">
+                  $170:00/Day
+                </h4>
+              </div> -->
+              <div class="row gy-2 gx-0 text-center mb-4">
+                <div class="col-4 border-end border-white">
+                  <i class="fa fa-users text-dark"></i><span class="text-body ms-1">5 Seat</span>
+                </div>
+                <div class="col-4">
+                  <i class="fa fa-gas-pump text-dark"></i><span class="text-body ms-1">Gasoline</span>
+                </div>
+                <div class="col-4 border-end border-white">
+                  <i class="bi bi-calendar-event-fill"></i>
+                  <span class="text-body ms-1">2019</span>
+                </div>
+                <div class="col-4 border-end border-white">
+                  <i class="fa fa-cogs text-dark"></i><span class="text-body ms-1">AUTO</span>
+                </div>
+
+                <div class="col-4 border-end border-white">
+                  <i class="fa fa-car text-dark"></i><span class="text-body ms-1">SUV</span>
+                </div>
+              </div>
+              <a href="pages/fleet.html#suzuki-ertiga-type-3"
+                class="btn btn-primary rounded-pill d-flex justify-content-center py-3">View Fleet</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Toyota Hiace -->
+        <div class="categories-item p-4">
+          <div class="categories-item-inner">
+            <div class="categories-img rounded-top">
+              <img src="img/cars/toyota_hiace.png" class="img-fluid w-100 rounded-top" alt="Toyota Hiace" />
+            </div>
+            <div class="categories-content rounded-bottom p-4">
+              <h4>Toyota Hiace</h4>
+              <div class="categories-review mb-4">
+                <div class="me-3">4.8 Review</div>
+                <div class="d-flex justify-content-center text-secondary">
+                  <i class="fa-solid fa-star text-warning-emphasis"></i>
+                  <i class="fa-solid fa-star text-warning-emphasis"></i>
+                  <i class="fa-solid fa-star text-warning-emphasis"></i>
+                  <i class="fa-solid fa-star text-warning-emphasis"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+              <!-- <div class="mb-4">
+                <h4 class="bg-white text-primary rounded-pill py-2 px-4 mb-0">
+                  $187:00/Day
+                </h4>
+              </div> -->
+              <div class="row gy-2 gx-0 text-center mb-4">
+                <div class="col-4 border-end border-white">
+                  <i class="fa fa-users text-dark"></i><span class="text-body ms-1">14 Seat</span>
+                </div>
+                <div class="col-4">
+                  <i class="fa fa-gas-pump text-dark"></i><span class="text-body ms-1">Gasoline</span>
+                </div>
+                <div class="col-4 border-end border-white">
+                  <i class="bi bi-calendar-event-fill"></i>
+                  <span class="text-body ms-1">2005</span>
+                </div>
+                <div class="col-4 border-end border-white">
+                  <i class="fa fa-cogs text-dark"></i><span class="text-body ms-1">AUTO</span>
+                </div>
+
+                <div class="col-4 border-end border-white">
+                  <i class="fa fa-car text-dark"></i><span class="text-body ms-1">Mini Van</span>
+                </div>
+              </div>
+              <a href="pages/fleet.html#toyota-hiace"
+                class="btn btn-primary rounded-pill d-flex justify-content-center py-3">View Fleet</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Suzuki Ertiga type 2-->
+        <div class="categories-item p-4">
+          <div class="categories-item-inner">
+            <div class="categories-img rounded-top">
+              <img src="img/cars/suzuki ertiga type 2.jpg" class="img-fluid w-100 rounded-top" alt="suzuki ertiga" />
+            </div>
+            <div class="categories-content rounded-bottom p-4">
+              <h4>Suzuki Ertiga Type 2</h4>
+              <div class="categories-review mb-4">
+                <div class="me-3">4.0 Review</div>
+                <div class="d-flex justify-content-center text-secondary">
+                  <i class="fa-solid fa-star text-warning-emphasis"></i>
+                  <i class="fa-solid fa-star text-warning-emphasis"></i>
+                  <i class="fa-solid fa-star text-warning-emphasis"></i>
+                  <i class="fa-solid fa-star text-warning-emphasis"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+              <!-- <div class="mb-4">
+                <h4 class="bg-white text-primary rounded-pill py-2 px-4 mb-0">
+                  $170:00/Day
+                </h4>
+              </div> -->
+              <div class="row gy-2 gx-0 text-center mb-4">
+                <div class="col-4 border-end border-white">
+                  <i class="fa fa-users text-dark"></i><span class="text-body ms-1">5 Seat</span>
+                </div>
+                <div class="col-4">
+                  <i class="fa fa-gas-pump text-dark"></i><span class="text-body ms-1">Gasoline</span>
+                </div>
+                <div class="col-4 border-end border-white">
+                  <i class="bi bi-calendar-event-fill"></i>
+                  <span class="text-body ms-1">2018</span>
+                </div>
+                <div class="col-4 border-end border-white">
+                  <i class="fa fa-cogs text-dark"></i><span class="text-body ms-1">AUTO</span>
+                </div>
+
+                <div class="col-4 border-end border-white">
+                  <i class="fa fa-car text-dark"></i><span class="text-body ms-1">Saloon</span>
+                </div>
+              </div>
+              <a href="pages/fleet.html#suzuki-type-2"
+                class="btn btn-primary rounded-pill d-flex justify-content-center py-3">View Fleet</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="text-center mt-4">
         <a href="./pages/fleet.html" class="btn btn-primary rounded-pill px-5 py-3">
           View Fleet
           <i class="fa-solid fa-arrow-right ms-2"></i>
         </a>
       </div> -->
-      </div>
     </div>
-    <!-- Car categories End -->
+  </div>
+  <!-- Car categories End -->
 
-    <!-- Why Choose Us Section Start -->
-    <div
-      class="container-fluid why-choose-us py-5 bg-light scroll-animate fade-up"
-    >
-      <div class="container">
-        <div class="text-center mx-auto mb-5 section-title">
-          <h1><span>安心して</span> ご利用いただける理由</h1>
-          <p class="mb-0">私たちのサービスが選ばれる理由をご紹介します。</p>
+  <!-- Why Choose Us Section Start -->
+  <div class="container-fluid why-choose-us py-5 bg-light scroll-animate fade-up">
+    <div class="container">
+      <div class="text-center mx-auto mb-5 section-title">
+        <h1><span>安心して</span> ご利用いただける理由</h1>
+        <p class="mb-0">私たちのサービスが選ばれる理由をご紹介します。</p>
+      </div>
+      <div class="row g-4">
+        <!-- Feature 1 -->
+        <div class="col-md-6 col-lg-6">
+          <div class="feature-box hover-effect-1 p-4 h-100 text-center bg-white border rounded">
+            <i class="fas fa-user-tie fa-2x mb-3 text-primary"></i>
+            <h5 class="fw-bold">経験豊富なプロドライバー</h5>
+            <p class="mb-0">
+              定期的な研修を受けたドライバーが
+              安全運転と丁寧なサービスでお迎えします。
+            </p>
+            <p class="mb-0">
+              日本人のお客様への対応経験が豊富で
+              日本語・英語どちらでもご案内可能です。
+            </p>
+          </div>
         </div>
-        <div class="row g-4">
-          <!-- Feature 1 -->
-          <div class="col-md-6 col-lg-6">
-            <div
-              class="feature-box hover-effect-1 p-4 h-100 text-center bg-white border rounded"
-            >
-              <i class="fas fa-user-tie fa-2x mb-3 text-primary"></i>
-              <h5 class="fw-bold">経験豊富なプロドライバー</h5>
-              <p class="mb-0">
-                定期的な研修を受けたドライバーが
-                安全運転と丁寧なサービスでお迎えします。
-              </p>
-              <p class="mb-0">
-                日本人のお客様への対応経験が豊富で
-                日本語・英語どちらでもご案内可能です。
-              </p>
-            </div>
+        <!-- Feature 2 -->
+        <div class="col-md-6 col-lg-6">
+          <div class="feature-box hover-effect-2 p-4 h-100 text-center bg-white border rounded">
+            <i class="fas fa-headset fa-2x mb-3 text-success"></i>
+            <h5 class="fw-bold">日本語でいつでもサポート</h5>
+            <p class="mb-0">日本語対応スタッフが24時間体制で待機。</p>
+            <p class="mb-0">
+              ご予約・ご相談・緊急時も、すべて日本語で安心してご連絡いただけます。
+            </p>
           </div>
-          <!-- Feature 2 -->
-          <div class="col-md-6 col-lg-6">
-            <div
-              class="feature-box hover-effect-2 p-4 h-100 text-center bg-white border rounded"
-            >
-              <i class="fas fa-headset fa-2x mb-3 text-success"></i>
-              <h5 class="fw-bold">日本語でいつでもサポート</h5>
-              <p class="mb-0">日本語対応スタッフが24時間体制で待機。</p>
-              <p class="mb-0">
-                ご予約・ご相談・緊急時も、すべて日本語で安心してご連絡いただけます。
-              </p>
-            </div>
+        </div>
+        <!-- Feature 3 -->
+        <div class="col-md-6 col-lg-6">
+          <div class="feature-box hover-effect-3 p-4 h-100 text-center bg-white border rounded">
+            <i class="fas fa-shield-alt fa-2x mb-3 text-warning"></i>
+            <h5 class="fw-bold">万が一にも備えた体制</h5>
+            <p class="mb-0">
+              車両の故障やドライバーの急な体調不良にも、予備の車とスタッフで即対応。
+            </p>
+            <p class="mb-0">
+              お客様の移動が滞らないよう、常に準備を整えています。
+            </p>
           </div>
-          <!-- Feature 3 -->
-          <div class="col-md-6 col-lg-6">
-            <div
-              class="feature-box hover-effect-3 p-4 h-100 text-center bg-white border rounded"
-            >
-              <i class="fas fa-shield-alt fa-2x mb-3 text-warning"></i>
-              <h5 class="fw-bold">万が一にも備えた体制</h5>
-              <p class="mb-0">
-                車両の故障やドライバーの急な体調不良にも、予備の車とスタッフで即対応。
-              </p>
-              <p class="mb-0">
-                お客様の移動が滞らないよう、常に準備を整えています。
-              </p>
-            </div>
-          </div>
-          <!-- Feature 4 -->
-          <div class="col-md-6 col-lg-6">
-            <!-- 6 ko 3 pyn pyon loh ya tl-->
-            <div
-              class="feature-box hover-effect-4 p-4 h-100 text-center bg-white border rounded"
-            >
-              <i class="fas fa-credit-card fa-2x mb-3 text-danger"></i>
-              <h5 class="fw-bold">選べる安心のお支払い方法</h5>
-              <p class="mb-0">
-                現金・銀行振込・電子決済など、柔軟で安全なお支払い方法をご用意。
-              </p>
-              <p class="mb-0">
-                お客様のご都合に合わせて、最適な方法をお選びいただけます。
-              </p>
-            </div>
+        </div>
+        <!-- Feature 4 -->
+        <div class="col-md-6 col-lg-6">
+          <!-- 6 ko 3 pyn pyon loh ya tl-->
+          <div class="feature-box hover-effect-4 p-4 h-100 text-center bg-white border rounded">
+            <i class="fas fa-credit-card fa-2x mb-3 text-danger"></i>
+            <h5 class="fw-bold">選べる安心のお支払い方法</h5>
+            <p class="mb-0">
+              現金・銀行振込・電子決済など、柔軟で安全なお支払い方法をご用意。
+            </p>
+            <p class="mb-0">
+              お客様のご都合に合わせて、最適な方法をお選びいただけます。
+            </p>
           </div>
         </div>
       </div>
     </div>
-    <!-- Why Choose Us Section End -->
+  </div>
+  <!-- Why Choose Us Section End -->
 
-    <!-- Fact Counter -->
-    <div class="container-fluid counter py-5">
-      <div class="container py-5 scroll-animate fade-down">
-        <div class="row g-5">
-          <div class="col-md-6 col-lg-6 col-xl-3">
-            <div class="counter-item text-center">
-              <div class="counter-item-icon mx-auto">
-                <i class="fas fa-thumbs-up fa-2x text-dark"></i>
-              </div>
-              <div class="counter-counting my-3">
-                <span class="text-white fs-2 fw-bold" data-toggle="counter-up"
-                  >55</span
-                >
-                <span class="h1 fw-bold text-white">+</span>
-              </div>
-              <h4 class="text-white mb-0">Employees</h4>
-            </div>
+  <!-- Vision & Mission Section Start -->
+  <div class="container-fluid py-5 bg-white scroll-animate fade-up">
+    <div class="container py-5">
+      <div class="text-center mx-auto mb-5 section-title">
+        <h1><span>Our</span> Vision & Mission</h1>
+        <p class="mb-0">
+          私たちの理念と使命をご紹介します。<br />
+          ミャンマーで暮らす日本人の皆さまに「安心」「快適」「信頼」をお届けします。
+        </p>
+      </div>
+
+      <div class="row g-5">
+        <!-- Vision -->
+        <div class="col-lg-6">
+          <div class="p-4 bg-light rounded shadow-sm h-100">
+            <h3 class="fw-bold text-primary mb-3">🚘 会社のビジョン（Vision）</h3>
+            <p>
+              私たちは、ミャンマーで暮らす日本人の皆さまに、
+              <strong>「安心」「快適」「信頼」</strong>をお届けする移動サービスを提供し、
+              心豊かな生活と円滑なビジネス活動を支えることを目指しています。
+            </p>
+            <p>
+              創業当初は1台の車からスタートしましたが、お客様や地域社会の信頼に支えられ、
+              現在では約90台の車両を保有するまでに成長しました。
+            </p>
+            <p>
+              私たちは、お客様への安心・安全なサービス提供とスタッフ一人ひとりの幸福を大切にし、
+              その成長とともに社会へ貢献してまいります。
+            </p>
+            <p>
+              また、環境に配慮した定期メンテナンスや低排出ガス車の導入を通じて、
+              持続可能な社会の実現にも努めています。
+            </p>
           </div>
-          <div
-            class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp"
-            data-wow-delay="0.3s"
-          >
-            <div class="counter-item text-center">
-              <div class="counter-item-icon mx-auto">
-                <i class="fas fa-car-alt fa-2x text-dark"></i>
-              </div>
-              <div class="counter-counting my-3">
-                <span class="text-white fs-2 fw-bold" data-toggle="counter-up"
-                  >56</span
-                >
-                <span class="h1 fw-bold text-white">+</span>
-              </div>
-              <h4 class="text-white mb-0">Royal Clients</h4>
-            </div>
-          </div>
-          <div
-            class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp"
-            data-wow-delay="0.5s"
-          >
-            <div class="counter-item text-center">
-              <div class="counter-item-icon mx-auto">
-                <i class="fas fa-building fa-2x text-dark"></i>
-              </div>
-              <div class="counter-counting my-3">
-                <span class="text-white fs-2 fw-bold" data-toggle="counter-up"
-                  >127</span
-                >
-                <span class="h1 fw-bold text-white">+</span>
-              </div>
-              <h4 class="text-white mb-0">Car available</h4>
-            </div>
-          </div>
-          <div
-            class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp"
-            data-wow-delay="0.7s"
-          >
-            <div class="counter-item text-center">
-              <div class="counter-item-icon mx-auto">
-                <i class="fas fa-clock fa-2x text-dark"></i>
-              </div>
-              <div class="counter-counting my-3">
-                <span class="text-white fs-2 fw-bold" data-toggle="counter-up"
-                  >5589</span
-                >
-                <span class="h1 fw-bold text-white">+</span>
-              </div>
-              <h4 class="text-white mb-0">Total Services Hours</h4>
-            </div>
+        </div>
+
+        <!-- Mission -->
+        <div class="col-lg-6">
+          <div class="p-4 bg-light rounded shadow-sm h-100">
+            <h3 class="fw-bold text-success mb-3">🎯 会社のミッション（Mission）</h3>
+            <ul class="list-unstyled">
+              <li class="mb-3">
+                <strong>✅ 安全と信頼の運転を提供します。</strong><br />
+                経験豊富で誠実なドライバーが、常に安全を最優先にお客様を快適に目的地までお送りします。
+              </li>
+              <li class="mb-3">
+                <strong>✅ お客様の満足を最も大切にします。</strong><br />
+                日本品質のきめ細やかなサービスで、ViberやLINEなどを通じて日本語・英語でいつでも対応します。
+              </li>
+              <li class="mb-3">
+                <strong>✅ ご家族向け専用車サービスを提供します。</strong><br />
+                車両点検・保険加入を徹底し、万が一の際も代車で迅速に対応します。
+              </li>
+              <li class="mb-3">
+                <strong>✅ ドライバー教育と現地知識の向上。</strong><br />
+                定期研修で、日本人のお客様がよく訪れる場所やルートを学び、スムーズな案内を実現します。
+              </li>
+              <li class="mb-3">
+                <strong>✅ ドライバーとともに成長し、幸せを分かち合います。</strong><br />
+                ドライバーが誇りを持って働ける環境を整え、安定した生活を支援します。
+              </li>
+              <li class="mb-3">
+                <strong>✅ 社会への貢献を大切にします。</strong><br />
+                雇用の創出や交通安全意識の向上を通じ、地域社会の発展に寄与します。
+              </li>
+            </ul>
           </div>
         </div>
       </div>
     </div>
-    <!-- Fact Counter -->
+  </div>
+  <!-- Vision & Mission Section End -->
 
-    <!-- Blog Start -->
-    <div class="container-fluid blog py-5">
-      <div class="container py-5">
-        <div
-          class="text-center mx-auto pb-5 section-title scroll-animate fade-down"
-        >
-          <h1><span> Blogs </span> & <span>News</span></h1>
-          <p class="mb-0">
-            GSSおよびナイスミャンマー・トラベルズの最新情報をご覧ください。<br />
-            最新のツアーパッケージ、レンタカーの特別割引、弊社からのお知らせなどをこちらでご確認いただけます。
-          </p>
+
+  <!-- Fact Counter -->
+  <div class="container-fluid counter py-5">
+    <div class="container py-5 scroll-animate fade-down">
+      <div class="row g-5">
+        <div class="col-md-6 col-lg-6 col-xl-3">
+          <div class="counter-item text-center">
+            <div class="counter-item-icon mx-auto">
+              <i class="fas fa-thumbs-up fa-2x text-dark"></i>
+            </div>
+            <div class="counter-counting my-3">
+              <span class="text-white fs-2 fw-bold" data-toggle="counter-up">55</span>
+              <span class="h1 fw-bold text-white">+</span>
+            </div>
+            <h4 class="text-white mb-0">Employees</h4>
+          </div>
         </div>
+        <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
+          <div class="counter-item text-center">
+            <div class="counter-item-icon mx-auto">
+              <i class="fas fa-car-alt fa-2x text-dark"></i>
+            </div>
+            <div class="counter-counting my-3">
+              <span class="text-white fs-2 fw-bold" data-toggle="counter-up">56</span>
+              <span class="h1 fw-bold text-white">+</span>
+            </div>
+            <h4 class="text-white mb-0">Royal Clients</h4>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
+          <div class="counter-item text-center">
+            <div class="counter-item-icon mx-auto">
+              <i class="fas fa-building fa-2x text-dark"></i>
+            </div>
+            <div class="counter-counting my-3">
+              <span class="text-white fs-2 fw-bold" data-toggle="counter-up">127</span>
+              <span class="h1 fw-bold text-white">+</span>
+            </div>
+            <h4 class="text-white mb-0">Car available</h4>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.7s">
+          <div class="counter-item text-center">
+            <div class="counter-item-icon mx-auto">
+              <i class="fas fa-clock fa-2x text-dark"></i>
+            </div>
+            <div class="counter-counting my-3">
+              <span class="text-white fs-2 fw-bold" data-toggle="counter-up">5589</span>
+              <span class="h1 fw-bold text-white">+</span>
+            </div>
+            <h4 class="text-white mb-0">Total Services Hours</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Fact Counter -->
 
-        <!-- Blog Grid -->
-        <div class="row g-4 justify-content-center">
-          <!-- Blog Item 1 -->
-          <div class="col-lg-6 px-3">
-            <div class="blog-item">
-              <div class="blog-img">
-                <img
-                  src="img/blog_img/blog_1_available_now.jpg"
-                  class="img-fluid rounded-top w-100"
-                  alt="Image"
-                />
-              </div>
-              <div class="blog-content rounded-bottom p-4">
-                <div class="blog-date">30 Dec 2025</div>
-                <br />
-                <!-- <div class="blog-comment my-3 d-flex justify-content-between small">
+  <!-- Blog Start -->
+  <div class="container-fluid blog py-5">
+    <div class="container py-5">
+      <div class="text-center mx-auto pb-5 section-title scroll-animate fade-down">
+        <h1><span> Blogs </span> & <span>News</span></h1>
+        <p class="mb-0">
+          GSSおよびナイスミャンマー・トラベルズの最新情報をご覧ください。<br />
+          最新のツアーパッケージ、レンタカーの特別割引、弊社からのお知らせなどをこちらでご確認いただけます。
+        </p>
+      </div>
+
+      <!-- Blog Grid -->
+      <div class="row g-4 justify-content-center">
+        <!-- Blog Item 1 -->
+        <div class="col-lg-6 px-3">
+          <div class="blog-item">
+            <div class="blog-img">
+              <img src="img/blog_img/blog_1_available_now.jpg" class="img-fluid rounded-top w-100" alt="Image" />
+            </div>
+            <div class="blog-content rounded-bottom p-4">
+              <div class="blog-date">30 Dec 2025</div>
+              <br />
+              <!-- <div class="blog-comment my-3 d-flex justify-content-between small">
                 <div><i class="fa fa-user"></i><span class="ms-2">Martin.C</span></div>
                 <div><i class="fa fa-comment-alt"></i><span class="ms-2">6 Comments</span></div>
               </div> -->
-                <a href="#" class="h4 d-block mb-3">Book Your Ride!</a>
-                <a href="#" class="h5 d-block mb-3"
-                  >Experienced Drivers & Quality Cars from GSS</a
-                >
-                <p class="mb-3">
-                  Golden Support Service (GSS) offers reliable and experienced
-                  car rental services,
-                  <b> AVAILABLE NOW!</b>
-                </p>
-                <a href="./pages/blog.html#blog1"
-                  >Read More <i class="fa fa-arrow-right"></i
-                ></a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Blog Item 2 -->
-          <div class="col-lg-6 px-3">
-            <div class="blog-item">
-              <div class="blog-img">
-                <img
-                  src="img/blog_img/blog_2_pamphlet.jpg"
-                  class="img-fluid rounded-top w-100"
-                  alt="Image"
-                />
-              </div>
-              <div class="blog-content rounded-bottom p-4">
-                <div class="blog-date">25 Dec 2025</div>
-                <br />
-                <a href="#" class="h4 d-block mb-3">Experience Bagan!</a>
-                <a href="#" class="h5 d-block mb-3"
-                  >Hot Air Balloons, River Cruise & More with Nice Myanmar
-                  Travels</a
-                >
-                <p class="mb-3">
-                  Explore Bagan on a 3-Day tour! See temples, enjoy a
-                  <b> Sunset River Cruise</b>, and add a
-                  <b>Hot Air Balloon</b> ride. Quick support by experienced
-                  staff.
-                </p>
-                <a href="./pages/blog.html#blog2"
-                  >Read More <i class="fa fa-arrow-right"></i
-                ></a>
-              </div>
+              <a href="#" class="h4 d-block mb-3">Book Your Ride!</a>
+              <a href="#" class="h5 d-block mb-3">Experienced Drivers & Quality Cars from GSS</a>
+              <p class="mb-3">
+                Golden Support Service (GSS) offers reliable and experienced
+                car rental services,
+                <b> AVAILABLE NOW!</b>
+              </p>
+              <a href="./pages/blog.html#blog1">Read More <i class="fa fa-arrow-right"></i></a>
             </div>
           </div>
         </div>
-        <!-- End Blog Grid -->
+
+        <!-- Blog Item 2 -->
+        <div class="col-lg-6 px-3">
+          <div class="blog-item">
+            <div class="blog-img">
+              <img src="img/blog_img/blog_2_pamphlet.jpg" class="img-fluid rounded-top w-100" alt="Image" />
+            </div>
+            <div class="blog-content rounded-bottom p-4">
+              <div class="blog-date">25 Dec 2025</div>
+              <br />
+              <a href="#" class="h4 d-block mb-3">Experience Bagan!</a>
+              <a href="#" class="h5 d-block mb-3">Hot Air Balloons, River Cruise & More with Nice Myanmar
+                Travels</a>
+              <p class="mb-3">
+                Explore Bagan on a 3-Day tour! See temples, enjoy a
+                <b> Sunset River Cruise</b>, and add a
+                <b>Hot Air Balloon</b> ride. Quick support by experienced
+                staff.
+              </p>
+              <a href="./pages/blog.html#blog2">Read More <i class="fa fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
       </div>
+      <!-- End Blog Grid -->
     </div>
-    <!-- Blog End -->
+  </div>
+  <!-- Blog End -->
 
-    <!-- Team Start -->
-    <div class="container-fluid team pb-5">
-      <div class="container pb-5">
-        <!-- ===== OUR TEAM TITLE ===== -->
-        <div
-          class="text-center mx-auto pb-5 section-title scroll-animate fade-down"
-          style="max-width: 800px"
-        >
-          <h1><span>Our</span> Team</h1>
-          <p class="mb-0">
-            現地事情に精通したスタッフが、日本語・ミャンマー語・英語で対応。<br />
-            お客様の不安や疑問に寄り添いながら、安心してご利用いただける環境を整えています。
-          </p>
+  <!-- Team Start -->
+  <div class="container-fluid team pb-5">
+    <div class="container pb-5">
+      <!-- ===== OUR TEAM TITLE ===== -->
+      <div class="text-center mx-auto pb-5 section-title scroll-animate fade-down" style="max-width: 800px">
+        <h1><span>Our</span> Team</h1>
+        <p class="mb-0">
+          現地事情に精通したスタッフが、日本語・ミャンマー語・英語で対応。<br />
+          お客様の不安や疑問に寄り添いながら、安心してご利用いただける環境を整えています。
+        </p>
+      </div>
+
+      <!-- ===== TEAM IMAGE ===== -->
+      <div class="container pb-5 scroll-animate fade-up">
+        <div class="team-image mt-4 mb-5 mx-auto" style="background-size: cover">
+          <img src="img/team/DSC01299.jpg" class="img-fluid rounded shadow" alt="Our Team Group Photo" />
         </div>
+      </div>
 
-        <!-- ===== TEAM IMAGE ===== -->
-        <div class="container pb-5 scroll-animate fade-up">
-          <div
-            class="team-image mt-4 mb-5 mx-auto"
-            style="background-size: cover"
-          >
-            <img
-              src="img/team/DSC01299.jpg"
-              class="img-fluid rounded shadow"
-              alt="Our Team Group Photo"
-            />
-          </div>
-        </div>
+      <!-- ===== OUR DRIVERS TITLE ===== -->
+      <div class="text-center mx-auto pb-5 section-title scroll-animate fade-down">
+        <h1><span>Our</span> Drivers</h1>
+        <p class="mb-0">
+          お客様の安全と快適な移動を支える、経験豊富なドライバーチームをご紹介します。<br />
+          現地事情に精通し、丁寧な対応と確かな運転技術で、安心の旅をサポートします。
+        </p>
+      </div>
 
-        <!-- ===== OUR DRIVERS TITLE ===== -->
-        <div
-          class="text-center mx-auto pb-5 section-title scroll-animate fade-down"
-        >
-          <h1><span>Our</span> Drivers</h1>
-          <p class="mb-0">
-            お客様の安全と快適な移動を支える、経験豊富なドライバーチームをご紹介します。<br />
-            現地事情に精通し、丁寧な対応と確かな運転技術で、安心の旅をサポートします。
-          </p>
-        </div>
-
-        <!-- ===== DRIVER CAROUSEL START ===== -->
-        <div id="driversCarousel" class="carousel slide scroll-animate fade-up">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <div class="row g-4 justify-content-center">
-                <!-- Driver 1 -->
-                <div class="col-md-6 col-lg-4">
-                  <div class="team-item p-4 pt-0">
-                    <div class="team-img">
-                      <img
-                        src="img/team/drivers/Zaw Zaw Kyi Win.jpg"
-                        class="img-fluid rounded w-100"
-                        alt="ZawZawKyiWin"
-                      />
-                    </div>
-                    <div class="team-content pt-4">
-                      <h4>Zaw Zaw Kyi Win</h4>
-                      <p>Profession</p>
-                      <a
-                        href="pages/ourteam.html"
-                        class="btn btn-primary btn-view-more mt-3"
-                      >
-                        View More
-                      </a>
-                    </div>
+      <!-- ===== DRIVER CAROUSEL START ===== -->
+      <div id="driversCarousel" class="carousel slide scroll-animate fade-up">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="row g-4 justify-content-center">
+              <!-- Driver 1 -->
+              <div class="col-md-6 col-lg-4">
+                <div class="team-item p-4 pt-0">
+                  <div class="team-img">
+                    <img src="img/team/drivers/Zaw Zaw Kyi Win.jpg" class="img-fluid rounded w-100"
+                      alt="ZawZawKyiWin" />
+                  </div>
+                  <div class="team-content pt-4">
+                    <h4>Zaw Zaw Kyi Win</h4>
+                    <p>Profession</p>
+                    <a href="pages/ourteam.html" class="btn btn-primary btn-view-more mt-3">
+                      View More
+                    </a>
                   </div>
                 </div>
+              </div>
 
-                <!-- Driver 2 -->
-                <div class="col-md-6 col-lg-4">
-                  <div class="team-item p-4 pt-0">
-                    <div class="team-img">
-                      <img
-                        src="img/team/drivers/Arkar Kyaw Lin 1.jpg"
-                        class="img-fluid rounded w-100"
-                        alt="ArkarKyawLin"
-                      />
-                    </div>
-                    <div class="team-content pt-4">
-                      <h4>Arkar Kyaw Lin</h4>
-                      <p>Profession</p>
-                      <a
-                        href="pages/ourteam.html"
-                        class="btn btn-primary btn-view-more mt-3"
-                      >
-                        View More
-                      </a>
-                    </div>
+              <!-- Driver 2 -->
+              <div class="col-md-6 col-lg-4">
+                <div class="team-item p-4 pt-0">
+                  <div class="team-img">
+                    <img src="img/team/drivers/Arkar Kyaw Lin 1.jpg" class="img-fluid rounded w-100"
+                      alt="ArkarKyawLin" />
+                  </div>
+                  <div class="team-content pt-4">
+                    <h4>Arkar Kyaw Lin</h4>
+                    <p>Profession</p>
+                    <a href="pages/ourteam.html" class="btn btn-primary btn-view-more mt-3">
+                      View More
+                    </a>
                   </div>
                 </div>
+              </div>
 
-                <!-- Driver 3 -->
-                <div class="col-md-6 col-lg-4">
-                  <div class="team-item p-4 pt-0">
-                    <div class="team-img">
-                      <img
-                        src="img/team/drivers/Hein Zin Wai 1.jpg"
-                        class="img-fluid rounded w-100"
-                        alt="Hein Zin Wai "
-                      />
-                    </div>
-                    <div class="team-content pt-4">
-                      <h4>Hein Zin Wai</h4>
-                      <p>Profession</p>
-                      <a
-                        href="pages/ourteam.html"
-                        class="btn btn-primary btn-view-more mt-3"
-                      >
-                        View More
-                      </a>
-                    </div>
+              <!-- Driver 3 -->
+              <div class="col-md-6 col-lg-4">
+                <div class="team-item p-4 pt-0">
+                  <div class="team-img">
+                    <img src="img/team/drivers/Hein Zin Wai 1.jpg" class="img-fluid rounded w-100"
+                      alt="Hein Zin Wai " />
+                  </div>
+                  <div class="team-content pt-4">
+                    <h4>Hein Zin Wai</h4>
+                    <p>Profession</p>
+                    <a href="pages/ourteam.html" class="btn btn-primary btn-view-more mt-3">
+                      View More
+                    </a>
                   </div>
                 </div>
+              </div>
 
-                <!-- Driver 4 -->
-                <div class="col-md-6 col-lg-4">
-                  <div class="team-item p-4 pt-0">
-                    <div class="team-img">
-                      <img
-                        src="img/team/drivers/Ko Ye Zaw.jpg"
-                        class="img-fluid rounded w-100"
-                        alt="Ko Ye Zaw"
-                      />
-                    </div>
-                    <div class="team-content pt-4">
-                      <h4>Ko Ye Zaw</h4>
-                      <p>Profession</p>
-                      <a
-                        href="pages/ourteam.html"
-                        class="btn btn-primary btn-view-more mt-3"
-                      >
-                        View More
-                      </a>
-                    </div>
+              <!-- Driver 4 -->
+              <div class="col-md-6 col-lg-4">
+                <div class="team-item p-4 pt-0">
+                  <div class="team-img">
+                    <img src="img/team/drivers/Ko Ye Zaw.jpg" class="img-fluid rounded w-100" alt="Ko Ye Zaw" />
+                  </div>
+                  <div class="team-content pt-4">
+                    <h4>Ko Ye Zaw</h4>
+                    <p>Profession</p>
+                    <a href="pages/ourteam.html" class="btn btn-primary btn-view-more mt-3">
+                      View More
+                    </a>
                   </div>
                 </div>
+              </div>
 
-                <!-- Driver 5-->
-                <div class="col-md-6 col-lg-4">
-                  <div class="team-item p-4 pt-0">
-                    <div class="team-img">
-                      <img
-                        src="img/team/drivers/Than Shwe2.jpg"
-                        class="img-fluid rounded w-100"
-                        alt="Than Shwe"
-                      />
-                    </div>
-                    <div class="team-content pt-4">
-                      <h4>Than Shwe</h4>
-                      <p>Profession</p>
-                      <a
-                        href="pages/ourteam.html"
-                        class="btn btn-primary btn-view-more mt-3"
-                      >
-                        View More
-                      </a>
-                    </div>
+              <!-- Driver 5-->
+              <div class="col-md-6 col-lg-4">
+                <div class="team-item p-4 pt-0">
+                  <div class="team-img">
+                    <img src="img/team/drivers/Than Shwe2.jpg" class="img-fluid rounded w-100" alt="Than Shwe" />
+                  </div>
+                  <div class="team-content pt-4">
+                    <h4>Than Shwe</h4>
+                    <p>Profession</p>
+                    <a href="pages/ourteam.html" class="btn btn-primary btn-view-more mt-3">
+                      View More
+                    </a>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-
-          <!-- Carousel Controls -->
-          <button
-            class="carousel-control-prev custom-carousel-btn"
-            type="button"
-          >
-            <i class="fas fa-chevron-left"></i>
-          </button>
-          <button
-            class="carousel-control-next custom-carousel-btn"
-            type="button"
-          >
-            <i class="fas fa-chevron-right"></i>
-          </button>
         </div>
-        <!-- ===== DRIVER CAROUSEL END ===== -->
+
+        <!-- Carousel Controls -->
+        <button class="carousel-control-prev custom-carousel-btn" type="button">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="carousel-control-next custom-carousel-btn" type="button">
+          <i class="fas fa-chevron-right"></i>
+        </button>
       </div>
+      <!-- ===== DRIVER CAROUSEL END ===== -->
     </div>
-    <!-- Team End -->
+  </div>
+  <!-- Team End -->
 
-    <!-- Footer Start -->
-    <div include-html="items/footer.html"></div>
-    <!-- Footer End -->
+  <!-- Footer Start -->
+  <div include-html="items/footer.html"></div>
+  <!-- Footer End -->
 
-    <!-- Back to Top Button -->
-    <button id="backToTopBtn" title="Go to top">
-      <i class="bi bi-arrow-up-short"></i>
-    </button>
+  <!-- Back to Top Button -->
+  <button id="backToTopBtn" title="Go to top">
+    <i class="bi bi-arrow-up-short"></i>
+  </button>
 
-    <!-- Load jQuery -->
-    <script src="js/jquery-3.7.1.min.js"></script>
-    <script src="js/items.js"></script>
-    <!-- Bootstrap JS -->
-    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- Load jQuery -->
+  <script src="js/jquery-3.7.1.min.js"></script>
+  <script src="js/items.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
 
-    <!-- custom script -->
-    <script type="text/javascript" src="js/script.js"></script>
+  <!-- custom script -->
+  <script type="text/javascript" src="js/script.js"></script>
 
-    <script src="js/counter.js"></script>
+  <script src="js/counter.js"></script>
 
-    <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
 
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-  </body>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+</body>
+
 </html>

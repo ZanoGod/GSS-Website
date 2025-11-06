@@ -106,7 +106,7 @@
   // Hide the overlay after 10 seconds (for testing)
   setTimeout(() => {
     document.getElementById("maintenance-overlay").style.display = "none";
-  }, 1000);
+  }, 500);
 
   // === Manual Driver Carousel (No Auto Sliding, No Clones, Smooth) ===
   document.addEventListener("DOMContentLoaded", function () {

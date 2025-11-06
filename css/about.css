@@ -1,5 +1,16 @@
 /* About Page Custom Styles */
 
+:root {
+  /* Change the hex code below to your desired color */
+  --bs-primary: #b68b2e;
+  --bs-secondary: #ffb22c; /* Secondary color */
+  --bs-light: #f8f9fa; /* Light background color */
+  --bs-dark: #343a40; /* Dark text color */
+  --bs-footer: #8b540f;
+  --bs-white: #ffffff;
+  --bs-gray: #e9ecef;
+}
+
 /* CEO Profile */
 .ceo-img {
   width: 200px;
@@ -167,5 +178,120 @@
   .ceo-hero p {
     font-size: 0.9rem;
     line-height: 1.6;
+  }
+}
+
+
+/* =============================
+   Vision & Mission Section
+============================= */
+.vision-mission-section h6 {
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+}
+
+/* ===== Vision & Mission Layout ===== */
+.vision-mission-section .row {
+  align-items: center;
+}
+/* =============================
+   Vision & Mission Section
+============================= */
+
+.vision-mission-section {
+  background-color: var(--bs-white);
+}
+
+.vision-mission-section h3 {
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+.vision-mission-section p {
+  color: var(--bs-dark);
+  line-height: 1.9;
+  font-size: 1.05rem;
+}
+
+/* ===== Boxes ===== */
+.vision-box,
+.mission-box {
+  width: 100%;
+  max-width: 450px;
+  height: 260px;
+  margin: 0 auto;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: all 0.4s ease;
+}
+
+.vision-box {
+  background: linear-gradient(135deg, var(--bs-primary), var(--bs-footer));
+}
+
+.mission-box {
+  background: linear-gradient(135deg, var(--bs-secondary), var(--bs-primary));
+}
+
+.vision-box:hover,
+.mission-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== Mission List ===== */
+.mission-list {
+  list-style: none;
+  padding-left: 0;
+  line-height: 1.8;
+}
+
+.mission-list li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.9rem;
+  color: var(--bs-dark);
+  font-size: 1.05rem;
+}
+
+.mission-list li::before {
+  content: "▸";
+  color: var(--bs-primary);
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 991px) {
+  .vision-box,
+  .mission-box {
+    max-width: 380px;
+    height: 200px;
+  }
+
+  .vision-mission-section h3 {
+    font-size: 1.5rem;
+  }
+
+  .vision-mission-section p,
+  .mission-list li {
+    font-size: 1rem;
+  }
+
+  .vision-mission-section .row {
+    text-align: center;
+  }
+}
+
+@media (max-width: 575px) {
+  .vision-box,
+  .mission-box {
+    max-width: 320px;
+    height: 180px;
   }
 }

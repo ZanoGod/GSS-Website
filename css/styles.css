@@ -1018,44 +1018,34 @@
 }
 
 /* === Drivers Carousel Styling === */
+/* === Drivers Carousel (Bootstrap-based, clean) === */
 #driversCarousel {
   position: relative;
   overflow: hidden;
-  padding: 0 100px;
+  padding: 0 60px;
 }
 
-#driversCarousel .carousel-inner .row {
-  display: flex;
-  flex-wrap: nowrap;
-  transition: transform 0.5s ease-in-out;
+#driversCarousel .carousel-item {
+  transition: transform 0.8s ease-in-out;
+}
+
+#driversCarousel .row {
   margin: 0;
-}
-
-
-#driversCarousel .carousel-inner .col-md-6.col-lg-4 {
-  padding: 0 12px;
-  box-sizing: border-box;
 }
 
 @media (max-width: 992px) {
   #driversCarousel {
-    padding: 0 60px;
-  }
-  #driversCarousel .carousel-inner .col-md-6.col-lg-4 {
-    flex: 0 0 50%;
-    max-width: 50%;
+    padding: 0 40px;
   }
 }
 
 @media (max-width: 768px) {
   #driversCarousel {
-    padding: 0 40px;
-  }
-  #driversCarousel .carousel-inner .col-md-6.col-lg-4 {
-    flex: 0 0 100%;
-    max-width: 100%;
+    padding: 0 20px;
   }
 }
+
+
 
 /* Carousel Buttons */
 .custom-carousel-btn {

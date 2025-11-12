@@ -33,7 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
         // 4. Recipients
         $mail->setFrom($email, $name);                          // From (the user)
-        $mail->addAddress('seteam@nicemyanmartravel.com');      // To (your company)
+        $mail->addAddress('operator-group@nicemyanmartravel.com');      // To (your company)
         $mail->addReplyTo($email, $name);                       // Reply-To (the user)
 
         // 5. Content

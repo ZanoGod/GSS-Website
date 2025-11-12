@@ -108,8 +108,4 @@
     document.getElementById("maintenance-overlay").style.display = "none";
   }, 500);
 
-
-
-
-
 })(jQuery);

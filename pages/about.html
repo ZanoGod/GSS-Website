@@ -97,16 +97,21 @@
           </p>
 
         </div>
-        <div class="col-lg-6 text-center">
-          <img src="../img/about-us.png" alt="About Image" class="img-fluid rounded shadow-lg" />
-        </div>
+        <!-- <div class="col-lg-6 text-center">
+          <img src="../img/about/IMG_7911.JPG" alt="About Image" class="img-fluid rounded shadow-lg" />
+        </div> -->
+<div class="col-lg-6 text-center">
+  <img id="aboutSlide" src="../img/about/IMG_7911.JPG"
+     class="img-fluid rounded shadow-lg zoom-fade-image" />
+</div>
+
       </div>
     </div>
   </section>
   <!-- About Us End -->
 
   <!-- CEO Profile -->
-  <section class="py-5">
+  <!-- <section class="py-5">
     <div class="container">
       <h2 class="text-center mb-4">Company Profile</h2>
       <h2 class="text-center mb-4">Need to Implement......</h2>
@@ -127,7 +132,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
   <!-- CEO Profile Section -->
   <!-- CEO Profile Hero Section -->
@@ -367,6 +372,40 @@
     <div include-html="../items/footer.html"></div>
     <!-- Footer End -->
   </section>
+
+<script>
+  const slides = [
+    "../img/about/IMG_7911.JPG",
+    "../img/about/IMG_7912.JPG",
+    "../img/about/IMG_7913.JPG",
+    "../img/about/IMG_7914.JPG",
+    "../img/about/IMG_7915.JPG",
+    "../img/about/IMG_7916.JPG",
+    "../img/about/IMG_7917.JPG",
+    "../img/about/IMG_7918.JPG",
+    "../img/about/IMG_7919.JPG",
+    "../img/about/IMG_7920.JPG"
+  ];
+
+  let index = 0;
+  const img = document.getElementById("aboutSlide");
+
+  setInterval(() => {
+    img.classList.add("zoom-fade-out"); // fade and zoom out
+
+    setTimeout(() => {
+      index = (index + 1) % slides.length;
+      img.src = slides[index];          // update image
+
+      img.classList.remove("zoom-fade-out");
+      img.classList.add("zoom-fade-in"); // fade + zoom in
+
+      // remove after animation to reset state
+      setTimeout(() => img.classList.remove("zoom-fade-in"), 500);
+    }, 500); // match fade-out time
+  }, 3500); // slide every 1.5 seconds
+</script>
+
 
   <!-- Scripts -->
   <script src="../lib/owlcarousel/owl.carousel.min.js"></script>

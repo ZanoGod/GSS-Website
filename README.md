@@ -1,4 +1,16 @@
 # GSS-Website
-to do our team and our drivers 
-to implement home hero banner image 
-to check and fix about us 
+
+
+This repository contains the official source code for the company website of GSS.
+
+## 🛠️ Technology Stack
+
+This website is built using:
+
+* HTML
+* CSS
+* JavaScript
+
+---
+
+© GSS. All rights reserved.

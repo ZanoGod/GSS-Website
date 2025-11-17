@@ -26,8 +26,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $mail->isSMTP();                                        // Send using SMTP
         $mail->Host       = 'smtp.gmail.com';                 // SET YOUR SMTP SERVER
         $mail->SMTPAuth   = true;                               // Enable SMTP authentication
-        $mail->Username   = 'zinwaiyan1443@gmail.com';           // SET YOUR SMTP USERNAME
-        $mail->Password   = 'ocjf dngb inqp xzii';              // SET YOUR SMTP PASSWORD
+        $mail->Username   = 'seteam@nicemyanmartravel.com';           // SET YOUR SMTP USERNAME
+        $mail->Password   = 'eyfi zdia zyuu hivc';              // SET YOUR SMTP PASSWORD
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;         // Enable implicit SMTPS
         $mail->Port       = 465;                                // Port 465 for SMTPS
 

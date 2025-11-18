@@ -44,20 +44,20 @@
     );
     animatedElements.forEach((el) => observer.observe(el));
 
-    // Load form.html into all .form-container elements
-    const containers = document.querySelectorAll(".form-container");
-    fetch("form.html")
-      .then((response) => response.text())
-      .then((html) => {
-        containers.forEach((container) => {
-          const temp = document.createElement("div");
-          temp.innerHTML = html;
-          container.appendChild(temp.firstElementChild);
-        });
-      })
-      .catch((error) => {
-        console.error("Error loading form:", error);
-      });
+    // // Load form.html into all .form-container elements
+    // const containers = document.querySelectorAll(".form-container");
+    // fetch("form.html")
+    //   .then((response) => response.text())
+    //   .then((html) => {
+    //     containers.forEach((container) => {
+    //       const temp = document.createElement("div");
+    //       temp.innerHTML = html;
+    //       container.appendChild(temp.firstElementChild);
+    //     });
+    //   })
+    //   .catch((error) => {
+    //     console.error("Error loading form:", error);
+    //   });
 
     // Hamburger menu toggle
     const hamburger = document.querySelector(".hamburger");
@@ -104,8 +104,8 @@
   });
 
   // Hide the overlay after 10 seconds (for testing)
-  setTimeout(() => {
-    document.getElementById("maintenance-overlay").style.display = "none";
-  }, 500);
+  // setTimeout(() => {
+  //   document.getElementById("maintenance-overlay").style.display = "none";
+  // }, 500);
 
 })(jQuery);

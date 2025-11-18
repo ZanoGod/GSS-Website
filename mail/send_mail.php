@@ -27,13 +27,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $mail->Host       = 'smtp.gmail.com';                 // SET YOUR SMTP SERVER
         $mail->SMTPAuth   = true;                               // Enable SMTP authentication
         $mail->Username   = 'seteam@nicemyanmartravel.com';           // SET YOUR SMTP USERNAME
-        $mail->Password   = 'eyfi zdia zyuu hivc';              // SET YOUR SMTP PASSWORD
+        $mail->Password   = 'paog yrqs gtwc tkdq';              // SET YOUR SMTP PASSWORD
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;         // Enable implicit SMTPS
-        $mail->Port       = 465;                                // Port 465 for SMTPS
+        $mail->Port       = 465;                                // Port 465 for SSL encryption SMTPS 587 for TLS encryption
 
         // 4. Recipients
         $mail->setFrom($email, $name);                          // From (the user)
-        $mail->addAddress('operator-group@nicemyanmartravel.com');      // To (your company)
+        $mail->addAddress('seteam@nicemyanmartravel.com');      // To (your company)
         $mail->addReplyTo($email, $name);                       // Reply-To (the user)
 
         // 5. Content

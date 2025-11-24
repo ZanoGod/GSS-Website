@@ -104,8 +104,8 @@
   });
 
   // Hide the overlay after 10 seconds (for testing)
-  setTimeout(() => {
-    document.getElementById("maintenance-overlay").style.display = "none";
-  }, 500);
+  // setTimeout(() => {
+  //   document.getElementById("maintenance-overlay").style.display = "none";
+  // }, 500);
 
 })(jQuery);

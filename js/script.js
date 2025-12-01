@@ -1,12 +1,73 @@
 (function ($) {
   "use strict";
 
-  // Preloader logic
+  /**
+   * Robust Preloader
+   * - waits for window.load
+   * - waits for elements with [include-html] to be populated (for items.js style injection)
+   * - observes DOM mutations as fallback
+   * - final safety timeout (10s)
+   */
   var initPreloader = function () {
-    $(document).ready(function () {
-      $(".preloader").fadeOut(500);
-      $("body").removeClass("preloader-site");
+    var pre = document.querySelector(".preloader");
+    if (!pre) return;
+
+    function removePre() {
+      try {
+        if (!pre) return;
+        if (pre.classList.contains("hidden")) return;
+        pre.classList.add("hidden");
+        // remove from DOM after transition completes
+        setTimeout(function () {
+          if (pre && pre.parentNode) pre.parentNode.removeChild(pre);
+        }, 600);
+      } catch (e) {
+        console.warn("Error while removing preloader:", e);
+      }
+    }
+
+    // Check whether include-html fragments are populated (no content = not ready)
+    function includesReadyCheck() {
+      var nodes = Array.prototype.slice.call(document.querySelectorAll("[include-html]"));
+      if (nodes.length === 0) return true;
+      return nodes.every(function (n) {
+        return n.innerHTML && n.innerHTML.trim().length > 0;
+      });
+    }
+
+    // 1) Hide on full load (images/fonts etc.)
+    window.addEventListener("load", function () {
+      removePre();
     });
+
+    // 2) If includes are in use, wait for them to contain HTML
+    if (includesReadyCheck()) {
+      // If includes already present, hide shortly after DOM ready
+      document.addEventListener("DOMContentLoaded", function () {
+        setTimeout(removePre, 200);
+      });
+    } else {
+      // Observe DOM changes to detect when include-html gets populated
+      var observer = new MutationObserver(function (mutations, obs) {
+        if (includesReadyCheck()) {
+          removePre();
+          obs.disconnect();
+        }
+      });
+      observer.observe(document.documentElement, { childList: true, subtree: true, characterData: true });
+      // Safety: disconnect observer after 15s
+      setTimeout(function () {
+        try { observer.disconnect(); } catch (e) {}
+      }, 15000);
+    }
+
+    // 3) Safety fallback: if nothing else fires, hide after 10s
+    setTimeout(function () {
+      if (document.querySelector(".preloader")) {
+        console.warn("Preloader fallback fired (10s)");
+        removePre();
+      }
+    }, 10000);
   };
 
   initPreloader();
@@ -43,21 +104,6 @@
       { threshold: 0.1 }
     );
     animatedElements.forEach((el) => observer.observe(el));
-
-    // // Load form.html into all .form-container elements
-    // const containers = document.querySelectorAll(".form-container");
-    // fetch("form.html")
-    //   .then((response) => response.text())
-    //   .then((html) => {
-    //     containers.forEach((container) => {
-    //       const temp = document.createElement("div");
-    //       temp.innerHTML = html;
-    //       container.appendChild(temp.firstElementChild);
-    //     });
-    //   })
-    //   .catch((error) => {
-    //     console.error("Error loading form:", error);
-    //   });
 
     // Hamburger menu toggle
     const hamburger = document.querySelector(".hamburger");
@@ -102,10 +148,5 @@
       },
     });
   });
-
-  // Hide the overlay after 10 seconds (for testing)
-  // setTimeout(() => {
-  //   document.getElementById("maintenance-overlay").style.display = "none";
-  // }, 500);
 
 })(jQuery);

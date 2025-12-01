@@ -209,80 +209,88 @@
     </section>
 
     <!-- Map -->
-    <div class="container-fluid p-0 scroll-animate fade-down">
+    <!-- <div class="container-fluid p-0 scroll-animate fade-down">
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d436.3384649592283!2d96.16856246943887!3d16.83161806996287!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c1932bb3462dd1%3A0x2254d254110e0fea!2sGolden%20Support%20Services%20Co.%2CLtd!5e1!3m2!1sen!2smm!4v1760610788407!5m2!1sen!2smm"
         frameborder="0" style="min-height: 450px; border: 0" allowfullscreen
         aria-hidden="false" tabindex="0"
         class="w-100"></iframe>
+    </div> -->
+
+    <!-- Map (with JS fallback) -->
+<div id="mapWrapper" class="container-fluid p-0 scroll-animate fade-down" style="position:relative;">
+  <iframe
+    id="gmapIframe"
+    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d436.3384649592283!2d96.16856246943887!3d16.83161806996287!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c1932bb3462dd1%3A0x2254d254110e0fea!2sGolden%20Support%20Services%20Co.%2CLtd!5e1!3m2!1sen!2smm!4v1760610788407!5m2!1sen!2smm"
+    frameborder="0"
+    style="min-height:450px; border:0; width:100%;"
+    allowfullscreen
+    aria-hidden="false"
+    tabindex="0"
+    loading="lazy"
+  ></iframe>
+
+  <!-- Hidden fallback UI, shown if Google Maps fails to load -->
+  <div id="mapFallback" style="display:none; position:absolute; inset:0; background:#f8f9fa; z-index:5; display:flex; align-items:center; justify-content:center; padding:20px; text-align:center;">
+    <div style="max-width:760px;">
+      <h4 style="margin-bottom:8px;">Map temporarily unavailable</h4>
+      <p style="margin-bottom:12px;">We were unable to load Google Maps from your network. You can:</p>
+      <p style="margin-bottom:12px;">
+        <a href="https://www.google.com/maps/place/Golden+Support+Service+Co.,Ltd/@16.832174,96.1684144,21z/data=!4m6!3m5!1s0x30c1932bb3462dd1:0x2254d254110e0fea!8m2!3d16.8322334!4d96.1684372!16s%2Fg%2F11zk27mk83?entry=ttu&g_ep=EgoyMDI1MTEyMy4xIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener" style="display:inline-block;margin:6px;padding:10px 14px;border-radius:22px;background:#b68b2e;color:#fff;text-decoration:none;">Open in Google Maps</a>
+        <button id="showOsmBtn" style="margin:6px;padding:10px 14px;border-radius:22px;border:1px solid #b68b2e;background:#fff;color:#b68b2e;cursor:pointer;">Show OpenStreetMap</button>
+      </p>
+      <p style="font-size:13px;color:#666;margin-top:6px;">If the map keeps failing, try a different network or contact us at info@goldensupportservices.com</p>
     </div>
+  </div>
+</div>
 
     <!-- Footer -->
     <section class="scroll-animate fade-up">
       <div include-html="../items/footer.html"></div>
     </section>
 
-    <script>
-  (function () {
-    function toHtmlListText(plain) {
-      // Simple parser: convert lines starting with "- " into an unordered list
-      const lines = plain.split(/\r?\n/);
-      let html = '';
-      let inList = false;
-      lines.forEach(line => {
-        const t = line.trim();
-        if (t.startsWith('- ')) {
-          if (!inList) { html += '<ul style="margin:0 0 0.5rem 1rem;">'; inList = true; }
-          html += '<li>' + escapeHtml(t.substring(2)) + '</li>';
-        } else {
-          if (inList) { html += '</ul>'; inList = false; }
-          html += '<div>' + escapeHtml(line) + '</div>';
-        }
-      });
-      if (inList) html += '</ul>';
-      return html;
-    }
+<script>
+(function(){
+  var iframe = document.getElementById('gmapIframe');
+  var fallback = document.getElementById('mapFallback');
+  var showed = false;
 
-    function escapeHtml(unsafe) {
-      return unsafe
-        .replace(/&/g, '&amp;')
-        .replace(/</g, '&lt;')
-        .replace(/>/g, '&gt;')
-        .replace(/"/g, '&quot;')
-        .replace(/'/g, '&#039;');
-    }
-
-    document.addEventListener('DOMContentLoaded', function () {
-      const key = 'reservationMessage';
-      const raw = localStorage.getItem(key);
-      if (!raw) return;
-
-      // Fill textarea
-      const textarea = document.getElementById('message');
-      if (textarea) {
-        // If message already contains user-typed text, append; otherwise replace
-        if (textarea.value && textarea.value.trim().length > 0) {
-          textarea.value = textarea.value.trim() + '\n\n' + raw;
-        } else {
-          textarea.value = raw;
-        }
-        textarea.focus();
+  // If the iframe fires load within timeout, OK. If not, show fallback.
+  var loadFired = false;
+  iframe.addEventListener('load', function(){
+    loadFired = true;
+    // small delay to allow embed scripts to initialize
+    setTimeout(function(){
+      if(!showed) {
+        // iframe loaded successfully — ensure fallback hidden
+        fallback.style.display = 'none';
       }
+    }, 800);
+  });
 
-      // Show a formatted preview
-      const wrapper = document.getElementById('reservationPreviewWrapper');
-      const preview = document.getElementById('reservationPreview');
-      if (preview && wrapper) {
-        preview.innerHTML = toHtmlListText(raw);
-        wrapper.style.display = 'block';
-      }
+  // After 8000ms, if iframe hasn't fired load, show fallback UI
+  setTimeout(function(){
+    if(!loadFired){
+      fallback.style.display = 'flex';
+      showed = true;
+      console.warn('Google Maps iframe did not load — showing fallback');
+    }
+  }, 8000);
 
-      // Optionally clear stored reservation after using it so it doesn't reappear
-      // Comment out next line if you want it to persist
-      localStorage.removeItem(key);
-    });
-  })();
+  // If user clicks Show OpenStreetMap, replace the iframe with an OSM embed (no API key)
+  document.getElementById('showOsmBtn').addEventListener('click', function(){
+    // OpenStreetMap embed URL centered on coordinate (lat, lon)
+    var lat = 16.83161806996287, lon = 96.16856246943887;
+    var zoom = 16;
+    var osmUrl = 'https://www.openstreetmap.org/export/embed.html?bbox=' + (lon-0.01) + '%2C' + (lat-0.01) + '%2C' + (lon+0.01) + '%2C' + (lat+0.01) + '&layer=mapnik&marker=' + lat + '%2C' + lon;
+    // swap iframe src to OSM
+    iframe.src = osmUrl;
+    // hide fallback overlay
+    fallback.style.display = 'none';
+  });
+})();
 </script>
+
 
 
 

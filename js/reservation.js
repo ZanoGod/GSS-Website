@@ -40,6 +40,14 @@
       pickupDateEl.focus();
       return;
     }
+    if (!dropoffDateEl.value) {
+      alert('Please choose a drop-off date.');
+      dropoffDateEl.focus();
+      return;
+    }
+
+  
+
 
     const car = carEl.value || '—';
     const pickupLoc = pickupLocEl.value || '—';

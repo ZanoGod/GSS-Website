@@ -1,15 +1,4 @@
-:root {
-  /* Change the hex code below to your desired color */
-  --bs-primary: #b68b2e;
-  --bs-secondary: #ffb22c; /* Secondary color */
-  --bs-light: #f8f9fa; /* Light background color */
-  --bs-dark: #343a40; /* Dark text color */
-  --bs-footer: #8b540f;
-
-}
-
-
-/* Page Header */
+/* Page Header Contact.css codes.. moved into the styles.css */
 /* Updated Page Header */
 .page-header {
     position: relative;
@@ -51,15 +40,14 @@
 }
 
 .breadcrumb-item a:hover {
-    color: var(--bs-secondary);
+    color: #ffb22c; /* var(--bs-secondary) replaced */
 }
 
 .breadcrumb-item.active {
-    color: var(--bs-primary);
+    color: #b68b2e; /* var(--bs-primary) replaced */
     font-weight: bold;
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
 }
-
 
 .page-header::before {
     content: '';
@@ -69,7 +57,6 @@
     background: rgba(0, 0, 0, 0.090);
     z-index: 1;
 }
-
 
 /* Contact Info Card */
 .contact-info-card {
@@ -100,18 +87,17 @@
 }
 
 .contact-info-card .row {
-  margin-top: 1rem;
+    margin-top: 1rem;
 }
 
 .contact-info-card .col-6 {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 }
 
 .contact-info-card .col-6 p {
-  margin-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
 }
-
 
 /* Form Styling (to match existing theme) */
 .form-control {
@@ -124,14 +110,14 @@
     padding-bottom: 0.625rem;
 }
 
-.container .btn{
-    background-color: var(--bs-primary);
+.container .btn {
+    background-color: #b68b2e; /* var(--bs-primary) replaced */
     color: #fff;
     border: none;
     transition: background-color 0.3s ease;
 }
+
 .container .btn:hover {
-    background-color: var(--bs-dark);
+    background-color: #343a40; /* var(--bs-dark) replaced */
     color: #fff;
 }
-

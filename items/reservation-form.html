@@ -1,87 +1,87 @@
 <form id="reservationForm" class="bg-secondary opacity-7 rounded p-5">
   <div class="row g-3">
     <div class="col-12">
-      <select class="form-select" id="carSelect" required>
+      <!-- <select class="form-select" id="carSelect" required>
         <option value="" selected>Select Your Car type</option>
         <option value="Toyota Alphard 2020">Toyota Alphard 2020</option>
         <option value="Mitsubishi Parjeo">Mitsubishi Parjeo</option>
         <option value="Suzuki Ertiga">Suzuki Ertiga</option>
         <option value="Toyota Hiace">Toyota Hiace</option>
+      </select> -->
+
+      <select class="form-select form-select-lg" id="carSelect" required>
+        <option value selected disabled>Select Your Car Type</option>
+        <optgroup label="Premium Vans">
+          <option value="Toyota Alphard 2020">Toyota Alphard 2020</option>
+          <option value="Toyota Hiace">Toyota Hiace</option>
+        </optgroup>
+        <optgroup label="SUVs">
+          <option value="Mitsubishi ASX"> Mitsubishi ASX</option>
+          <option value="Mitsubishi Zinger">Mitsubishi Zinger</option>
+        </optgroup>
+        <optgroup label="Saloons">
+          <option value="Suzuki Ertiga type2">Suzuki Ertiga Type 2</option>
+          <option value="Toyota Mark II">Toyota Mark II</option>
+
+        </optgroup>
       </select>
+
     </div>
 
     <div class="col-12">
       <div class="input-group">
-        <div class="d-flex align-items-center bg-light text-body rounded-start p-2">
-          <span class="fas fa-map-marker-alt"></span><span class="ms-1">Pick Up</span>
+        <div
+          class="d-flex align-items-center bg-light text-body rounded-start p-2">
+          <span class="fas fa-map-marker-alt"></span><span class="ms-1">Pick
+            Up</span>
         </div>
-        <input id="pickupLocation" class="form-control" type="text" placeholder="Enter a City or Airport" />
+        <input id="pickupLocation" class="form-control" type="text"
+          placeholder="Enter a City or Airport" />
       </div>
     </div>
 
     <div class="col-12">
       <div class="input-group">
-        <div class="d-flex align-items-center bg-light text-body rounded-start p-2">
-          <span class="fas fa-map-marker-alt"></span><span class="ms-1">Drop off</span>
+        <div
+          class="d-flex align-items-center bg-light text-body rounded-start p-2">
+          <span class="fas fa-map-marker-alt"></span><span class="ms-1">Drop
+            off</span>
         </div>
-        <input id="dropoffLocation" class="form-control" type="text" placeholder="Enter a City or Airport" />
+        <input id="dropoffLocation" class="form-control" type="text"
+          placeholder="Enter a City or Airport" />
       </div>
     </div>
 
     <div class="col-12">
       <div class="input-group">
-        <div class="d-flex align-items-center bg-light text-body rounded-start p-2">
-          <span class="fas fa-calendar-alt"></span><span class="ms-1">Pick Up</span>
+        <div
+          class="d-flex align-items-center bg-light text-body rounded-start p-2">
+          <span class="fas fa-calendar-alt"></span><span class="ms-1">Pick
+            Up</span>
         </div>
         <input id="pickupDate" class="form-control" type="date" />
-        <select id="pickupTime" class="form-select ms-3">
-          <option value="12:00 AM" selected>12:00AM</option>
-          <option value="1:00 AM">1:00AM</option>
-          <option value="2:00 AM">2:00AM</option>
-          <option value="3:00 AM">3:00AM</option>
-          <option value="4:00 AM">4:00AM</option>
-          <option value="5:00 AM">5:00AM</option>
-          <option value="6:00 AM">6:00AM</option>
-          <option value="7:00 AM">7:00AM</option>
-          <option value="8:00 AM">8:00AM</option>
-          <option value="9:00 AM">9:00AM</option>
-          <option value="10:00 AM">10:00AM</option>
-          <option value="11:00 AM">11:00AM</option>
-          <option value="12:00 PM">12:00PM</option>
-          <option value="1:00 PM">1:00PM</option>
-          <option value="2:00 PM">2:00PM</option>
-          <option value="3:00 PM">3:00PM</option>
-          <option value="4:00 PM">4:00PM</option>
-          <option value="5:00 PM">5:00PM</option>
-          <option value="6:00 PM">6:00PM</option>
-          <option value="7:00 PM">7:00PM</option>
-          <option value="8:00 PM">8:00PM</option>
-          <option value="9:00 PM">9:00PM</option>
-          <option value="10:00 PM">10:00PM</option>
-          <option value="11:00 PM">11:00PM</option>
-        </select>
+        <input id="pickupTime" class="form-control ms-4" type="time"
+          placeholder="time" />
       </div>
 
     </div>
 
     <div class="col-12">
       <div class="input-group">
-        <div class="d-flex align-items-center bg-light text-body rounded-start p-2">
-          <span class="fas fa-calendar-alt"></span><span class="ms-1">Drop off</span>
+        <div
+          class="d-flex align-items-center bg-light text-body rounded-start p-2">
+          <span class="fas fa-calendar-alt"></span><span class="ms-1">Drop
+            off</span>
         </div>
         <input id="dropoffDate" class="form-control" type="date" />
-        <select id="dropoffTime" class="form-select ms-3">
-          <option value="12:00 AM" selected>12:00AM</option>
-          <option value="1:00 AM">1:00AM</option>
-          <option value="2:00 AM">2:00AM</option>
-          <option value="3:00 AM">3:00AM</option>
-        </select>
+        <input id="dropoffTime" class="form-control ms-4" type="time" />
+
       </div>
     </div>
 
     <div class="col-12">
-      <button id="bookNowBtn" type="button" class="btn btn-light btn-booknow w-100 py-2">Book Now</button>
+      <button id="bookNowBtn" type="button"
+        class="btn btn-light btn-booknow w-100 py-2">Book Now</button>
     </div>
   </div>
 </form>
-

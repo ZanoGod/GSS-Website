@@ -338,7 +338,7 @@ function displayCars(category) {
                 <i class="fa fa-car text-dark"></i><span class="text-body ms-1">${car.type}</span>
               </div>
             </div>
-            <a href="#" class="btn btn-primary rounded-pill d-flex justify-content-center py-3">Book Now</a>
+
           </div>
         </div>
       </div>

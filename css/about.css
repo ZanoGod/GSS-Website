@@ -14,18 +14,21 @@
 .zoom-fade-image {
   opacity: 1;
   transform: scale(1);
-  transition: opacity 0.5s ease-in-out, transform 1s ease-in-out;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 
+/* exit animation */
 .zoom-fade-out {
   opacity: 0;
-  transform: scale(1.05); /* slight zoom on exit */
+  transform: scale(1.05);
 }
 
+/* enter animation */
 .zoom-fade-in {
   opacity: 1;
-  transform: scale(1); /* zoom back to normal */
+  transform: scale(1);
 }
+
 
 /* CEO Profile */
 .ceo-img {

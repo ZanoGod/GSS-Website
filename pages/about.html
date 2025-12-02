@@ -299,7 +299,7 @@
                   Crafting unforgettable travel experiences across Myanmar and
                   beyond.
                 </p>
-                <a href="#" class="btn btn-modern mt-auto align-self-center">
+                <a href="https://nicemyanmartravel.com/" target="_blank" class="btn btn-modern mt-auto align-self-center">
                   Learn More
                 </a>
               </div>
@@ -318,7 +318,7 @@
                   Delivering reliable logistics and supply chain solutions
                   worldwide.
                 </p>
-                <a href="#" class="btn btn-modern mt-auto align-self-center">
+                <a href="https://myanmargss.com/"  target="_blank" class="btn btn-modern mt-auto align-self-center">
                   Learn More
                 </a>
               </div>
@@ -338,7 +338,7 @@
                   Specializing in outsourced financial services and strategic
                   investment planning.
                 </p>
-                <a href="#" class="btn btn-modern mt-auto align-self-center">
+                <a href="https://ritaoutsourcing.com/" target="_blank" class="btn btn-modern mt-auto align-self-center">
                   Learn More
                 </a>
               </div>
@@ -359,7 +359,7 @@
                   Offering Japanese language training and cultural immersion
                   programs.
                 </p>
-                <a href="#" class="btn btn-modern mt-auto align-self-center">
+                <a href="https://www.facebook.com/people/Myanmar-GSS-Employment-Agency/100093316034488/?mibextid=ZbWKwL" target="_blank" class="btn btn-modern mt-auto align-self-center">
                   Learn More
                 </a>
               </div>
@@ -389,7 +389,7 @@
       <!-- Footer End -->
     </section>
 
-    <script>
+<script>
   const slides = [
     "../img/about/IMG_7911.JPG",
     "../img/about/IMG_7912.JPG",
@@ -403,24 +403,28 @@
     "../img/about/IMG_7920.JPG"
   ];
 
-  let index = 0;
   const img = document.getElementById("aboutSlide");
+  let index = 0;
+
+  const fadeDuration = 500; // must match CSS 0.8s transition
 
   setInterval(() => {
-    img.classList.add("zoom-fade-out"); // fade and zoom out
+    // Fade out
+    img.classList.add("zoom-fade-out");
+    img.classList.remove("zoom-fade-in");
 
+    // Change slide after fade-out finishes
     setTimeout(() => {
       index = (index + 1) % slides.length;
-      img.src = slides[index];          // update image
+      img.src = slides[index];
 
+      // Fade in
       img.classList.remove("zoom-fade-out");
-      img.classList.add("zoom-fade-in"); // fade + zoom in
-
-      // remove after animation to reset state
-      setTimeout(() => img.classList.remove("zoom-fade-in"), 500);
-    }, 500); // match fade-out time
-  }, 3500); // slide every 1.5 seconds
+      img.classList.add("zoom-fade-in");
+    }, fadeDuration);
+  }, 3500);  // interval between slides
 </script>
+
 
     <!-- Scripts -->
     <script src="../lib/owlcarousel/owl.carousel.min.js"></script>

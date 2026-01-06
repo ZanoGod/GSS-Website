@@ -709,7 +709,7 @@
 
 .blog .blog-img img {
   width: 100%;
-  height: 500px;
+  height: 600px; /* Fixed height for 500px */
   object-fit: fill;
   transition: transform 0.5s ease;
 }

@@ -1,306 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="../img/favicon.ico" type="image/x-icon" />
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <title>Contact Us - Golden Support Service</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us - Golden Support Service</title>
 
-    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Montserrat:wght@400;700;900&display=swap"
-      rel="stylesheet" />
+  <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Montserrat:wght@400;700;900&display=swap"
+    rel="stylesheet" />
 
-    <link href="../lib/animate/animate.min.css" rel="stylesheet" />
-    <link href="../lib/owlcarousel/assets/owl.carousel.min.css"
-      rel="stylesheet" />
-    <link href="../fontawesome/css/all.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="../css/styles.css" />
-    <!-- <link rel="stylesheet" href="../css/contact.css" /> -->
+  <link href="../lib/animate/animate.min.css" rel="stylesheet" />
+  <link href="../lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+  <link href="../fontawesome/css/all.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="stylesheet" href="../css/contact.css" />
+</head>
 
-  </head>
+<body>
+  <div class="preloader">
+    <div class="loader"></div>
+  </div>
 
-  <body>
-    <div class="preloader">
-      <div class="loader"></div>
-    </div>
+  <!-- Topbar Start -->
+  <div include-html="../items/topbar.html"></div>
+  <!-- Topbar End -->
 
-    <!-- Topbar Start -->
-    <div include-html="../items/topbar.html"></div>
-    <!-- Topbar End -->
+  <!-- ================= Navbar & Hero Start ================= -->
+  <div class="container-fluid nav-bar sticky-top px-0 px-lg-4 py-2 py-lg-0">
+    <div class="container">
+      <nav class="navbar navbar-light d-flex justify-content-between align-items-center">
+        <!-- Brand -->
+        <a href="#" class="navbar-brand p-0 d-flex align-items-center">
+          <img src="../img/gss-logo-navbar.png" alt="Golden Support Service Logo"
+            style="max-height:55px; margin-right:10px;">
+          <h3 class="display-6 mb-0">Car Rental</h3>
+        </a>
 
-    <!-- ================= Navbar & Hero Start ================= -->
-    <div class="container-fluid nav-bar sticky-top px-0 px-lg-4 py-2 py-lg-0">
-      <div class="container">
-        <nav
-          class="navbar navbar-light d-flex justify-content-between align-items-center">
-          <!-- Brand -->
-          <a href="#" class="navbar-brand p-0 d-flex align-items-center">
-            <img src="../img/gss-logo-navbar.png"
-              alt="Golden Support Service Logo"
-              style="max-height:55px; margin-right:10px;">
-            <h3 class="display-6 mb-0">Car Rental</h3>
-          </a>
-
-          <!-- Hamburger Menu -->
-          <div class="hamburger d-lg-none">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-
-          <!-- Nav Links -->
-          <ul class="nav-links list-unstyled mb-0 d-lg-flex align-items-center">
-            <li> <a href="../index.html" class="nav-item nav-link">Home</a>
-            </li>
-            <li> <a href="about.html" class="nav-item nav-link ">About</a></li>
-            <li> <a href="service.html" class="nav-item nav-link">Service</a>
-            </li>
-            <li> <a href="fleet.html" class="nav-item nav-link">Fleet</a> </li>
-            <li><a href="./blog.html" class="nav-item nav-link">Blog</a> </li>
-            <li> <a href="ourteam.html" class="nav-item nav-link">Our
-                Team</a></li>
-            <li> <a href="contact.html"
-                class="nav-item nav-link active">Contact</a> </li>
-            <li> <a href="contact.html"
-                class="btn btn-primary rounded-pill py-2 px-4">Get
-                Started</a></li>
-          </ul>
-        </nav>
-      </div>
-    </div>
-    <!-- ================= Navbar & Hero End ================= -->
-
-    <!-- Page Header -->
-    <header class="page-header d-flex align-items-center">
-      <div class="container text-center">
-        <h1 class="page-title">Contact Us</h1>
-        <nav aria-label="breadcrumb">
-          <ol class="breadcrumb justify-content-center">
-            <li class="breadcrumb-item">
-              <a href="../index.html">Home</a>
-            </li>
-            <li class="breadcrumb-item active" aria-current="page">Contact</li>
-          </ol>
-        </nav>
-      </div>
-    </header>
-
-    <!-- Contact Section -->
-    <section class="container-xxl py-5">
-      <div class="container">
-        <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s"
-          style="max-width: 600px">
-          <h1 class="display-6 mb-4">Get In Touch</h1>
-          <p class="mb-4">
-            ご質問・ご相談は、以下のフォームよりお気軽にお寄せください。<br>
-            担当スタッフが確認のうえ、折り返しご連絡いたします。
-          </p>
+        <!-- Hamburger Menu -->
+        <div class="hamburger d-lg-none">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
-        <div class="row g-5">
-          <!-- Contact Details -->
-          <!-- Contact Info Card (Updated with separate email columns) -->
-          <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-            <div class="contact-info-card p-4 h-100">
-              <h4 class="mb-4">Contact Details</h4>
-              <div class="d-flex align-items-center mb-4">
-                <div class="icon-bg flex-shrink-0">
-                  <i class="fa fa-map-marker-alt text-primary"></i>
-                </div>
-                <div class="ms-3">
-                  <h5>Office Address</h5>
-                  <p class="mb-0">
-                    No. 35(A), Boe Yar Zar Street, Kyaukkone, Yankin Township,
-                    Yangon, Myanmar
-                  </p>
-                </div>
+
+        <!-- Nav Links -->
+        <ul class="nav-links list-unstyled mb-0 d-lg-flex align-items-center">
+          <li> <a href="../index.html" class="nav-item nav-link">Home</a> </li>
+          <li> <a href="about.html" class="nav-item nav-link ">About</a></li>
+          <li> <a href="service.html" class="nav-item nav-link">Service</a> </li>
+          <li> <a href="fleet.html" class="nav-item nav-link">Fleet</a> </li>
+          <li><a href="./blog.html" class="nav-item nav-link">Blog</a> </li>
+          <li> <a href="ourteam.html" class="nav-item nav-link">Our Team</a></li>
+          <li> <a href="contact.html" class="nav-item nav-link active">Contact</a> </li>
+          <li> <a href="contact.html" class="btn btn-primary rounded-pill py-2 px-4">Get Started</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <!-- ================= Navbar & Hero End ================= -->
+
+
+  <!-- Page Header -->
+  <header class="page-header d-flex align-items-center">
+    <div class="container text-center">
+      <h1 class="page-title">Contact Us</h1>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb justify-content-center">
+          <li class="breadcrumb-item">
+            <a href="../index.html">Home</a>
+          </li>
+          <li class="breadcrumb-item active" aria-current="page">Contact</li>
+        </ol>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Contact Section -->
+  <section class="container-xxl py-5">
+    <div class="container">
+      <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px">
+        <h1 class="display-6 mb-4">Get In Touch</h1>
+        <p class="mb-4">
+          ご質問・ご相談は、以下のフォームよりお気軽にお寄せください。<br>
+          担当スタッフが確認のうえ、折り返しご連絡いたします。
+        </p>
+      </div>
+      <div class="row g-5">
+        <!-- Contact Details -->
+        <!-- Contact Info Card (Updated with separate email columns) -->
+        <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+          <div class="contact-info-card p-4 h-100">
+            <h4 class="mb-4">Contact Details</h4>
+            <div class="d-flex align-items-center mb-4">
+              <div class="icon-bg flex-shrink-0">
+                <i class="fa fa-map-marker-alt text-primary"></i>
               </div>
-              <div class="d-flex align-items-center mb-4">
-                <div class="icon-bg flex-shrink-0">
-                  <i class="fa fa-phone-alt text-primary"></i>
-                </div>
-                <div class="ms-3">
-                  <h5>Phone Number</h5>
-                  <p class="mb-0">(+95) 9-4088-55622</p>
-                  <p class="mb-0">(+95) 9-4088-55611</p>
-                  <p class="mb-0">(+95) 9-2504-30271</p>
-                </div>
+              <div class="ms-3">
+                <h5>Office Address</h5>
+                <p class="mb-0">
+                  No. 35(A), Boe Yar Zar Street, Kyaukkone, Yankin Township,
+                  Yangon, Myanmar
+                </p>
               </div>
-              <div class="d-flex align-items-center">
-                <div class="icon-bg flex-shrink-0">
-                  <i class="fa fa-envelope text-primary"></i>
-                </div>
-                <div class="ms-3">
-                  <h5>Email Address</h5>
-                  <div class="row">
-                    <div class="col-12">
-                      <p>
-                        <strong>English Contact:</strong>
-                        info@goldensupportservices.com
-                      </p>
-                    </div>
-                    <div class="col-12">
-                      <p>
-                        <strong>Japanese Contact:</strong>
-                        operation@goldensupportservices.com
-                      </p>
-                    </div>
+            </div>
+            <div class="d-flex align-items-center mb-4">
+              <div class="icon-bg flex-shrink-0">
+                <i class="fa fa-phone-alt text-primary"></i>
+              </div>
+              <div class="ms-3">
+                <h5>Phone Number</h5>
+                <p class="mb-0">(+95) 9-408855622</p>
+                <p class="mb-0">(+95) 9-408855611</p>
+                <p class="mb-0">(+95) 9-2504-30271</p>
+              </div>
+            </div>
+            <div class="d-flex align-items-center">
+              <div class="icon-bg flex-shrink-0">
+                <i class="fa fa-envelope text-primary"></i>
+              </div>
+              <div class="ms-3">
+                <h5>Email Address</h5>
+                <div class="row">
+                  <div class="col-12">
+                    <p>
+                      <strong>English Contact:</strong>
+                      info@goldensupportservices.com
+                    </p>
+                  </div>
+                  <div class="col-12">
+                    <p>
+                      <strong>Japanese Contact:</strong>
+                      operation@goldensupportservices.com
+                    </p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+        </div>
 
-          <!-- Contact Form -->
-          <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-            <form method="POST" action="../mail/send_mail.php">
-              <div class="row g-3">
-                <div class="col-md-6">
-                  <div class="form-floating">
-                    <input type="text" class="form-control" id="name"
-                      name="name" placeholder="Your Name" required />
-                    <label for="name">Your Name</label>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="form-floating">
-                    <input type="email" class="form-control" id="email"
-                      name="email" placeholder="Your Email" required />
-                    <label for="email">Your Email</label>
-                  </div>
-                </div>
-                <div class="col-12">
-                  <div class="form-floating">
-                    <input type="text" class="form-control" id="subject"
-                      name="subject" placeholder="Subject" required />
-                    <label for="subject">Subject</label>
-                  </div>
-                </div>
-
-                <!-- <div id="reservationPreviewWrapper" class="mb-3" style="display:none;">
-                  <label class="form-label"><strong>Reservation Preview</strong></label>
-                  <div id="reservationPreview" class="p-3 border rounded" style="background:#f8f9fa; white-space:pre-wrap;"></div>
-                  <small class="text-muted">This content has been copied from your reservation. You can edit it below before sending.</small>
-                </div> -->
-                <div class="col-12">
-                  <div class="form-floating">
-                    <textarea class="form-control"
-                      placeholder="Leave a message here" id="message"
-                      name="message"
-                      style="height: 150px" required></textarea>
-                    <label for="message">Message</label>
-                  </div>
-                </div>
-                <div class="col-12">
-                  <button class="btn rounded-pill py-3 px-5" type="submit">
-                    Send Message
-                  </button>
+        <!-- Contact Form -->
+        <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+          <form method="POST" action="../send_mail.php">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <div class="form-floating">
+                  <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required />
+                  <label for="name">Your Name</label>
                 </div>
               </div>
-            </form>
-          </div>
+              <div class="col-md-6">
+                <div class="form-floating">
+                  <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" required />
+                  <label for="email">Your Email</label>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form-floating">
+                  <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" required />
+                  <label for="subject">Subject</label>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form-floating">
+                  <textarea class="form-control" placeholder="Leave a message here" id="message" name="message"
+                    style="height: 150px" required></textarea>
+                  <label for="message">Message</label>
+                </div>
+              </div>
+              <div class="col-12">
+                <button class="btn rounded-pill py-3 px-5" type="submit">
+                  Send Message
+                </button>
+              </div>
+            </div>
+          </form>
         </div>
       </div>
-    </section>
-
-    <!-- Map -->
-    <!-- <div class="container-fluid p-0 scroll-animate fade-down">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d436.3384649592283!2d96.16856246943887!3d16.83161806996287!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c1932bb3462dd1%3A0x2254d254110e0fea!2sGolden%20Support%20Services%20Co.%2CLtd!5e1!3m2!1sen!2smm!4v1760610788407!5m2!1sen!2smm"
-        frameborder="0" style="min-height: 450px; border: 0" allowfullscreen
-        aria-hidden="false" tabindex="0"
-        class="w-100"></iframe>
-    </div> -->
-
-    <!-- Map (with JS fallback) -->
-<div id="mapWrapper" class="container-fluid p-0 scroll-animate fade-down" style="position:relative;">
-  <iframe
-    id="gmapIframe"
-    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d436.3384649592283!2d96.16856246943887!3d16.83161806996287!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c1932bb3462dd1%3A0x2254d254110e0fea!2sGolden%20Support%20Services%20Co.%2CLtd!5e1!3m2!1sen!2smm!4v1760610788407!5m2!1sen!2smm"
-    frameborder="0"
-    style="min-height:450px; border:0; width:100%;"
-    allowfullscreen
-    aria-hidden="false"
-    tabindex="0"
-    loading="lazy"
-  ></iframe>
-
-  <!-- Hidden fallback UI, shown if Google Maps fails to load -->
-  <div id="mapFallback" style="display:none; position:absolute; inset:0; background:#f8f9fa; z-index:5; display:flex; align-items:center; justify-content:center; padding:20px; text-align:center;">
-    <div style="max-width:760px;">
-      <h4 style="margin-bottom:8px;">Map temporarily unavailable</h4>
-      <p style="margin-bottom:12px;">We were unable to load Google Maps from your network. You can:</p>
-      <p style="margin-bottom:12px;">
-        <a href="https://www.google.com/maps/place/Golden+Support+Service+Co.,Ltd/@16.832174,96.1684144,21z/data=!4m6!3m5!1s0x30c1932bb3462dd1:0x2254d254110e0fea!8m2!3d16.8322334!4d96.1684372!16s%2Fg%2F11zk27mk83?entry=ttu&g_ep=EgoyMDI1MTEyMy4xIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener" style="display:inline-block;margin:6px;padding:10px 14px;border-radius:22px;background:#b68b2e;color:#fff;text-decoration:none;">Open in Google Maps</a>
-        <button id="showOsmBtn" style="margin:6px;padding:10px 14px;border-radius:22px;border:1px solid #b68b2e;background:#fff;color:#b68b2e;cursor:pointer;">Show OpenStreetMap</button>
-      </p>
-      <p style="font-size:13px;color:#666;margin-top:6px;">If the map keeps failing, try a different network or contact us at info@goldensupportservices.com</p>
     </div>
+  </section>
+
+  <!-- Map -->
+  <div class="container-fluid p-0 scroll-animate fade-down">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d436.3384649592283!2d96.16856246943887!3d16.83161806996287!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c1932bb3462dd1%3A0x2254d254110e0fea!2sGolden%20Support%20Services%20Co.%2CLtd!5e1!3m2!1sen!2smm!4v1760610788407!5m2!1sen!2smm"
+      frameborder="0" style="min-height: 450px; border: 0" allowfullscreen="" aria-hidden="false" tabindex="0"
+      class="w-100"></iframe>
   </div>
-</div>
 
-    <!-- Footer -->
-    <section class="scroll-animate fade-up">
-      <div include-html="../items/footer.html"></div>
-    </section>
+  <!-- Footer -->
+  <section class="scroll-animate fade-up">
+    <div include-html="../items/footer.html"></div>
+  </section>
 
-<script>
-(function(){
-  var iframe = document.getElementById('gmapIframe');
-  var fallback = document.getElementById('mapFallback');
-  var showed = false;
-
-  // If the iframe fires load within timeout, OK. If not, show fallback.
-  var loadFired = false;
-  iframe.addEventListener('load', function(){
-    loadFired = true;
-    // small delay to allow embed scripts to initialize
-    setTimeout(function(){
-      if(!showed) {
-        // iframe loaded successfully — ensure fallback hidden
-        fallback.style.display = 'none';
-      }
-    }, 800);
-  });
-
-  // After 8000ms, if iframe hasn't fired load, show fallback UI
-  setTimeout(function(){
-    if(!loadFired){
-      fallback.style.display = 'flex';
-      showed = true;
-      console.warn('Google Maps iframe did not load — showing fallback');
-    }
-  }, 8000);
-
-  // If user clicks Show OpenStreetMap, replace the iframe with an OSM embed (no API key)
-  document.getElementById('showOsmBtn').addEventListener('click', function(){
-    // OpenStreetMap embed URL centered on coordinate (lat, lon)
-    var lat = 16.83161806996287, lon = 96.16856246943887;
-    var zoom = 16;
-    var osmUrl = 'https://www.openstreetmap.org/export/embed.html?bbox=' + (lon-0.01) + '%2C' + (lat-0.01) + '%2C' + (lon+0.01) + '%2C' + (lat+0.01) + '&layer=mapnik&marker=' + lat + '%2C' + lon;
-    // swap iframe src to OSM
-    iframe.src = osmUrl;
-    // hide fallback overlay
-    fallback.style.display = 'none';
-  });
-})();
-</script>
-
-
-
-
-    <!-- Scripts -->
-    <script src="../js/jquery-3.7.1.min.js"></script>
-    <script src="../lib/wow/wow.min.js"></script>
-    <script src="../lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="../js/script.js"></script>
-    <script src="../js/items.js"></script>
-  </body>
+  <!-- Scripts -->
+  <script src="../js/jquery-3.7.1.min.js"></script>
+  <script src="../lib/wow/wow.min.js"></script>
+  <script src="../lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../js/script.js"></script>
+  <script src="../js/items.js"></script>
+</body>
 
 </html>

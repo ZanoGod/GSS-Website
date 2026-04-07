@@ -1,4 +1,15 @@
-/* Page Header Contact.css codes.. moved into the styles.css */
+:root {
+  /* Change the hex code below to your desired color */
+  --bs-primary: #b68b2e;
+  --bs-secondary: #ffb22c; /* Secondary color */
+  --bs-light: #f8f9fa; /* Light background color */
+  --bs-dark: #343a40; /* Dark text color */
+  --bs-footer: #8b540f;
+
+}
+
+
+/* Page Header */
 /* Updated Page Header */
 .page-header {
     position: relative;
@@ -6,7 +17,7 @@
     background: linear-gradient(
         rgba(0, 0, 0, 0.5), 
         rgba(0, 0, 0, 0.5)
-    ), url('../img/about/about-us.png') center center / cover no-repeat;
+    ), url('../img/about-us.png') center center / cover no-repeat;
     color: #fff;
     text-align: center;
 }
@@ -40,14 +51,15 @@
 }
 
 .breadcrumb-item a:hover {
-    color: #ffb22c; /* var(--bs-secondary) replaced */
+    color: var(--bs-secondary);
 }
 
 .breadcrumb-item.active {
-    color: #b68b2e; /* var(--bs-primary) replaced */
+    color: var(--bs-primary);
     font-weight: bold;
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
 }
+
 
 .page-header::before {
     content: '';
@@ -57,6 +69,7 @@
     background: rgba(0, 0, 0, 0.090);
     z-index: 1;
 }
+
 
 /* Contact Info Card */
 .contact-info-card {
@@ -87,17 +100,18 @@
 }
 
 .contact-info-card .row {
-    margin-top: 1rem;
+  margin-top: 1rem;
 }
 
 .contact-info-card .col-6 {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .contact-info-card .col-6 p {
-    margin-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
 }
+
 
 /* Form Styling (to match existing theme) */
 .form-control {
@@ -110,14 +124,14 @@
     padding-bottom: 0.625rem;
 }
 
-.container .btn {
-    background-color: #b68b2e; /* var(--bs-primary) replaced */
+.container .btn{
+    background-color: var(--bs-primary);
     color: #fff;
     border: none;
     transition: background-color 0.3s ease;
 }
-
 .container .btn:hover {
-    background-color: #343a40; /* var(--bs-dark) replaced */
+    background-color: var(--bs-dark);
     color: #fff;
 }
+

@@ -20,11 +20,9 @@
 
       <div class="col-lg-6 text-center text-lg-end">
         <div class="d-flex align-items-center justify-content-end">
-          <a href="#" class="btn btn-light social-icon me-3">
-            <!-- <i class="fa-brands fa-facebook"></i> -->
-            <!-- <i class="fa-brands bi bi-line"></i> -->
-            <i class="fa-brands fa-line fa-lg"></i>
-          </a>
+          <a href="#" class="btn btn-light social-icon me-3" data-bs-toggle="modal" data-bs-target="#lineQrModal">
+         <i class="fa-brands fa-line fa-lg"></i>
+</a>
           <a href="#" class="btn btn-light social-icon me-3">
             <!-- <i class="fa-brands fa-facebook-messenger"></i> -->
             <i class="fa-brands fa-whatsapp fa-lg"></i>
@@ -37,6 +35,27 @@
           </a>
         </div>
       </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- LINE QR Modal -->
+<div class="modal fade" id="lineQrModal" tabindex="-1" aria-labelledby="lineQrLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content text-center p-3">
+      
+      <div class="modal-header border-0">
+        <h5 class="modal-title w-100" id="lineQrLabel">Scan LINE QR Code</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+    
+        <img src="https://qr-official.line.me/gs/M_442vwvky_BW.png?oat_content=qr" alt="LINE QR Code" class="img-fluid" style="max-width: 250px;" >
+        <p class="mt-3">Scan to connect with us on LINE</p>
+      </div>
+
     </div>
   </div>
 </div>

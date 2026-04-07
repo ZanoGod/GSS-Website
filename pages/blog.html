@@ -2,496 +2,306 @@
 
 <html lang="en">
 
-    <head>
+<head>
 
-        <meta charset="UTF-8" />
+    <meta charset="UTF-8" />
 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <link rel="icon" href="../img/favicon.ico" type="image/x-icon" />
+    <title>Blog Detail | GSS Car Rental</title>
 
-        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-        <link rel="apple-touch-icon" sizes="180x180"
-            href="/apple-touch-icon.png">
-        <title>Blog Detail | GSS Car Rental</title>
+    <!-- Bootstrap CSS -->
 
-        <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css" />
 
-        <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css" />
+    <!-- Google Fonts -->
 
-        <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
 
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@600;700&display=swap"
+        rel="stylesheet" />
 
-        <link
-            href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@600;700&display=swap"
-            rel="stylesheet" />
+    <!-- Fontawesome -->
 
-        <!-- Fontawesome -->
+    <link href="../fontawesome/css/all.min.css" rel="stylesheet" />
 
-        <link href="../fontawesome/css/all.min.css" rel="stylesheet" />
+    <!-- Custom CSS -->
 
-        <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/styles.css" />
 
-        <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/blog.css" />
 
-        <link rel="stylesheet" href="../css/blog.css" />
+</head>
 
-    </head>
+<body>
 
-    <body>
+    <!-- Topbar -->
 
-        <!-- Topbar -->
+    <div include-html="../items/topbar.html"></div>
 
-        <div include-html="../items/topbar.html"></div>
+    <!-- ================= Navbar & Hero Start ================= -->
+    <div class="container-fluid nav-bar sticky-top px-0 px-lg-4 py-2 py-lg-0">
+        <div class="container">
+            <nav class="navbar navbar-light d-flex justify-content-between align-items-center">
+                <!-- Brand -->
+                <a href="#" class="navbar-brand p-0 d-flex align-items-center">
+                    <img src="../img/gss-logo-navbar.png" alt="Golden Support Service Logo"
+                        style="max-height:55px; margin-right:10px;">
+                    <h3 class="display-6 mb-0">Car Rental</h3>
+                </a>
 
-        <!-- ================= Navbar & Hero Start ================= -->
-        <div
-            class="container-fluid nav-bar sticky-top px-0 px-lg-4 py-2 py-lg-0">
-            <div class="container">
-                <nav
-                    class="navbar navbar-light d-flex justify-content-between align-items-center">
-                    <!-- Brand -->
-                    <a href="#"
-                        class="navbar-brand p-0 d-flex align-items-center">
-                        <img src="../img/gss-logo-navbar.png"
-                            alt="Golden Support Service Logo"
-                            style="max-height:55px; margin-right:10px;">
-                        <h3 class="display-6 mb-0">Car Rental</h3>
-                    </a>
+                <!-- Hamburger Menu -->
+                <div class="hamburger d-lg-none">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
 
-                    <!-- Hamburger Menu -->
-                    <div class="hamburger d-lg-none">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-
-                    <!-- Nav Links -->
-                    <ul
-                        class="nav-links list-unstyled mb-0 d-lg-flex align-items-center">
-                        <li> <a href="../index.html"
-                                class="nav-item nav-link">Home</a> </li>
-                        <li> <a href="about.html"
-                                class="nav-item nav-link">About</a></li>
-                        <li> <a href="service.html"
-                                class="nav-item nav-link">Service</a> </li>
-                        <li> <a href="fleet.html"
-                                class="nav-item nav-link">Fleet</a> </li>
-                        <li><a href="./blog.html"
-                                class="nav-item nav-link active">Blog</a> </li>
-                        <li> <a href="ourteam.html"
-                                class="nav-item nav-link">Our Team</a></li>
-                        <li> <a href="contact.html"
-                                class="nav-item nav-link">Contact</a> </li>
-                        <li> <a href="contact.html"
-                                class="btn btn-primary rounded-pill py-2 px-4">Get
-                                Started</a></li>
-                    </ul>
-                </nav>
-            </div>
+                <!-- Nav Links -->
+                <ul class="nav-links list-unstyled mb-0 d-lg-flex align-items-center">
+                    <li> <a href="../index.html" class="nav-item nav-link">Home</a> </li>
+                    <li> <a href="about.html" class="nav-item nav-link">About</a></li>
+                    <li> <a href="service.html" class="nav-item nav-link">Service</a> </li>
+                    <li> <a href="fleet.html" class="nav-item nav-link">Fleet</a> </li>
+                    <li><a href="./blog.html" class="nav-item nav-link active">Blog</a> </li>
+                    <li> <a href="ourteam.html" class="nav-item nav-link">Our Team</a></li>
+                    <li> <a href="contact.html" class="nav-item nav-link">Contact</a> </li>
+                    <li> <a href="contact.html" class="btn btn-primary rounded-pill py-2 px-4">Get Started</a></li>
+                </ul>
+            </nav>
         </div>
-        <!-- ================= Navbar & Hero End ================= -->
+    </div>
+    <!-- ================= Navbar & Hero End ================= -->
 
-        <!-- Featured Header -->
+    <!-- Featured Header -->
 
-        <section
-            class="featured-header text-center text-white d-flex align-items-center justify-content-center">
+    <section class="featured-header text-center text-white d-flex align-items-center justify-content-center">
 
-            <div class="overlay"></div>
+        <div class="overlay"></div>
 
-            <div class="featured-content">
+        <div class="featured-content">
 
-                <h1 class="display-4 fw-bold">Blog & News</h1>
+            <h1 class="display-4 fw-bold">Blog & News</h1>
 
-                <p class="lead mb-0">Explore our travel updates, packages &
+            <p class="lead mb-0">Explore our travel updates, packages &
 
-                    services</p>
+                services</p>
 
+        </div>
+
+    </section>
+    <!-- BLOG CARD SECTION -->
+    <section class="container py-5">
+        <!-- Blog Card 1 -->
+        <div class="blog-card-horizontal" id="blog1">
+            <div class="blog-image">
+                <img src="../img/blog_img/blog_1_available_now.jpg" alt="GSS Car Rental" />
             </div>
-
-        </section>
-        <!-- BLOG CARD SECTION -->
-        <section class="container py-5">
-
-            <!-- Blog Card 1-->
-            <div class="blog-card-horizontal" id="blog1">
-                <div class="blog-image">
-                    <img src="../img/blog_img/2026_01.webp"
-                        alt="Nice Myanmar Travel" />
+            <div class="blog-text">
+                <div class="blog-meta mb-2">
+                    <span><i class="fa fa-calendar"></i> 30 Dec 2025</span>
+                    <span><i class="fa fa-user"></i> GSS Car Rental</span>
                 </div>
-                <div class="blog-text">
-                    <div class="blog-meta mb-2">
-                        <span><i class="fa fa-calendar"></i> 06 Jan 2026</span>
-                        <span><i class="fa fa-user"></i> Nice Myanmar
-                            Travel</span>
-                    </div>
-
-                    <h1 class="blog-title">ミャンマー旅行・ビジネスのことは「Nice Myanmar
-                        Travel」にお任せください！</h1>
-
-                    <div class="highlight-block">
-                        <i class="fa fa-bullhorn"></i>
-                        <span><strong>2026 New Year:</strong> 明けましておめでとうございます！🎍
-                            皆様の滞在を全力でサポートします。</span>
-                    </div>
-
-                    <p class="mt-3">
-                        「初めてのミャンマーで不安…」「ビジネスで急に車両や通訳が必要になった」<br>
-                        そんな時は、ぜひ私たちにご相談ください。ご希望に合わせた自由なプランをご提案します！
-                    </p>
-
-                    <h4 class="mb-3">📍 人気のサービスメニュー</h4>
-
-                    <div class="table-responsive mb-4">
-                        <table class="table table-hover align-middle">
-                            <thead>
-                                <tr>
-                                    <th>Service Name</th>
-                                    <th>Description</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><strong>ヤンゴン1日観光</strong></td>
-                                    <td>シュエダゴン・パゴダ、ボージョーアウンサンマーケット等</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>バガン2泊3日ツアー</strong></td>
-                                    <td>金曜発・日曜着で週末旅行に最適！</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>ドライバー付き専用車</strong></td>
-                                    <td>月極利用も可能（ビジネス・出張に）</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>各種手配代行</strong></td>
-                                    <td>VISA申請代行・宿泊手配（ホテル＆アパートメント）</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-
-                    <h4 class="mb-3">✨ 当社の強み ✨</h4>
-                    <ul class="blog-list mb-4">
-                        <li><i class="fa fa-check-circle"></i>日本国内銀行振込OK！
-                            (チケット代のお支払いスムーズ)</li>
-                        <li><i class="fa fa-clock"></i>24時間柔軟対応
-                            (早朝・深夜もサポート)</li>
-                        <li><i class="fa fa-language"></i>日本語通訳・翻訳
-                            (言葉の壁も心配なし)</li>
-                    </ul>
-
-                    <p class="small text-muted">
-                        お問い合わせはDM、またはLINE QRコードからお気軽にどうぞ！<br>
-                    </p>
-
-                    <div class="hashtag-container">
-                        <span class="hashtag">#ミャンマー旅行</span>
-                        <span class="hashtag">#ミャンマー観光</span>
-                        <span class="hashtag">#ヤンゴン</span>
-                        <span class="hashtag">#バガン</span>
-                        <span class="hashtag">#海外出張</span>
-                    </div>
-
-                </div>
-            </div>
-
-            <!-- Blog Card 2-->
-            <div class="blog-card-horizontal" id="blog2">
-                <div class="blog-image">
-                    <img src="../img/blog_img/2026_02.webp"
-                        alt="Golden Support Services" />
-                </div>
-                <div class="blog-text">
-                    <div class="blog-meta mb-2">
-                        <span><i class="fa fa-calendar"></i> 06 Jan 2026</span>
-                        <span><i class="fa fa-user"></i> Golden Support
-                            Services</span>
-                    </div>
-
-                    <h1 class="blog-title">ヤンゴンを思いっきり楽しむなら、<br>移動はプロにお任せ✨</h1>
-
-                    <div class="highlight-gold">
-                        <div class="d-flex">
-                            <i class="fa fa-bullhorn mt-1"></i>
-                            <div>
-                                <strong>2026 Greetings:</strong><br>
-                                明けましておめでとうございます！🎍<br>
-                                皆様のミャンマー滞在を全力でサポートいたします。
-                            </div>
-                        </div>
-                    </div>
-
-                    <p class="mb-4">
-                        「ヤンゴンでの移動をもっと快適に！」<br>
-                        <strong>Golden Support
-                            Services（GSS）</strong>なら、観光もショッピングもストレスフリー。
-                    </p>
-
-                    <h4 class="mb-3" style="color: var(--bs-primary);">🌟
-                        おすすめポイント</h4>
-
-                    <ul class="feature-points mb-4">
-                        <li>
-                            <i class="fa fa-comments"></i>
-                            <div>
-                                <strong>日本語でラクラク相談</strong><br>
-                                <small
-                                    class="text-muted">行きたい場所へ迷わず行けます！LINEでの相談も大歓迎。</small>
-                            </div>
-                        </li>
-                        <li>
-                            <i class="fa fa-car"></i>
-                            <div>
-                                <strong>豊富な車種ラインナップ</strong><br>
-                                <small
-                                    class="text-muted">セダンからミニバスまで、人数や目的に合わせて選べます。</small>
-                            </div>
-                        </li>
-                        <li>
-                            <i class="fa fa-shield-alt"></i>
-                            <div>
-                                <strong>安心のフルサポート</strong><br>
-                                <small
-                                    class="text-muted">VISA申請や通訳の手配も相談OK。トラブル時も迅速に対応します。</small>
-                            </div>
-                        </li>
-                    </ul>
-
-                    <div class="cta-box">
-                        <p class="mb-2 fw-bold">お仕事でも、お出かけでも、安全＆安心をお届けします。</p>
-                        <p
-                            class="mb-0 small text-muted">まずはQRコードからLINE登録して、気軽にチャットしてみてくださいね！</p>
-                    </div>
-
-                    <div class="hashtag-container">
-                        <span class="hashtag">#ヤンゴン観光</span>
-                        <span class="hashtag">#ミャンマー旅行</span>
-                        <span class="hashtag">#ヤンゴン移動</span>
-                        <span class="hashtag">#日本語OK</span>
-                        <span class="hashtag">#GSS</span>
-                    </div>
-                </div>
-            </div>
-            <!-- Blog Card 3 -->
-            <div class="blog-card-horizontal" id="blog3">
-                <div class="blog-image">
-                    <img src="../img/blog_img/GSS now available Pamphlet.jpg"
-                        alt="GSS Car Rental" />
-                </div>
-                <div class="blog-text">
-                    <div class="blog-meta mb-2">
-                        <span><i class="fa fa-calendar"></i> 30 Dec 2025</span>
-                        <span><i class="fa fa-user"></i> GSS Car Rental</span>
-                    </div>
-                    <h1 class="blog-title">Book Your Ride! Experienced Drivers &
-                        Quality Cars</h1>
-                    <!-- <p class="lead">Golden Support Service (GSS) proudly
+                <h1 class="blog-title">Book Your Ride! Experienced Drivers &
+                    Quality Cars</h1>
+                <!-- <p class="lead">Golden Support Service (GSS) proudly
                         announces the availability of our diverse and
                         well-maintained fleet! With 13 years of proven
                         experience, we provide reliable, safe, and comfortable
                         transportation for every need.</p> -->
-                    <div class="highlight-block">
-                        <i class="fa fa-bullhorn"></i>
-                        <span><strong>Special Offer:</strong> Book now and enjoy
-                            priority service!</span>
-                    </div>
-                    <h4 class="mb-3">Our Reliable Fleet: Available Now!</h4>
-                    <!-- <p>We offer both modern and rugged vehicles, ensuring we
+                <div class="highlight-block">
+                    <i class="fa fa-bullhorn"></i>
+                    <span><strong>Special Offer:</strong> Book now and enjoy
+                        priority service!</span>
+                </div>
+                <h4 class="mb-3">Our Reliable Fleet: Available Now!</h4>
+                <!-- <p>We offer both modern and rugged vehicles, ensuring we
                         have the perfect ride for city driving, long-distance
                         travel, or executive transport.</p> -->
-                    <div class="table-responsive mb-4">
-                        <table class="table table-hover align-middle">
-                            <thead>
-                                <tr>
-                                    <th>Vehicle Model</th>
-                                    <th>Year</th>
-                                    <th>Type</th>
-                                    <th>Ideal For</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><strong>Suzuki Ertiga Type
-                                            III</strong></td>
-                                    <td>2019</td>
-                                    <td>Compact
-                                        MPV</td>
-                                    <td>Family trips, city
-                                        travel.</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Mitsubishi
-                                            ASX</strong></td>
-                                    <td>2019</td>
-                                    <td>Compact
-                                        SUV</td>
-                                    <td>Versatile travel, fuel
-                                        efficiency.</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Mitsubishi
-                                            Mirage</strong></td>
-                                    <td>2019</td>
-                                    <td>Hatchback</td>
-                                    <td>Economical
-                                        city rides.</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Toyota
-                                            Prado</strong></td>
-                                    <td>2006</td>
-                                    <td>SUV
-                                        / Off-Road</td>
-                                    <td>Challenging
-                                        terrains.</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Toyota
-                                            Alphard</strong></td>
-                                    <td>2006</td>
-                                    <td>Luxury
-                                        Van</td>
-                                    <td>Executive
-                                        transport.</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <h4 class="mb-3">Why Choose Golden Support Service?</h4>
-                    <ul class="blog-list mb-4">
-                        <li><i class="fa fa-check-circle"></i>13 Years of
-                            Experience</li>
-                        <li><i class="fa fa-users"></i>90+ Professional
-                            Drivers</li>
-                        <li><i class="fa fa-map-marker-alt"></i>Wide Service
-                            Area</li>
-                        <li><i class="fa fa-calendar-check"></i>Flexible Rental
-                            Plans</li>
-                    </ul>
-                    <!-- <a href="#" class="btn btn-primary btn-lg">Book Now</a> -->
+                <div class="table-responsive mb-4">
+                    <table class="table table-hover align-middle">
+                        <thead>
+                            <tr>
+                                <th>Vehicle Model</th>
+                                <th>Year</th>
+                                <th>Type</th>
+                                <th>Ideal For</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Suzuki Ertiga Type
+                                        III</strong></td>
+                                <td>2019</td>
+                                <td>Compact
+                                    MPV</td>
+                                <td>Family trips, city
+                                    travel.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Mitsubishi
+                                        ASX</strong></td>
+                                <td>2019</td>
+                                <td>Compact
+                                    SUV</td>
+                                <td>Versatile travel, fuel
+                                    efficiency.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Mitsubishi
+                                        Mirage</strong></td>
+                                <td>2019</td>
+                                <td>Hatchback</td>
+                                <td>Economical
+                                    city rides.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Toyota
+                                        Prado</strong></td>
+                                <td>2006</td>
+                                <td>SUV
+                                    / Off-Road</td>
+                                <td>Challenging
+                                    terrains.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Toyota
+                                        Alphard</strong></td>
+                                <td>2006</td>
+                                <td>Luxury
+                                    Van</td>
+                                <td>Executive
+                                    transport.</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
+                <h4 class="mb-3">Why Choose Golden Support Service?</h4>
+                <ul class="blog-list mb-4">
+                    <li><i class="fa fa-check-circle"></i>13 Years of
+                        Experience</li>
+                    <li><i class="fa fa-users"></i>90+ Professional
+                        Drivers</li>
+                    <li><i class="fa fa-map-marker-alt"></i>Wide Service
+                        Area</li>
+                    <li><i class="fa fa-calendar-check"></i>Flexible Rental
+                        Plans</li>
+                </ul>
+                <!-- <a href="#" class="btn btn-primary btn-lg">Book Now</a> -->
             </div>
+        </div>
 
-            <!-- Blog Card 4 -->
-            <div class="blog-card-horizontal" id="blog4">
-                <div class="blog-image">
-                    <img src="../img/blog_img/blog_2_pamphlet.jpg"
-                        alt="NMT Travel Package" />
+        <!-- Blog Card 2 -->
+        <div class="blog-card-horizontal" id="blog2">
+            <div class="blog-image">
+                <img src="../img/blog_img/blog_2_pamphlet.jpg" alt="NMT Travel Package" />
+            </div>
+            <div class="blog-text">
+                <div class="blog-meta mb-2">
+                    <span><i class="fa fa-calendar"></i> 30 Dec 2025</span>
+                    <span><i class="fa fa-user"></i> NICE MYANMAR TRAVELS &
+                        TOURS</span>
                 </div>
-                <div class="blog-text">
-                    <div class="blog-meta mb-2">
-                        <span><i class="fa fa-calendar"></i> 30 Dec 2025</span>
-                        <span><i class="fa fa-user"></i> NICE MYANMAR TRAVELS &
-                            TOURS</span>
-                    </div>
-                    <h1 class="blog-title">ヤンゴン ⇒ バガン ⇒ ヤンゴン パッケージツアー
-                        (2泊3日)</h1>
-                    <p class="lead">金曜 朝6時出発 → 日曜 午後14時帰着</p>
-                    <h4 class="mb-3">特別アドオン内容</h4>
-                    <ul class="blog-list mb-4">
-                        <li>● 熱気球体験</li>
-                        <li>■ イラワジ川サンセットクルーズ</li>
-                        <li>■ バガンでのゴルフ手配も可能</li>
-                    </ul>
-                    <div class="highlight-block mb-4">
-                        <i class="fa fa-gift"></i>
-                        <span>団体様限定！割引価格あり！ 熟練スタッフが迅速サポート！</span>
-                    </div>
-                    <h4 class="mb-3">弊社サービス</h4>
-                    <ul class="blog-list mb-4">
-                        <li>✈ 航空券手配 (国内・国際)</li>
-                        <li>🏠 宿泊手配 (国内・国際)</li>
-                        <li>🚗 専用車 (ドライバー付き/ミャンマー国内)</li>
-                        <li>🗣 日本語・英語通訳ガイド</li>
-                    </ul>
-                    <p>国内チャット対応OK！<br>ドル・カード・日本円振込も可能</p>
-                    <h4 class="mt-4 mb-2">--- お問い合わせ ---</h4>
-                    <p>オペレーターグループ<br>📞 09408855622<br>📧
-                        operator-group@nicemyanmartravel.com</p>
-                    <p>Zinme Yulay (ゼンミ ユーレー)<br>📞 09785500522<br>📧
-                        operation@nicemyanmartravel.com</p>
-                    <p>NICE MYANMAR TRAVELS & TOURS CO., LTD<br>📍 No. 35/A Boe
-                        Yar Zar Street, Yankin Township, Yangon, Myanmar.<br>
-                        🌐 <a href="https://nicemyanmartravel.com" class="link"
-                            target="_blank">Nice Myanmar Travel </a></p>
-                    <!-- <a href="#" class="btn btn-primary btn-lg mt-2">Book
+                <h1 class="blog-title">ヤンゴン ⇒ バガン ⇒ ヤンゴン パッケージツアー
+                    (2泊3日)</h1>
+                <p class="lead">金曜 朝6時出発 → 日曜 午後14時帰着</p>
+                <h4 class="mb-3">特別アドオン内容</h4>
+                <ul class="blog-list mb-4">
+                    <li>● 熱気球体験</li>
+                    <li>■ イラワジ川サンセットクルーズ</li>
+                    <li>■ バガンでのゴルフ手配も可能</li>
+                </ul>
+                <div class="highlight-block mb-4">
+                    <i class="fa fa-gift"></i>
+                    <span>団体様限定！割引価格あり！ 熟練スタッフが迅速サポート！</span>
+                </div>
+                <h4 class="mb-3">弊社サービス</h4>
+                <ul class="blog-list mb-4">
+                    <li>✈ 航空券手配 (国内・国際)</li>
+                    <li>🏠 宿泊手配 (国内・国際)</li>
+                    <li>🚗 専用車 (ドライバー付き/ミャンマー国内)</li>
+                    <li>🗣 日本語・英語通訳ガイド</li>
+                </ul>
+                <p>国内チャット対応OK！<br>ドル・カード・日本円振込も可能</p>
+                <h4 class="mt-4 mb-2">--- お問い合わせ ---</h4>
+                <p>オペレーターグループ<br>📞 09408855622<br>📧
+                    operator-group@nicemyanmartravel.com</p>
+                <p>Zinme Yulay (ゼンミ ユーレー)<br>📞 09785500522<br>📧
+                    operation@nicemyanmartravel.com</p>
+                <p>NICE MYANMAR TRAVELS & TOURS CO., LTD<br>📍 No. 35/A Boe
+                    Yar Zar Street, Yankin Township, Yangon, Myanmar.<br>
+                    🌐 <a href="https://nicemyanmartravel.com" class="link" target="_blank">Nice Myanmar Travel </a></p>
+                <!-- <a href="#" class="btn btn-primary btn-lg mt-2">Book
                         Tour</a> -->
-                </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Related Posts -->
+    <!-- Related Posts -->
 
-        <section class="related-posts bg-light py-5">
+    <section class="related-posts bg-light py-5">
 
-            <div class="container">
+        <div class="container">
 
-                <h3 class="text-center mb-5">You May Also Like</h3>
+            <h3 class="text-center mb-5">You May Also Like</h3>
 
-                <div class="row g-4">
+            <div class="row g-4">
 
-                    <div class="col-md-4">
+                <div class="col-md-4">
 
-                        <div class="related-card">
+                    <div class="related-card">
 
-                            <img src="../img/blog_img/blog_2.png" alt="blog2" />
+                        <img src="../img/blog_img/blog_2.png" alt="blog2" />
 
-                            <div class="p-3">
+                        <div class="p-3">
 
-                                <h5>Top 5 Cars for Long Distance Travel</h5>
+                            <h5>Top 5 Cars for Long Distance Travel</h5>
 
-                                <a href="#"
-                                    class="btn btn-outline-primary btn-sm mt-2">Read
+                            <a href="#" class="btn btn-outline-primary btn-sm mt-2">Read
 
-                                    More</a>
-
-                            </div>
+                                More</a>
 
                         </div>
 
                     </div>
 
-                    <div class="col-md-4">
+                </div>
 
-                        <div class="related-card">
+                <div class="col-md-4">
 
-                            <img src="../img/blog_img/blog3.jpg" alt />
+                    <div class="related-card">
 
-                            <div class="p-3">
+                        <img src="../img/blog_img/blog3.jpg" alt />
 
-                                <h5>Tips for First-Time Car Renters</h5>
+                        <div class="p-3">
 
-                                <a href="#"
-                                    class="btn btn-outline-primary btn-sm mt-2">Read
+                            <h5>Tips for First-Time Car Renters</h5>
 
-                                    More</a>
+                            <a href="#" class="btn btn-outline-primary btn-sm mt-2">Read
 
-                            </div>
+                                More</a>
 
                         </div>
 
                     </div>
 
-                    <div class="col-md-4">
+                </div>
 
-                        <div class="related-card">
+                <div class="col-md-4">
 
-                            <img src="../img/blog_img/blog4.jpg" alt />
+                    <div class="related-card">
 
-                            <div class="p-3">
+                        <img src="../img/blog_img/blog4.jpg" alt />
 
-                                <h5>Airport Pick-up Service Explained</h5>
+                        <div class="p-3">
 
-                                <a href="#"
-                                    class="btn btn-outline-primary btn-sm mt-2">Read
+                            <h5>Airport Pick-up Service Explained</h5>
 
-                                    More</a>
+                            <a href="#" class="btn btn-outline-primary btn-sm mt-2">Read
 
-                            </div>
+                                More</a>
 
                         </div>
 
@@ -501,22 +311,22 @@
 
             </div>
 
-        </section>
+        </div>
 
-        <section class="scroll-animate fade-up">
-            <div include-html="../items/footer.html"></div>
-        </section>
+    </section>
 
-        <!-- JS -->
+    <!-- JS -->
 
-        <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/jquery-3.7.1.min.js"></script>
 
-        <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
 
-        <script src="../js/items.js"></script>
+    <script src="../js/items.js"></script>
 
-        <script src="../js/script.js"></script>
+    <script src="../js/script.js"></script>
 
-    </body>
+
+
+</body>
 
 </html>

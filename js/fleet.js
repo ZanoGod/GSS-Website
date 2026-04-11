@@ -17,7 +17,7 @@ const cars = [
     slug: 'mitsubishi-asx',
     name: 'Mitsubishi ASX',
     category: 'suv',
-    image: '../img/cars/Mitsubishi ASX .png',
+    image: '../img/cars/Mitsubishi ASX .webp',
     passengers: 4,
     transmission: 'Automatic',
     fuel: 'Gasoline',
@@ -43,7 +43,7 @@ const cars = [
     slug: 'toyota-hiace',
     name: 'Toyota Hiace',
     category: 'mini-van',
-    image: '../img/cars/toyota_hiace.png',
+    image: '../img/cars/toyota_hiace.webp',
     passengers: 14,
     transmission: 'Automatic',
     fuel: 'Gasoline',
@@ -338,7 +338,7 @@ function displayCars(category) {
                 <i class="fa fa-car text-dark"></i><span class="text-body ms-1">${car.type}</span>
               </div>
             </div>
-            <a href="#" class="btn btn-primary rounded-pill d-flex justify-content-center py-3">Book Now</a>
+
           </div>
         </div>
       </div>

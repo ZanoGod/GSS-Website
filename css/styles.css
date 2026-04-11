@@ -81,30 +81,29 @@
 
 /* Preloader
 ------------------------------------------------------------- */
-.preloader {
-  width: 100%;
-  height: 100vh;
-  margin: 0 auto;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 9999;
+.preloader{
+  position: fixed;     
+  inset: 0;             /* top:0; right:0; bottom:0; left:0; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: #ffffff;
+  z-index: 99999;       /* make sure it's above everything */
+  transition: opacity .4s ease, visibility .4s ease;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
 }
 
+/* spinner kept from your original */
 .loader {
   display: block;
   position: relative;
-  left: 50%;
-  top: 50%;
   width: 150px;
   height: 150px;
-  margin: -75px 0 0 -75px;
   border-radius: 50%;
   border: 3px solid transparent;
-  /* border-top-color: #D16806; */
   border-top-color: #bb8e2f;
-  -webkit-animation: spin 2s linear infinite;
   animation: spin 2s linear infinite;
 }
 
@@ -118,9 +117,9 @@
   border-radius: 50%;
   border: 3px solid transparent;
   border-top-color: rgb(255, 208, 164);
-  -webkit-animation: spin 3s linear infinite;
   animation: spin 3s linear infinite;
 }
+
 
 .loader:after {
   content: "";
@@ -132,9 +131,16 @@
   border-radius: 50%;
   border: 3px solid transparent;
   border-top-color: #fcebdb;
-  -webkit-animation: spin 1.5s linear infinite;
   animation: spin 1.5s linear infinite;
 }
+
+/* Hidden state: fade + make non-interactive */
+.preloader.hidden{
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
 
 @-webkit-keyframes spin {
   0% {
@@ -162,6 +168,7 @@
     -ms-transform: rotate(360deg);
     transform: rotate(360deg);
   }
+
 }
 /***======================= Navbar Start =========================***/
 
@@ -439,111 +446,6 @@
 }
 /*** Carousel Header End ***/
 
-/*** About Start ***/
-.about .about-item h1 {
-  font-size: 2.5rem;
-  font-weight: 600;
-  color: var(--bs-dark);
-  margin-bottom: 20px;
-}
-.about .about-item span {
-  color: var(--bs-primary);
-}
-.about .text-justify {
-  text-align: justify;
-}
-
-/* Custom style for the experience box */
-.about .experience-box {
-  background-color: var(--bs-primary); /* Example: Black background */
-}
-.about .about-item .btn {
-  color: var(--bs-dark);
-  font-weight: bold;
-  background-color: var(--bs-secondary);
-}
-.about .about-item .btn:hover {
-  color: var(--bs-light);
-  background-color: var(--bs-primary);
-}
-
-.about .about-item .about-item-inner {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  border-radius: 10px;
-  background: var(--bs-light);
-  transition: 0.5s;
-}
-
-.about .about-item .about-item-inner .about-icon {
-  width: 90px;
-  height: 90px;
-  border-radius: 67% 33% 29% 71% / 39% 46% 54% 61%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--bs-secondary);
-  background: var(--bs-primary);
-  animation-name: icon-animat;
-  animation-duration: 5s;
-  animation-delay: 1s;
-  animation-direction: alternate;
-  animation-iteration-count: infinite;
-  transition: 0.5s;
-}
-
-.about .about-img {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  height: 100%;
-}
-
-.about .about-img .img-1 {
-  height: 85%;
-  margin-right: 50px;
-}
-
-.about .about-img .img-2 {
-  position: absolute;
-  width: 100%;
-  bottom: 0;
-  right: 0;
-  padding-left: 50px;
-  border-radius: 10px;
-}
-
-.about .about-img::after {
-  content: "";
-  position: absolute;
-  width: 10px;
-  height: 98%;
-  top: 0;
-  right: 0;
-  border-radius: 10px;
-  background: var(--bs-primary);
-  z-index: -1;
-}
-
-.about .about-item .text-item {
-  position: relative;
-  padding-left: 25px;
-}
-
-.about .about-item .text-item::after {
-  content: "";
-  position: absolute;
-  width: 5px;
-  height: 100%;
-  top: 0;
-  left: 0;
-  border-radius: 10px;
-  background: var(--bs-secondary);
-}
-/*** About End ***/
 
 /*** Fact Counter ***/
 .counter {
@@ -767,6 +669,7 @@
   cursor: pointer;
 }
 
+
 /***======================= Blog Section Start ==============================***/
 
 /* Force equal height and responsive grid */
@@ -806,7 +709,7 @@
 
 .blog .blog-img img {
   width: 100%;
-  height: 500px;
+  height: 600px; /* Fixed height for 500px */
   object-fit: fill;
   transition: transform 0.5s ease;
 }
@@ -930,12 +833,17 @@
 /*** Blog Section End ***/
 
 /*** Team Start ***/
+/*** Team Start ***/
+.team{
+  background: var(--bs-light);
+}
+
 .team .team-item {
   position: relative;
   text-align: center;
   border-radius: 10px;
   margin-top: 100px;
-  background: var(--bs-light);
+  background: var(--bs-gray);
   transition: 0.5s;
   z-index: 1;
 }
@@ -960,6 +868,7 @@
 .team .team-item .team-content {
   position: relative;
   z-index: 5;
+  padding-bottom: 15px;
 }
 
 .team .team-item .team-content h4,
@@ -967,9 +876,7 @@
   transition: 0.5s;
 }
 
-.team .team-item:hover .team-content h4 {
-  color: var(--bs-white);
-}
+.team .team-item:hover .team-content h4,
 .team .team-item:hover .team-content p {
   color: var(--bs-white);
 }
@@ -981,13 +888,13 @@
   margin-bottom: -100px;
   border-radius: 10px;
   z-index: 3;
-  height: 350px; /* Fixed height for all image containers */
+  height: 350px;
 }
 
 .team .team-item .team-img img {
-  object-fit: cover; /* Ensures image fills container without distortion */
+  object-fit: cover;
   width: 100%;
-  height: 100%; /* Make image take full container height */
+  height: 100%;
   transition: 0.5s;
 }
 
@@ -1012,9 +919,91 @@
   height: 100%;
 }
 
+/* === Drivers Carousel Styling === */
+/* === Drivers Carousel (Bootstrap-based, clean) === */
+#driversCarousel {
+  position: relative;
+  overflow: hidden;
+  padding: 0 60px;
+}
+
+#driversCarousel .carousel-item {
+  transition: transform 0.8s ease-in-out;
+}
+
+#driversCarousel .row {
+  margin: 0;
+}
+
+@media (max-width: 992px) {
+  #driversCarousel {
+    padding: 0 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  #driversCarousel {
+    padding: 0 20px;
+  }
+}
 
 
+
+/* Carousel Buttons */
+.custom-carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--bs-primary);
+  border: none;
+  color: var(--bs-white);
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  z-index: 10;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-carousel-btn:hover {
+  background-color: var(--bs-secondary);
+  color: var(--bs-dark);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-control-prev.custom-carousel-btn {
+  left: 25px;
+}
+
+.carousel-control-next.custom-carousel-btn {
+  right: 25px;
+}
+
+/* === View More Button Inside Each Card === */
+.team .btn-view-more {
+  background-color: var(--bs-secondary);
+  border-color: var(--bs-secondary);
+  color: var(--bs-dark);
+  font-weight: 600;
+  padding: 6px 18px;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  transition: 0.3s ease;
+  display: inline-block;
+}
+
+.team .btn-view-more:hover {
+  background-color: var(--bs-footer);
+  border-color: var(--bs-footer);
+  color: var(--bs-white);
+  transform: translateY(-2px);
+}
 /*** Team End ***/
+
+
 
 /*** Footer Start ***/
 :root {
@@ -1121,4 +1110,131 @@
   background-color: var(--bs-secondary);
   color: black;
   transform: translateY(-3px);
+}
+
+
+/* ================= Contact page styles (moved from contact.css) ================= */
+
+/* Page Header */
+/* Updated Page Header */
+.page-header {
+    position: relative;
+    height: 400px;
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.5), 
+        rgba(0, 0, 0, 0.5)
+    ), url('../img/about/about-us.png') center center / cover no-repeat;
+    color: #fff;
+    text-align: center;
+}
+
+.page-header .container {
+    position: relative;
+    z-index: 2;
+}
+
+.page-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #ffffff;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+    margin-bottom: 20px;
+}
+
+.breadcrumb {
+    background: transparent;
+    padding: 0;
+    margin: 0;
+    font-size: 1rem;
+    justify-content: center;
+}
+
+.breadcrumb-item a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+.breadcrumb-item a:hover {
+    color: #ffb22c; /* secondary gold */
+}
+
+.breadcrumb-item.active {
+    color: #b68b2e; /* primary gold */
+    font-weight: bold;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+.page-header::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.090);
+    z-index: 1;
+}
+
+/* Contact Info Card */
+.contact-info-card {
+    background-color: #f8f9fa; /* Light background to stand out */
+    border-radius: 15px;
+    border: 1px solid #dee2e6;
+    transition: all 0.3s ease;
+}
+
+.contact-info-card:hover {
+    box-shadow: 0 0 30px rgba(0,0,0,0.1);
+    transform: translateY(-5px);
+}
+
+.contact-info-card .icon-bg {
+    width: 60px;
+    height: 60px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #e8e8e8;
+}
+
+.contact-info-card i {
+    font-size: 24px;
+}
+
+.contact-info-card .row {
+    margin-top: 1rem;
+}
+
+.contact-info-card .col-6 {
+    display: flex;
+    align-items: center;
+}
+
+.contact-info-card .col-6 p {
+    margin-bottom: 0.5rem;
+}
+
+/* Form Styling (to match existing theme) */
+.form-control {
+    border-radius: 0.5rem;
+}
+
+.form-floating > .form-control:focus,
+.form-floating > .form-control:not(:placeholder-shown) {
+    padding-top: 1.625rem;
+    padding-bottom: 0.625rem;
+}
+
+.container .btn {
+    background-color: #b68b2e; /* primary gold */
+    color: #fff;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.container .btn:hover {
+    background-color: #343a40; /* dark */
+    color: #fff;
 }

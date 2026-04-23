@@ -72,6 +72,118 @@
 
   initPreloader();
 
+  var mobileEntryAlertDefaults = {
+    enabled: true,
+    title: "Mobile Notice",
+    // Update this text whenever you want a different mobile popup message site-wide.
+    message:
+      "Welcome to Golden Support Service.\nIf you need full experience, please visit our website on a desktop or laptop computer.",
+    buttonText: "Continue",
+    autoHideMs: 3000,
+    delayMs: 500,
+  };
+
+  function isLikelyMobileDevice() {
+    var userAgent = navigator.userAgent || "";
+    var userAgentDataMobile =
+      navigator.userAgentData &&
+      typeof navigator.userAgentData.mobile === "boolean"
+        ? navigator.userAgentData.mobile
+        : false;
+    var hasCoarsePointer =
+      window.matchMedia && window.matchMedia("(pointer: coarse)").matches;
+    var isNarrowViewport =
+      window.matchMedia && window.matchMedia("(max-width: 991.98px)").matches;
+
+    return (
+      userAgentDataMobile ||
+      /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+        userAgent
+      ) ||
+      (hasCoarsePointer && isNarrowViewport)
+    );
+  }
+
+  function isHomePage() {
+    var pathName = window.location.pathname || "";
+    return (
+      pathName === "/" ||
+      /\/index\.html$/i.test(pathName) ||
+      /\/GSS-Website\/?$/i.test(pathName)
+    );
+  }
+
+  function createMobileEntryAlertModal(config) {
+    var existingModal = document.getElementById("mobileEntryAlertModal");
+    if (existingModal) return existingModal;
+
+    var wrapper = document.createElement("div");
+    wrapper.innerHTML =
+      '<div class="modal fade mobile-entry-alert" id="mobileEntryAlertModal" tabindex="-1" aria-labelledby="mobileEntryAlertModalLabel" aria-hidden="true">' +
+      '<div class="modal-dialog modal-dialog-centered modal-sm">' +
+      '<div class="modal-content border-0 shadow">' +
+      '<div class="modal-header">' +
+      '<h5 class="modal-title" id="mobileEntryAlertModalLabel" data-mobile-alert-title></h5>' +
+      '<button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>' +
+      "</div>" +
+      '<div class="modal-body">' +
+      '<p class="mb-0" data-mobile-alert-message></p>' +
+      "</div>" +
+      '<div class="modal-footer border-0 pt-0">' +
+      '<button type="button" class="btn w-100" data-bs-dismiss="modal" data-mobile-alert-button></button>' +
+      "</div>" +
+      "</div>" +
+      "</div>" +
+      "</div>";
+
+    var modalEl = wrapper.firstElementChild;
+    modalEl.querySelector("[data-mobile-alert-title]").textContent =
+      config.title;
+    modalEl.querySelector("[data-mobile-alert-message]").textContent =
+      config.message;
+    modalEl.querySelector("[data-mobile-alert-button]").textContent =
+      config.buttonText;
+
+    document.body.appendChild(modalEl);
+    return modalEl;
+  }
+
+  function showMobileEntryAlert() {
+    var config = Object.assign(
+      {},
+      mobileEntryAlertDefaults,
+      window.GSS_MOBILE_ALERT || {}
+    );
+    if (
+      !config.enabled ||
+      !config.message ||
+      !isLikelyMobileDevice() ||
+      !isHomePage()
+    ) {
+      return;
+    }
+
+    if (window.bootstrap && typeof window.bootstrap.Modal === "function") {
+      var modalEl = createMobileEntryAlertModal(config);
+      var modalInstance = new window.bootstrap.Modal(modalEl);
+      modalInstance.show();
+
+      if (config.autoHideMs > 0) {
+        window.setTimeout(function () {
+          modalInstance.hide();
+        }, config.autoHideMs);
+      }
+
+      return;
+    }
+
+    window.alert(config.message);
+  }
+
+  window.addEventListener("load", function () {
+    setTimeout(showMobileEntryAlert, mobileEntryAlertDefaults.delayMs);
+  });
+
   // Sticky Navbar and Back to Top button visibility
   $(window).on("scroll", function () {
     if ($(this).scrollTop() > 200) {

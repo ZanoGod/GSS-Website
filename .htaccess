@@ -3,11 +3,13 @@
 # 1. SET DEFAULT INDEX
 DirectoryIndex index.html index.php
 
+
 # BEGIN Newfold Headers
 <IfModule mod_headers.c>
     Header set X-Newfold-Cache-Level "2"
 </IfModule>
 # END Newfold Headers
+
 
 # BEGIN Newfold Browser Cache
 <IfModule mod_expires.c>
@@ -25,50 +27,97 @@ DirectoryIndex index.html index.php
 </IfModule>
 # END Newfold Browser Cache
 
+
 Options -Indexes
+
 
 <IfModule mod_headers.c>
     Header set X-Endurance-Cache-Level "2"
     Header set X-nginx-cache "WordPress"
 </IfModule>
 
+
+########################################
+# PHP CLEAN URLS
+########################################
+<IfModule mod_rewrite.c>
+
+RewriteEngine On
+RewriteBase /
+
+
+# -----------------------------------------------------
+# A) REMOVE .PHP FROM FLEET MANAGEMENT URLS
+# -----------------------------------------------------
+
+# /17011969/login.php → /17011969/login
+RewriteCond %{THE_REQUEST} \s/+17011969/([^.?\s]+)\.php(?:[?\s]) [NC]
+RewriteRule ^17011969/(.+)\.php$ /17011969/$1 [R=301,L,NE]
+
+
+# /17011969/dashboard.php → /17011969/dashboard
+# /17011969/fleet.php → /17011969/fleet
+# etc.
+
+
+# -----------------------------------------------------
+# B) INTERNALLY ADD .PHP
+# -----------------------------------------------------
+
+# /17011969/login → /17011969/login.php
+# /17011969/dashboard → /17011969/dashboard.php
+# etc.
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^17011969/(.+?)/?$ $0.php [L]
+
+
+</IfModule>
+########################################
+
+
 ########################################
 # CUSTOM PRETTY URLS & REDIRECTS
 ########################################
 <IfModule mod_rewrite.c>
+
 RewriteEngine On
 RewriteBase /
 
+
 # -----------------------------------------------------
-# A) CLEANUP REDIRECTS (Run these FIRST)
+# A) CLEANUP REDIRECTS
 # -----------------------------------------------------
 
-# 1. Redirect /index.html -> /
+# 1. Redirect /index.html → /
 RewriteCond %{THE_REQUEST} \s/index\.html [NC]
 RewriteRule ^index\.html$ / [R=301,L]
 
-# 2. Redirect /pages/name.html -> /name
-# (If someone visits the long link, force them to the short one)
+
+# 2. Redirect /pages/name.html → /name
 RewriteCond %{THE_REQUEST} \s/pages/(about|service|fleet|contact|ourteam|blog)\.html [NC]
 RewriteRule ^pages/(about|service|fleet|contact|ourteam|blog)\.html$ /%1 [R=301,L]
 
-# 3. Redirect /name.html -> /name
+
+# 3. Redirect /name.html → /name
 RewriteCond %{THE_REQUEST} \s/(about|service|fleet|contact|ourteam|blog)\.html [NC]
 RewriteRule ^(about|service|fleet|contact|ourteam|blog)\.html$ /$1 [R=301,L]
 
+
 # -----------------------------------------------------
-# B) IGNORE REAL FILES (Run this SECOND)
-# If the request is for an existing image, css, or js file,
-# stop here so we don't break the site assets.
+# B) IGNORE REAL FILES AND DIRECTORIES
 # -----------------------------------------------------
+
 RewriteCond %{REQUEST_FILENAME} -f [OR]
 RewriteCond %{REQUEST_FILENAME} -d
 RewriteRule ^ - [L]
 
+
 # -----------------------------------------------------
-# C) INTERNAL MAPPING (Run this LAST)
-# Connect the short URL to the actual file invisible
+# C) INTERNAL MAPPING
 # -----------------------------------------------------
+
 RewriteRule ^about/?$   pages/about.html   [L,NC]
 RewriteRule ^service/?$ pages/service.html [L,NC]
 RewriteRule ^fleet/?$   pages/fleet.html   [L,NC]
@@ -78,6 +127,7 @@ RewriteRule ^contact/?$ pages/contact.html [L,NC]
 
 </IfModule>
 ########################################
+
 
 # BEGIN NFD EPC
 <IfModule mod_expires.c>
@@ -95,16 +145,22 @@ RewriteRule ^contact/?$ pages/contact.html [L,NC]
 </IfModule>
 # END NFD EPC
 
+
 # BEGIN WordPress
 <IfModule mod_rewrite.c>
+
 RewriteEngine On
 RewriteBase /
+
 RewriteRule ^index\.php$ - [L]
+
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule . /index.php [L]
+
 </IfModule>
 # END WordPress
+
 
 # php -- BEGIN cPanel-generated handler
 <IfModule mime_module>
